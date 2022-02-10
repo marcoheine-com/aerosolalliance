@@ -1,0 +1,93 @@
+{
+  "id": "herosection",
+  "type": "SharedSlice",
+  "name": "Herosection",
+  "description": "Herosection",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Herosection",
+      "primary": {
+        "backgroundcolor": {
+          "config": {
+            "label": "backgroundcolor",
+            "placeholder": "",
+            "options": [
+              "grey",
+              "yellow",
+              "purple",
+              "red",
+              "lightblue",
+              "darkblue"
+            ],
+            "default_value": "grey"
+          },
+          "type": "Select"
+        },
+        "herosvg": {
+          "config": {
+            "label": "herosvg",
+            "placeholder": "",
+            "select": "media"
+          },
+          "type": "Link"
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "twoColumnHero",
+      "name": "two-column-hero",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Herosection",
+      "primary": {
+        "backgroundcolor": {
+          "config": {
+            "label": "backgroundcolor",
+            "placeholder": "",
+            "options": [
+              "grey",
+              "yellow",
+              "purple",
+              "red",
+              "lightblue",
+              "darkblue"
+            ],
+            "default_value": "grey"
+          },
+          "type": "Select"
+        },
+        "herosvg": {
+          "config": {
+            "label": "herosvg",
+            "placeholder": "",
+            "select": "media"
+          },
+          "type": "Link"
+        },
+        "heroimage": {
+          "config": {
+            "label": "heroimage",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "heroheadline": {
+          "config": {
+            "label": "heroheadline",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2,heading3,heading5,heading4,heading6"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,5 +1,166 @@
 {
   "slices": {
-    "components": {}
+    "components": {
+      "herosection": {
+        "library": "slices",
+        "id": "herosection",
+        "name": "Herosection",
+        "description": "Herosection",
+        "model": {
+          "id": "herosection",
+          "type": "SharedSlice",
+          "name": "Herosection",
+          "description": "Herosection",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Herosection",
+              "primary": {
+                "backgroundcolor": {
+                  "config": {
+                    "label": "backgroundcolor",
+                    "placeholder": "",
+                    "options": [
+                      "grey",
+                      "yellow",
+                      "purple",
+                      "red",
+                      "lightblue",
+                      "darkblue"
+                    ],
+                    "default_value": "grey"
+                  },
+                  "type": "Select"
+                },
+                "herosvg": {
+                  "config": {
+                    "label": "herosvg",
+                    "placeholder": "",
+                    "select": "media"
+                  },
+                  "type": "Link"
+                }
+              },
+              "items": {}
+            },
+            {
+              "id": "twoColumnHero",
+              "name": "two-column-hero",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Herosection",
+              "primary": {
+                "backgroundcolor": {
+                  "config": {
+                    "label": "backgroundcolor",
+                    "placeholder": "",
+                    "options": [
+                      "grey",
+                      "yellow",
+                      "purple",
+                      "red",
+                      "lightblue",
+                      "darkblue"
+                    ],
+                    "default_value": "grey"
+                  },
+                  "type": "Select"
+                },
+                "herosvg": {
+                  "config": {
+                    "label": "herosvg",
+                    "placeholder": "",
+                    "select": "media"
+                  },
+                  "type": "Link"
+                },
+                "heroimage": {
+                  "config": {
+                    "label": "heroimage",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "heroheadline": {
+                  "config": {
+                    "label": "heroheadline",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "heading2,heading3,heading5,heading4,heading6"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "herosection",
+            "items": [],
+            "primary": {
+              "backgroundcolor": "grey",
+              "herosvg": {
+                "link_type": "media",
+                "url": "https://source.unsplash.com/daily"
+              }
+            }
+          },
+          "twoColumnHero": {
+            "variation": "twoColumnHero",
+            "name": "two-column-hero",
+            "slice_type": "herosection",
+            "items": [],
+            "primary": {
+              "backgroundcolor": "grey",
+              "herosvg": {
+                "link_type": "media",
+                "url": "https://source.unsplash.com/daily"
+              },
+              "heroimage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+              },
+              "heroheadline": [
+                {
+                  "type": "heading2",
+                  "text": "Synthesize end-to-end initiatives",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/.slicemachine/assets/slices/Herosection/default-slice/preview.png",
+            "width": 800,
+            "height": 66
+          },
+          "twoColumnHero": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/.slicemachine/assets/slices/Herosection/twoColumnHero/preview.png",
+            "width": 800,
+            "height": 66
+          }
+        }
+      }
+    }
   }
 }

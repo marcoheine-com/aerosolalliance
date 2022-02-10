@@ -1,0 +1,44 @@
+{
+  "slices": {
+    "Header": {
+      "default-slice": {
+        "primary": {
+          "Headline": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      },
+      "twoColumn": {
+        "primary": {
+          "Headline": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Herosection": {
+      "default-slice": {
+        "primary": {}
+      },
+      "twoColumnHero": {
+        "primary": {
+          "heroheadline": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "_cts": {
+    "home": {}
+  }
+}

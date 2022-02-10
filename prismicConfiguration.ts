@@ -30,9 +30,8 @@ export const linkResolver = (doc: Doc) => {
 export const routeResolver = {
   routes: [
     {
-      "type":"page",
-      "path":"/:uid"
+      type: 'home',
+      path: '/:uid',
     },
-  ]
-};
-
+  ],
+}

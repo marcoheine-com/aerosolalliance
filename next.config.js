@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+module.exports = {
+  images: {
+    domains: ['images.prismic.io'],
+  },
   reactStrictMode: true,
 }
-
-module.exports = nextConfig

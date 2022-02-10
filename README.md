@@ -33,11 +33,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To create new slices or custom types locally, you can use the slicemachine.
+To create new prismic slices or custom types locally, you can use the slicemachine.
 ```bash
 npm run slicemachine
 ```
 
-It will than be availale on [http://localhost:9000](http://localhost:9000).
+It will than be availale on [http://localhost:9000](http://localhost:9999).
+
+To create a production build of the project, run the following command:
+```bash
+npm run build
+```
 
 

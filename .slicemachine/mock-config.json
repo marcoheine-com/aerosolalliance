@@ -24,7 +24,14 @@
     },
     "Herosection": {
       "default-slice": {
-        "primary": {}
+        "primary": {
+          "backgroundcolor": {
+            "content": "yellow"
+          },
+          "herosvg": {
+            "content": "https://images.prismic.io/aerosolalliance/e41e5558-9a69-4e23-99ff-ebc8a465f934_AEROSOL+ALLIANCE.svg?auto=compress,format"
+          }
+        }
       },
       "twoColumnHero": {
         "primary": {
@@ -33,6 +40,9 @@
               "patternType": "HEADING",
               "blocks": 1
             }
+          },
+          "heroimage": {
+            "content": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f"
           }
         }
       }

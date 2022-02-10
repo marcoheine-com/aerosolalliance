@@ -82,7 +82,7 @@
             "label": "heroheadline",
             "placeholder": "",
             "allowTargetBlank": false,
-            "single": "heading2,heading3,heading5,heading4,heading6"
+            "single": "heading2,heading3,heading4,heading5,heading6"
           },
           "type": "StructuredText"
         }

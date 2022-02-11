@@ -29,7 +29,12 @@ const Home: NextPage<Props> = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="max-w-[1920px] flex flex-col mx-auto">
-        <SliceZone slices={props.data.slices} resolver={resolver} />
+        {props.data.slices[0] && (
+          <Slices.Herosection slice={props.data.slices[0]} />
+        )}
+        {props.data.slices[1] && (
+          <Slices.Herosection slice={props.data.slices[1]} />
+        )}
       </main>
     </>
   )

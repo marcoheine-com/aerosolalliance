@@ -16,14 +16,14 @@
             "label": "backgroundcolor",
             "placeholder": "",
             "options": [
-              "grey",
+              "white",
               "yellow",
               "purple",
               "red",
               "lightblue",
               "darkblue"
             ],
-            "default_value": "grey"
+            "default_value": "white"
           },
           "type": "Select"
         },

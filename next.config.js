@@ -2,7 +2,11 @@
 
 module.exports = {
   images: {
-    domains: ['images.prismic.io', 'source.unsplash.com'],
+    domains: [
+      'images.prismic.io',
+      'source.unsplash.com',
+      'images.unsplash.com',
+    ],
   },
   reactStrictMode: true,
 }

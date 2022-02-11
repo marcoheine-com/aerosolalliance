@@ -1,0 +1,24 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "text_media",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Expedite value-added initiatives",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Incididunt elit ex esse voluptate et laborum fugiat pariatur id mollit nostrud aliquip. Est tempor sit voluptate ad labore sunt ea proident esse dolor Lorem voluptate. Adipisicing consequat eiusmod qui magna voluptate non.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

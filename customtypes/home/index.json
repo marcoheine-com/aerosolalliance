@@ -12,6 +12,12 @@
           "choices": {
             "herosection": {
               "type": "SharedSlice"
+            },
+            "text_content": {
+              "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
             }
           }
         }

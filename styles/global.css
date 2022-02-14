@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'SuisseIntlMono';
+  src: url('/fonts/SuisseIntlMono-Regular-WebS.woff'),
+    url('/fonts/SuisseIntlMono-Regular-WebS.woff2'),
+    url('/fonts/SuisseIntlMono-Regular-WebXL.woff'),
+    url('/fonts/SuisseIntlMono-Regular-WebXL.woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntlRegular';
+  src: url('/fonts/SuisseIntl-Regular-WebM.woff'),
+    url('/fonts/SuisseIntl-Regular-WebM.woff2');
+}
+
+@layer base {
+  body {
+    font-family: 'SuisseIntlRegular';
+    @apply text-darkblue;
+  }
+
+  p {
+    @apply text-2xl mb-4;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'SuisseIntlMono';
+    @apply text-4xl mb-4;
+  }
+}
+
+@layer utilities {
+  .textContent h2 {
+    @apply border-b-2 border-b-darkblue pb-4;
+  }
+}

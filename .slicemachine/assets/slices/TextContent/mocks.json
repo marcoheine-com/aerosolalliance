@@ -1,0 +1,28 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "text_content",
+    "items": [
+      {
+        "Content": [
+          {
+            "type": "paragraph",
+            "text": "Ipsum nostrud commodo laboris.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "Content": [
+          {
+            "type": "paragraph",
+            "text": "Minim veniam dolore ut nisi in ullamco mollit id.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {}
+  }
+]

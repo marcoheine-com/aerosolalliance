@@ -1,0 +1,46 @@
+{
+  "id": "call_to_action",
+  "type": "SharedSlice",
+  "name": "CallToAction",
+  "description": "CallToAction",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CallToAction",
+      "primary": {},
+      "items": {
+        "Link": {
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "LinkLabel": {
+          "config": {
+            "label": "LinkLabel",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "LinkColor": {
+          "config": {
+            "label": "LinkColor",
+            "placeholder": "",
+            "options": [
+              "1",
+              "2"
+            ]
+          },
+          "type": "Select"
+        }
+      }
+    }
+  ]
+}

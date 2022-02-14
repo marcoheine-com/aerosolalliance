@@ -5,11 +5,17 @@ import { RichText, RichTextBlock } from 'prismic-reactjs'
 interface HeroSVG {
   url: string
   name: string
+  width: number
+  height: number
 }
 
 interface HeroImage {
   url: string
   alt: string
+  dimensions: {
+    width: number
+    height: number
+  }
 }
 
 interface HeroSection {
@@ -53,20 +59,24 @@ const getBackgroundColorClass = (
   }
 }
 
-const renderSingleColumnHero = (primary: HeroSection): JSX.Element => {
+const renderSingleColumnHero = (
+  primary: HeroSection,
+  isFullWidth = true
+): JSX.Element => {
+  const FULL_WIDTH_STYLES = isFullWidth ? 'p-20 lg:p-52' : 'px-5 py-20 lg:px-20'
   return (
     primary.backgroundcolor && (
       <section
         className={`${getBackgroundColorClass(
           primary.backgroundcolor
-        )} px-5 relative`}
+        )} ${FULL_WIDTH_STYLES}`}
       >
         {primary.herosvg?.url && (
           <div className="max-w-5xl mx-auto">
             <Image
               src={primary.herosvg.url}
-              width="100%"
-              height="100%"
+              width={primary.herosvg.width}
+              height={primary.herosvg.height}
               layout="responsive"
               alt={primary.herosvg.name}
             />
@@ -81,16 +91,18 @@ const renderTwoColumnHero = (primary: HeroSection): JSX.Element => {
   return (
     <section className="grid grid-cols-2">
       <>
-        {renderSingleColumnHero(primary)}
+        {renderSingleColumnHero(primary, false)}
         <section>
           <Image
             src={primary.heroimage?.url}
-            width="100%"
-            height="100%"
             layout="responsive"
+            height={primary.heroimage?.dimensions.height}
+            width={primary.heroimage?.dimensions.width}
             alt={primary.heroimage?.alt}
           />
-          <RichText render={primary.heroheadline} />
+          {primary.heroheadline && primary.heroheadline[0].spans?.length ? (
+            <RichText render={primary.heroheadline} />
+          ) : null}
         </section>
       </>
     </section>

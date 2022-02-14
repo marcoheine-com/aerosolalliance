@@ -23,33 +23,187 @@
       }
     },
     "Herosection": {
-      "default-slice": {
+      "0": {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "herosection",
+        "items": [],
         "primary": {
-          "backgroundcolor": {
-            "content": "yellow"
-          },
+          "backgroundcolor": "yellow",
           "herosvg": {
-            "content": "https://images.prismic.io/aerosolalliance/e41e5558-9a69-4e23-99ff-ebc8a465f934_AEROSOL+ALLIANCE.svg?auto=compress,format"
+            "link_type": "media",
+            "url": "https://images.prismic.io/aerosolalliance/e41e5558-9a69-4e23-99ff-ebc8a465f934_AEROSOL+ALLIANCE.svg?auto=compress,format"
           }
         }
       },
-      "twoColumnHero": {
+      "1": {
+        "variation": "twoColumnHero",
+        "name": "two-column-hero",
+        "slice_type": "herosection",
+        "items": [],
         "primary": {
-          "heroheadline": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
+          "backgroundcolor": "darkblue",
+          "herosvg": {
+            "link_type": "media",
+            "url": "https://source.unsplash.com/daily"
           },
           "heroimage": {
-            "content": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f"
-          }
+            "dimensions": {
+              "width": 900,
+              "height": 500
+            },
+            "alt": "Placeholder image",
+            "copyright": null,
+            "url": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=900&h=500&fit=crop"
+          },
+          "heroheadline": [
+            {
+              "type": "heading2",
+              "text": "Scale holistic users",
+              "spans": []
+            }
+          ]
         }
+      },
+      "default-slice": {
+        "primary": {}
       }
     },
-    "TextMedia": {}
+    "TextMedia": {},
+    "TextContent": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "text_content",
+        "items": [
+          {
+            "Content": [
+              {
+                "type": "paragraph",
+                "text": "Adipisicing do mollit elit eu ex irure ea magna et quis ex dolore deserunt.",
+                "spans": []
+              }
+            ]
+          },
+          {
+            "Content": [
+              {
+                "type": "paragraph",
+                "text": "Consectetur amet reprehenderit consequat quis irure elit excepteur non voluptate laborum quis ex cupidatat.",
+                "spans": []
+              }
+            ]
+          },
+          {
+            "Content": [
+              {
+                "type": "paragraph",
+                "text": "Dolor ex ullamco Lorem eiusmod id eiusmod. Incididunt proident qui duis ex est magna dolor laborum magna. Eiusmod eu excepteur qui adipisicing cillum magna ex.",
+                "spans": []
+              }
+            ]
+          }
+        ],
+        "primary": {}
+      }
+    ],
+    "CallToAction": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "call_to_action",
+        "items": [
+          {
+            "Link": {
+              "link_type": "Web",
+              "url": "https://slicemachine.dev"
+            },
+            "LinkLabel": [
+              {
+                "type": "paragraph",
+                "text": "Culpa Lorem irure culpa commodo velit. Ipsum magna sit non pariatur.",
+                "spans": []
+              }
+            ],
+            "LinkColor": "1"
+          },
+          {
+            "Link": {
+              "link_type": "Web",
+              "url": "https://slicemachine.dev"
+            },
+            "LinkLabel": [
+              {
+                "type": "paragraph",
+                "text": "Nostrud consectetur nulla nostrud laboris do cillum irure ex dolore reprehenderit.",
+                "spans": []
+              }
+            ],
+            "LinkColor": "1"
+          },
+          {
+            "Link": {
+              "link_type": "Web",
+              "url": "https://prismic.io"
+            },
+            "LinkLabel": [
+              {
+                "type": "paragraph",
+                "text": "Eu eiusmod ullamco amet voluptate mollit occaecat. Incididunt elit cillum anim irure in dolore id eu ea elit veniam exercitation occaecat quis. Nisi id velit voluptate consectetur commodo non velit laboris laboris elit eiusmod.",
+                "spans": []
+              }
+            ],
+            "LinkColor": "1"
+          },
+          {
+            "Link": {
+              "link_type": "Web",
+              "url": "http://google.com"
+            },
+            "LinkLabel": [
+              {
+                "type": "paragraph",
+                "text": "Nostrud consectetur enim voluptate id aliquip Lorem id cillum.",
+                "spans": []
+              }
+            ],
+            "LinkColor": "2"
+          }
+        ],
+        "primary": {}
+      }
+    ]
   },
   "_cts": {
-    "home": {}
+    "home": {},
+    "burgerMenu": {
+      "links": {}
+    },
+    "footer": {
+      "instagramlinklabel": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "partners": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "adress": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "links": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   }
 }

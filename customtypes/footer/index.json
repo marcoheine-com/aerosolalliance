@@ -1,0 +1,88 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "config": {
+          "label": "logo",
+          "constraint": {},
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "instagramlink": {
+        "config": {
+          "label": "instagramlink",
+          "placeholder": "",
+          "allowTargetBlank": false
+        },
+        "type": "Link"
+      },
+      "instagramlinklabel": {
+        "config": {
+          "label": "instagramlinklabel",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "paragraph"
+        },
+        "type": "StructuredText"
+      },
+      "adressHeadline": {
+        "config": {
+          "label": "adressHeadline",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        },
+        "type": "StructuredText"
+      },
+      "adress": {
+        "config": {
+          "label": "adress",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        },
+        "type": "StructuredText"
+      },
+      "links": {
+        "config": {
+          "label": "links",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "hyperlink"
+        },
+        "type": "StructuredText"
+      },
+      "partnersHeadline": {
+        "config": {
+          "label": "partnersHeadline",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        },
+        "type": "StructuredText"
+      },
+      "partners": {
+        "config": {
+          "label": "partners",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading3,heading4,heading5,heading6,hyperlink,image"
+        },
+        "type": "StructuredText"
+      },
+      "supportLink": {
+        "config": {
+          "label": "supportLink",
+          "placeholder": "",
+          "allowTargetBlank": false
+        },
+        "type": "Link"
+      }
+    }
+  }
+}

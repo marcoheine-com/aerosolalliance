@@ -39,6 +39,13 @@
 
 @layer utilities {
   .textContent h2 {
-    @apply border-b-2 border-b-darkblue pb-4;
+    @apply border-b-2 border-b-darkblue pb-10 mb-12;
+  }
+
+  .footer h3 {
+    @apply uppercase text-[10px];
+  }
+  .footer p {
+    @apply text-[15px] mb-0;
   }
 }

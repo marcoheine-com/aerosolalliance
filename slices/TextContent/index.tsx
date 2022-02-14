@@ -6,16 +6,21 @@ interface Item {
 }
 
 interface Props {
-  slice: any
-  items: Item[]
+  slice: {
+    items: Item[]
+  }
 }
 
 const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
-  return slice?.items?.map((item: Item, i: number) => (
-    <section key={i} className="max-w-4xl px-5 mx-auto my-44 textContent">
-      <RichText render={item.Content} />
-    </section>
-  ))
+  return (
+    <>
+      {slice?.items?.map((item: Item, i: number) => (
+        <section key={i} className="max-w-4xl px-5 mx-auto my-44 textContent">
+          <RichText render={item.Content} />
+        </section>
+      ))}
+    </>
+  )
 }
 
 export default TextContent

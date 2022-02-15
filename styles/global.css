@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'SuisseIntlMono';
+  src: url('/fonts/SuisseIntlMono-Regular-WebS.woff'),
+    url('/fonts/SuisseIntlMono-Regular-WebS.woff2'),
+    url('/fonts/SuisseIntlMono-Regular-WebXL.woff'),
+    url('/fonts/SuisseIntlMono-Regular-WebXL.woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntlRegular';
+  src: url('/fonts/SuisseIntl-Regular-WebM.woff'),
+    url('/fonts/SuisseIntl-Regular-WebM.woff2');
+}
+
+@font-face {
+  font-family: 'UvasBlack-Black';
+  src: url('/fonts/UvasBlack-Black.woff'), url('/fonts/UvasBlack-Black.woff2');
+}
+
+@layer base {
+  body {
+    font-family: 'SuisseIntlRegular';
+    @apply text-darkblue;
+  }
+
+  p {
+    @apply text-2xl mb-4;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'SuisseIntlMono';
+    @apply text-4xl mb-4;
+  }
+}
+
+@layer utilities {
+  .textContent h2 {
+    @apply border-b-2 border-b-darkblue pb-10 mb-12;
+  }
+
+  .footer h3 {
+    @apply uppercase text-[10px];
+  }
+  .footer p {
+    @apply text-[15px] mb-0;
+  }
+  .reversed section {
+    @apply -order-1;
+  }
+
+  .reversed svg {
+    @apply -scale-x-100 left-[unset] -right-28 rotate-12 z-[1];
+  }
+
+  .quoteText h3,
+  .quoteText p {
+    @apply xl:text-4xl;
+  }
+
+  .fontUvasBlack {
+    font-family: 'UvasBlack-Black';
+  }
+
+  .fontUvasBlack p {
+    @apply text-6xl md:text-4xl lg:text-5xl 2xl:text-7xl;
+  }
+  .imageWrapper h2 {
+    @apply uppercase text-2xl mt-4 mb-2;
+    font-family: 'SuisseIntlRegular';
+  }
+
+  .imageWrapper p {
+    @apply text-sm;
+  }
+}

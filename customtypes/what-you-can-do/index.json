@@ -1,6 +1,6 @@
 {
-  "id": "home",
-  "label": "Home",
+  "id": "what-you-can-do",
+  "label": "What You Can Do",
   "repeatable": false,
   "status": true,
   "json": {
@@ -17,15 +17,6 @@
               "type": "SharedSlice"
             },
             "call_to_action": {
-              "type": "SharedSlice"
-            },
-            "quote": {
-              "type": "SharedSlice"
-            },
-            "link_image_gallery": {
-              "type": "SharedSlice"
-            },
-            "image_gallery": {
               "type": "SharedSlice"
             }
           }

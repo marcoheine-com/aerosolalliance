@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/CallToAction';
+
+export default {
+  title: 'slices/CallToAction'
+}
+
+
+export const _DefaultSlice = () => <MyComponent slice={{"variation":"default-slice","name":"Default slice","slice_type":"call_to_action","items":[{"Link":{"link_type":"Web","url":"http://twitter.com"},"LinkLabel":[{"type":"paragraph","text":"Aute tempor amet minim quis adipisicing eu nostrud enim consequat ut.","spans":[]}],"LinkColor":"1"},{"Link":{"link_type":"Web","url":"https://slicemachine.dev"},"LinkLabel":[{"type":"paragraph","text":"Magna adipisicing anim amet exercitation labore nostrud et dolor voluptate laborum eiusmod.","spans":[]}],"LinkColor":"2"},{"Link":{"link_type":"Web","url":"https://slicemachine.dev"},"LinkLabel":[{"type":"paragraph","text":"Nostrud est elit voluptate ex consequat exercitation laborum cillum eiusmod quis.","spans":[]}],"LinkColor":"1"},{"Link":{"link_type":"Web","url":"http://google.com"},"LinkLabel":[{"type":"paragraph","text":"Ipsum incididunt velit voluptate laboris do culpa dolore. Laborum amet do consectetur esse pariatur eiusmod deserunt velit minim non tempor minim. Enim tempor ea fugiat enim deserunt ut laboris aliquip aliquip nostrud.","spans":[]}],"LinkColor":"1"},{"Link":{"link_type":"Web","url":"http://twitter.com"},"LinkLabel":[{"type":"paragraph","text":"Aute ex reprehenderit consequat dolor occaecat proident fugiat et duis. Non ullamco nisi non laborum tempor eu veniam consequat tempor ex officia aute commodo. Nulla elit esse ex occaecat incididunt enim qui aliqua elit ex labore anim.","spans":[]}],"LinkColor":"1"},{"Link":{"link_type":"Web","url":"http://twitter.com"},"LinkLabel":[{"type":"paragraph","text":"Proident id aliquip deserunt deserunt qui enim. Nostrud est excepteur aliqua aute proident voluptate eu voluptate.","spans":[]}],"LinkColor":"2"}],"primary":{},"id":"_DefaultSlice"}} />
+_DefaultSlice.storyName = 'Default slice'

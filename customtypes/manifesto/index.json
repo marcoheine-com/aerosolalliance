@@ -1,6 +1,6 @@
 {
-  "id": "home",
-  "label": "Home",
+  "id": "manifesto",
+  "label": "Manifesto",
   "repeatable": false,
   "status": true,
   "json": {
@@ -14,18 +14,6 @@
               "type": "SharedSlice"
             },
             "text_content": {
-              "type": "SharedSlice"
-            },
-            "call_to_action": {
-              "type": "SharedSlice"
-            },
-            "quote": {
-              "type": "SharedSlice"
-            },
-            "link_image_gallery": {
-              "type": "SharedSlice"
-            },
-            "image_gallery": {
               "type": "SharedSlice"
             }
           }

@@ -2,6 +2,7 @@
 
 export { default as CallToAction } from './CallToAction'
 export { default as Herosection } from './Herosection'
+export { default as ImageGallery } from './ImageGallery'
 export { default as LinkImageGallery } from './LinkImageGallery'
 export { default as Quote } from './Quote'
 export { default as TextContent } from './TextContent'

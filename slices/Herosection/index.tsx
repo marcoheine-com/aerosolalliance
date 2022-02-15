@@ -63,7 +63,9 @@ const renderSingleColumnHero = (
   primary: HeroSection,
   isFullWidth = true
 ): JSX.Element => {
-  const FULL_WIDTH_STYLES = isFullWidth ? 'p-20 lg:p-52' : 'px-5 py-20 lg:px-20'
+  const FULL_WIDTH_STYLES = isFullWidth
+    ? 'p-20 lg:p-52 h-screen flex flex-col justify-center'
+    : 'px-5 py-20 lg:px-20'
   return (
     primary.backgroundcolor && (
       <section
@@ -72,7 +74,7 @@ const renderSingleColumnHero = (
         )} ${FULL_WIDTH_STYLES}`}
       >
         {primary.herosvg?.url && (
-          <div className="max-w-5xl mx-auto">
+          <div className="relative mx-auto min-w-full max-w-5xl">
             <Image
               src={primary.herosvg.url}
               width={primary.herosvg.width}
@@ -93,13 +95,15 @@ const renderTwoColumnHero = (primary: HeroSection): JSX.Element => {
       <>
         {renderSingleColumnHero(primary, false)}
         <section>
-          <Image
-            src={primary.heroimage?.url}
-            layout="responsive"
-            height={primary.heroimage?.dimensions.height}
-            width={primary.heroimage?.dimensions.width}
-            alt={primary.heroimage?.alt}
-          />
+          {primary.heroimage.url && (
+            <Image
+              src={primary.heroimage?.url}
+              layout="responsive"
+              height={primary.heroimage?.dimensions.height}
+              width={primary.heroimage?.dimensions.width}
+              alt={primary.heroimage?.alt}
+            />
+          )}
           {primary.heroheadline && primary.heroheadline[0].spans?.length ? (
             <RichText render={primary.heroheadline} />
           ) : null}

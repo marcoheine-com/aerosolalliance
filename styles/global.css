@@ -73,4 +73,12 @@
   .fontUvasBlack p {
     @apply text-6xl md:text-4xl lg:text-5xl 2xl:text-7xl;
   }
+  .imageWrapper h2 {
+    @apply uppercase text-2xl mt-4 mb-2;
+    font-family: 'SuisseIntlRegular';
+  }
+
+  .imageWrapper p {
+    @apply text-sm;
+  }
 }

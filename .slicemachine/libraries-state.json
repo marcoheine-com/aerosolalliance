@@ -150,85 +150,16 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/marcokuehbauch/development/aerosolalliance/.slicemachine/assets/slices/Herosection/default-slice/preview.png",
+            "path": "/Users/mykhail/moro/dev/aerosolalliance/.slicemachine/assets/slices/Herosection/default-slice/preview.png",
             "width": 800,
             "height": 800
           },
           "twoColumnHero": {
-            "path": "/Users/marcokuehbauch/development/aerosolalliance/.slicemachine/assets/slices/Herosection/twoColumnHero/preview.png",
+            "path": "/Users/mykhail/moro/dev/aerosolalliance/.slicemachine/assets/slices/Herosection/twoColumnHero/preview.png",
             "width": 800,
             "height": 800
           }
         }
-      },
-      "text_media": {
-        "library": "slices",
-        "id": "text_media",
-        "name": "TextMedia",
-        "description": "TextMedia",
-        "model": {
-          "id": "text_media",
-          "type": "SharedSlice",
-          "name": "TextMedia",
-          "description": "TextMedia",
-          "variations": [
-            {
-              "id": "default-slice",
-              "name": "Default slice",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "TextMedia",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "mocks": {
-          "default-slice": {
-            "variation": "default-slice",
-            "name": "Default slice",
-            "slice_type": "text_media",
-            "items": [],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Expedite value-added initiatives",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Incididunt elit ex esse voluptate et laborum fugiat pariatur id mollit nostrud aliquip. Est tempor sit voluptate ad labore sunt ea proident esse dolor Lorem voluptate. Adipisicing consequat eiusmod qui magna voluptate non.",
-                  "spans": []
-                }
-              ]
-            }
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "isDirectory": true,
-          "extension": "js"
-        },
-        "screenshotPaths": {}
       }
     }
   }

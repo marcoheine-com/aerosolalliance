@@ -16,6 +16,11 @@
     url('/fonts/SuisseIntl-Regular-WebM.woff2');
 }
 
+@font-face {
+  font-family: 'UvasBlack-Black';
+  src: url('/fonts/UvasBlack-Black.woff'), url('/fonts/UvasBlack-Black.woff2');
+}
+
 @layer base {
   body {
     font-family: 'SuisseIntlRegular';
@@ -59,5 +64,13 @@
   .quoteText h3,
   .quoteText p {
     @apply xl:text-4xl;
+  }
+
+  .fontUvasBlack {
+    font-family: 'UvasBlack-Black';
+  }
+
+  .fontUvasBlack p {
+    @apply text-6xl md:text-4xl lg:text-5xl 2xl:text-7xl;
   }
 }

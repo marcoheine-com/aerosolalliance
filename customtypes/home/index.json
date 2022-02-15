@@ -21,6 +21,9 @@
             },
             "quote": {
               "type": "SharedSlice"
+            },
+            "link_image_gallery": {
+              "type": "SharedSlice"
             }
           }
         }

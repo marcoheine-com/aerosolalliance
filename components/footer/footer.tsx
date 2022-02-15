@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { FunctionComponent } from 'react'
 import { Link, RichText, RichTextBlock } from 'prismic-reactjs'
 
+// TODO: put in a separate file
 export interface ImageProps {
   url: string
   dimensions: {
@@ -30,7 +31,7 @@ export const Footer: FunctionComponent<Props> = ({ data }) => {
   return (
     <footer className="py-14 px-5 bg-grey xl:px-40 footer">
       <section className="flex flex-col gap-16 justify-between items-center mb-16 md:flex-row md:gap-0 xl:justify-around">
-        {data.logo && (
+        {data.logo.url && (
           <Image
             src={data.logo.url}
             width={data.logo.dimensions.width}

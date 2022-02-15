@@ -1,0 +1,98 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "link_image_gallery",
+    "items": [
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
+        },
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Consectetur officia culpa irure culpa laborum Lorem ex qui.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+        },
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Proident aliquip duis ad pariatur. Eu sint veniam Lorem esse laborum nostrud ex ullamco anim labore consectetur sit nulla.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
+        },
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Irure excepteur consectetur aute id ut excepteur culpa Lorem cupidatat consectetur eiusmod amet nulla.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+        },
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Nisi ad commodo laborum et magna reprehenderit esse. Quis veniam excepteur et mollit dolor deserunt proident amet ad reprehenderit Lorem tempor.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {}
+  }
+]

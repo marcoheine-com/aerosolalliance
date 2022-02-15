@@ -15,7 +15,7 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
   return (
     <>
       {slice?.items?.map((item: Item, i: number) => (
-        <section key={i} className="max-w-4xl px-5 mx-auto my-44 textContent">
+        <section key={i} className="px-5 my-44 mx-auto max-w-4xl textContent">
           <RichText render={item.Content} />
         </section>
       ))}

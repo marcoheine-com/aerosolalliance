@@ -28,9 +28,11 @@ const Quote: FunctionComponent<Props> = ({ slice }): JSX.Element => {
             width={item.image.dimensions.width}
             height={item.image.dimensions.height}
           />
-          <Speech />
-          <section className="relative z-10 py-20 px-5 lg:px-20 xl:px-32 xl:pt-28">
-            <RichText render={item.quote} />
+          <section className="relative py-20 px-5 lg:px-20 xl:px-32 xl:pt-28">
+            <div className="relative z-[2] quoteText">
+              <RichText render={item.quote} />
+            </div>
+            <Speech />
           </section>
         </section>
       ))}

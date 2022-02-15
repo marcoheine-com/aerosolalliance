@@ -53,6 +53,11 @@
   }
 
   .reversed svg {
-    @apply -scale-x-100 left-44 rotate-12;
+    @apply -scale-x-100 left-[unset] -right-28 rotate-12 z-[1];
+  }
+
+  .quoteText h3,
+  .quoteText p {
+    @apply xl:text-4xl;
   }
 }

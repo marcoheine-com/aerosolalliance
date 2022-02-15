@@ -22,27 +22,27 @@
         }
       }
     },
-    "Herosection": {
-      "0": {
+    "Herosection": [
+      {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "herosection",
         "items": [],
         "primary": {
-          "backgroundcolor": "yellow",
+          "backgroundcolor": "purple",
           "herosvg": {
             "link_type": "media",
-            "url": "https://images.prismic.io/aerosolalliance/e41e5558-9a69-4e23-99ff-ebc8a465f934_AEROSOL+ALLIANCE.svg?auto=compress,format"
+            "url": "https://source.unsplash.com/daily"
           }
         }
       },
-      "1": {
+      {
         "variation": "twoColumnHero",
         "name": "two-column-hero",
         "slice_type": "herosection",
         "items": [],
         "primary": {
-          "backgroundcolor": "darkblue",
+          "backgroundcolor": "grey",
           "herosvg": {
             "link_type": "media",
             "url": "https://source.unsplash.com/daily"
@@ -54,21 +54,18 @@
             },
             "alt": "Placeholder image",
             "copyright": null,
-            "url": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=900&h=500&fit=crop"
+            "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=900&h=500&fit=crop"
           },
           "heroheadline": [
             {
               "type": "heading2",
-              "text": "Scale holistic users",
+              "text": "Seize back-end synergies",
               "spans": []
             }
           ]
         }
-      },
-      "default-slice": {
-        "primary": {}
       }
-    },
+    ],
     "TextMedia": {},
     "TextContent": [
       {
@@ -80,7 +77,7 @@
             "Content": [
               {
                 "type": "paragraph",
-                "text": "Adipisicing do mollit elit eu ex irure ea magna et quis ex dolore deserunt.",
+                "text": "Ipsum nostrud commodo laboris.",
                 "spans": []
               }
             ]
@@ -89,16 +86,7 @@
             "Content": [
               {
                 "type": "paragraph",
-                "text": "Consectetur amet reprehenderit consequat quis irure elit excepteur non voluptate laborum quis ex cupidatat.",
-                "spans": []
-              }
-            ]
-          },
-          {
-            "Content": [
-              {
-                "type": "paragraph",
-                "text": "Dolor ex ullamco Lorem eiusmod id eiusmod. Incididunt proident qui duis ex est magna dolor laborum magna. Eiusmod eu excepteur qui adipisicing cillum magna ex.",
+                "text": "Minim veniam dolore ut nisi in ullamco mollit id.",
                 "spans": []
               }
             ]
@@ -116,12 +104,12 @@
           {
             "Link": {
               "link_type": "Web",
-              "url": "https://slicemachine.dev"
+              "url": "http://twitter.com"
             },
             "LinkLabel": [
               {
                 "type": "paragraph",
-                "text": "Culpa Lorem irure culpa commodo velit. Ipsum magna sit non pariatur.",
+                "text": "Aute tempor amet minim quis adipisicing eu nostrud enim consequat ut.",
                 "spans": []
               }
             ],
@@ -135,21 +123,21 @@
             "LinkLabel": [
               {
                 "type": "paragraph",
-                "text": "Nostrud consectetur nulla nostrud laboris do cillum irure ex dolore reprehenderit.",
+                "text": "Magna adipisicing anim amet exercitation labore nostrud et dolor voluptate laborum eiusmod.",
                 "spans": []
               }
             ],
-            "LinkColor": "1"
+            "LinkColor": "2"
           },
           {
             "Link": {
               "link_type": "Web",
-              "url": "https://prismic.io"
+              "url": "https://slicemachine.dev"
             },
             "LinkLabel": [
               {
                 "type": "paragraph",
-                "text": "Eu eiusmod ullamco amet voluptate mollit occaecat. Incididunt elit cillum anim irure in dolore id eu ea elit veniam exercitation occaecat quis. Nisi id velit voluptate consectetur commodo non velit laboris laboris elit eiusmod.",
+                "text": "Nostrud est elit voluptate ex consequat exercitation laborum cillum eiusmod quis.",
                 "spans": []
               }
             ],
@@ -163,7 +151,35 @@
             "LinkLabel": [
               {
                 "type": "paragraph",
-                "text": "Nostrud consectetur enim voluptate id aliquip Lorem id cillum.",
+                "text": "Ipsum incididunt velit voluptate laboris do culpa dolore. Laborum amet do consectetur esse pariatur eiusmod deserunt velit minim non tempor minim. Enim tempor ea fugiat enim deserunt ut laboris aliquip aliquip nostrud.",
+                "spans": []
+              }
+            ],
+            "LinkColor": "1"
+          },
+          {
+            "Link": {
+              "link_type": "Web",
+              "url": "http://twitter.com"
+            },
+            "LinkLabel": [
+              {
+                "type": "paragraph",
+                "text": "Aute ex reprehenderit consequat dolor occaecat proident fugiat et duis. Non ullamco nisi non laborum tempor eu veniam consequat tempor ex officia aute commodo. Nulla elit esse ex occaecat incididunt enim qui aliqua elit ex labore anim.",
+                "spans": []
+              }
+            ],
+            "LinkColor": "1"
+          },
+          {
+            "Link": {
+              "link_type": "Web",
+              "url": "http://twitter.com"
+            },
+            "LinkLabel": [
+              {
+                "type": "paragraph",
+                "text": "Proident id aliquip deserunt deserunt qui enim. Nostrud est excepteur aliqua aute proident voluptate eu voluptate.",
                 "spans": []
               }
             ],
@@ -172,7 +188,20 @@
         ],
         "primary": {}
       }
-    ]
+    ],
+    "Quote": {
+      "default-slice": {
+        "primary": {},
+        "items": {
+          "quote": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   },
   "_cts": {
     "home": {},

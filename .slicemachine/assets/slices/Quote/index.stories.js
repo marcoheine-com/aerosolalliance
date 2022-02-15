@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/Quote';
+
+export default {
+  title: 'slices/Quote'
+}
+
+
+export const _DefaultSlice = () => <MyComponent slice={{"variation":"default-slice","name":"Default slice","slice_type":"quote","items":[{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"},"quote":[{"type":"paragraph","text":"Eiusmod proident tempor aliqua quis.","spans":[]}]},{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"},"quote":[{"type":"paragraph","text":"Reprehenderit ex nulla sit labore reprehenderit magna eiusmod culpa ipsum anim aliquip. Occaecat non ullamco elit sit irure sint. Lorem sint cupidatat culpa quis irure pariatur culpa consectetur.","spans":[]}]},{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"},"quote":[{"type":"paragraph","text":"Nisi irure laboris consequat laboris do ut Lorem amet enim ipsum nulla in magna consectetur. Ea et ad aliqua velit.","spans":[]}]},{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"},"quote":[{"type":"paragraph","text":"Ex proident nisi deserunt cupidatat consequat proident laborum excepteur veniam mollit. Et ad nisi sint exercitation mollit deserunt qui minim. Ut commodo nostrud irure dolore tempor elit sunt.","spans":[]}]}],"primary":{},"id":"_DefaultSlice"}} />
+_DefaultSlice.storyName = 'Default slice'

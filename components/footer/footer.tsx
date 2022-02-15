@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FunctionComponent } from 'react'
 import { Link, RichText, RichTextBlock } from 'prismic-reactjs'
 
-interface ImageProps {
+export interface ImageProps {
   url: string
   dimensions: {
     width: number
@@ -58,7 +58,7 @@ export const Footer: FunctionComponent<Props> = ({ data }) => {
 
         <div className="grid lg:grid-cols-[100px_1fr] lg:pl-5 lg:w-6/12">
           <RichText render={data.partnersHeadline} />
-          <div className="flex items-center">
+          <div className="flex gap-16 items-center">
             <RichText render={data.partners} />
           </div>
         </div>

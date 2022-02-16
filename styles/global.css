@@ -85,4 +85,9 @@
   .imageWrapper p {
     @apply text-sm;
   }
+
+  .fontUvasBlack h1 {
+    font-family: 'UvasBlack-Black';
+    @apply text-6xl 2xl:text-7xl;
+  }
 }

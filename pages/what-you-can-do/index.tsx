@@ -1,10 +1,10 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import Client from '../prismicHelpers'
+import Client from '../../prismicHelpers'
 // @ts-ignore
 import SliceZone from 'next-slicezone'
-import * as Slices from '../slices'
-import { Footer } from '../components/footer'
+import * as Slices from '../../slices'
+import { Footer } from '../../components/footer'
 
 // @ts-ignore
 const resolver = ({ sliceName }) => Slices[sliceName]

@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import Image from 'next/image'
 import { ImageProps } from '../../entities'
 import Link from 'next/link'
+import { linkResolver } from '../../utils/linkResolver'
 
 interface Item {
   image: ImageProps
@@ -19,7 +20,7 @@ const LinkImageGallery: FunctionComponent<Props> = ({ slice }) => {
     <section className="grid gap-y-5 p-5 md:grid-cols-2 md:gap-16 md:p-16 xl:gap-24 xl:p-24">
       {slice?.items?.map((item: any, i: number) => (
         <div key={item.image.alt || i} className="relative">
-          <Link href={item.link}>
+          <Link href={`${linkResolver(item.link.slug || '')}`}>
             <a>
               {item.image.url && (
                 <Image

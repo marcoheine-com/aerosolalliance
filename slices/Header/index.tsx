@@ -20,7 +20,7 @@ interface Props {
       backgroundcolor: Backgroundcolor
       headersvg: SVG
       image: ImageProps
-      headline: RichTextBlock[]
+      textOnImage: RichTextBlock[]
     }
     variation:
       | 'default-slice'
@@ -41,11 +41,22 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
           backgroundcolor={BACKGROUND_COLOR}
           svg={primary.headersvg}
           image={primary.image}
-          headline={primary.headline}
+          headline={primary.textOnImage}
         />
       )
     case 'twoColumnWithMenu':
-      return <div>Two column with menu</div>
+      return (
+        <>
+          <TwoColumnSection
+            backgroundcolor={BACKGROUND_COLOR}
+            svg={primary.headersvg}
+            image={primary.image}
+            headline={primary.textOnImage}
+            className="h-[90vh]"
+          />
+          <HorizontalMenu items={slice.items} className="h-[10vh]" />
+        </>
+      )
     case 'fullWidthWithMenu':
       return (
         <section className="h-screen">

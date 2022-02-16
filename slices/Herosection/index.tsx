@@ -21,8 +21,8 @@ interface Props {
   slice: Slice
 }
 
-const Herosection: FunctionComponent<Props> = ({ slice }): JSX.Element => {
-  const { primary, variation } = slice
+const Herosection: FunctionComponent<Props> = (props): JSX.Element => {
+  const { primary, variation } = props.slice
   const BACKGROUND_COLOR = getBackgroundColorClass(primary.backgroundcolor)
 
   return variation === 'twoColumnHero' ? (

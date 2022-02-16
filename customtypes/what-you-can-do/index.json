@@ -5,6 +5,23 @@
   "status": true,
   "json": {
     "Main": {
+      "subpages": {
+        "config": {
+          "label": "subpages",
+          "placeholder": "",
+          "fields": {
+            "subpage": {
+              "config": {
+                "label": "subpage",
+                "customtypes": [],
+                "select": "document"
+              },
+              "type": "Link"
+            }
+          }
+        },
+        "type": "Group"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

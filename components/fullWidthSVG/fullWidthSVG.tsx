@@ -13,7 +13,6 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
   className,
   svg,
 }): JSX.Element => {
-  console.log(backgroundcolor)
   return (
     <section
       className={`${backgroundcolor} p-20 lg:p-52 flex flex-col justify-center relative ${className}`}

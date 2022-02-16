@@ -1,7 +1,6 @@
 import { Backgroundcolor } from '../entities'
 
 export const getBackgroundColorClass = (color: Backgroundcolor): string => {
-  console.log(color)
   switch (color) {
     case 'yellow':
       return 'bg-yellow'

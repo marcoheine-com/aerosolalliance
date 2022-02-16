@@ -27,6 +27,9 @@
             },
             "image_gallery": {
               "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
             }
           }
         }

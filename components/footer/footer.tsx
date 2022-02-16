@@ -2,16 +2,7 @@ import Image from 'next/image'
 import { FunctionComponent } from 'react'
 import { RichText, RichTextBlock } from 'prismic-reactjs'
 import Link from 'next/link'
-
-// TODO: put in a separate file
-export interface ImageProps {
-  url: string
-  dimensions: {
-    width: number
-    height: number
-  }
-  alt: string
-}
+import { ImageProps } from '../../entities'
 
 interface Props {
   data: {

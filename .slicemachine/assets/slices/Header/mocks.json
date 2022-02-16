@@ -5,8 +5,8 @@
     "slice_type": "header",
     "items": [],
     "primary": {
-      "Backgroundcolor": "Darkblue",
-      "HeadlineSVG": {
+      "backgroundcolor": "purple",
+      "headersvg": {
         "link_type": "media",
         "url": "https://source.unsplash.com/daily"
       }
@@ -14,31 +14,153 @@
   },
   {
     "variation": "twoColumn",
-    "name": "Two Column",
+    "name": "two-column",
     "slice_type": "header",
     "items": [],
     "primary": {
-      "Backgroundcolor": "Grey",
-      "HeadlineSVG": {
+      "backgroundcolor": "white",
+      "headersvg": {
         "link_type": "media",
         "url": "https://source.unsplash.com/daily"
       },
-      "Heroimage": {
+      "image": {
         "dimensions": {
           "width": 900,
           "height": 500
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
       },
-      "Headline": [
+      "textOnImage": [
         {
-          "type": "heading2",
-          "text": "Aggregate real-time e-tailers",
+          "type": "heading1",
+          "text": "Redefine vertical interfaces",
           "spans": []
         }
       ]
+    }
+  },
+  {
+    "variation": "twoColumnWithMenu",
+    "name": "two-column-with-menu",
+    "slice_type": "header",
+    "items": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Dolore eu laborum quis.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Dolor est exercitation qui consectetur laboris labore.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Aute nisi nisi enim consequat mollit proident dolor excepteur dolore reprehenderit minim eu amet aute.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {
+      "backgroundcolor": "white",
+      "headersvg": {
+        "link_type": "media",
+        "url": "https://source.unsplash.com/daily"
+      },
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
+      },
+      "textOnImage": [
+        {
+          "type": "heading1",
+          "text": "Facilitate viral schemas",
+          "spans": []
+        }
+      ]
+    }
+  },
+  {
+    "variation": "fullWidthWithMenu",
+    "name": "full-width-with-menu",
+    "slice_type": "header",
+    "items": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Occaecat officia ut irure laboris excepteur est culpa dolore anim dolor reprehenderit officia veniam amet aliquip.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Sit eiusmod ullamco pariatur labore.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linkLabel": [
+          {
+            "type": "paragraph",
+            "text": "Qui consequat excepteur occaecat ea cillum consectetur deserunt sit elit do reprehenderit nulla proident.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {
+      "backgroundcolor": "red",
+      "headersvg": {
+        "link_type": "media",
+        "url": "https://source.unsplash.com/daily"
+      }
     }
   }
 ]

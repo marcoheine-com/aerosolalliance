@@ -70,6 +70,10 @@
     font-family: 'UvasBlack-Black';
   }
 
+  .fontSwissIntlMono {
+    font-family: 'SuisseIntlMono';
+  }
+
   .fontUvasBlack p {
     @apply text-6xl md:text-4xl lg:text-5xl 2xl:text-7xl;
   }

@@ -18,6 +18,9 @@
             },
             "call_to_action": {
               "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -10,10 +10,10 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "herosection": {
+            "text_content": {
               "type": "SharedSlice"
             },
-            "text_content": {
+            "header": {
               "type": "SharedSlice"
             }
           }

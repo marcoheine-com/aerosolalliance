@@ -30,7 +30,6 @@ interface Props {
 }
 
 const Home: NextPage<Props> = (props) => {
-  console.log(props.menu)
   return (
     <>
       <Head>
@@ -39,13 +38,12 @@ const Home: NextPage<Props> = (props) => {
       </Head>
       <main className="flex relative flex-col mx-auto max-w-[1920px]">
         <nav className="absolute top-0 right-0">
-          <ul>
-            <li>Link 1</li>
-            <li>Link 1</li>
-            <li>Link 1</li>
-            <li>Link 1</li>
-            <li>Link 1</li>
-          </ul>
+          {/* {props.menu && (
+            props.menu.data.slices.map((slice) => (
+              <li>
+
+              </li>
+          )} */}
         </nav>
         <SliceZone slices={props.home.data.slices} resolver={resolver} />
       </main>

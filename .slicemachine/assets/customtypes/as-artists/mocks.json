@@ -1,6 +1,11 @@
 {
-  "id": "e62794df-5b58-4b00-927f-bf35dc99ffc3",
-  "uid": "est-vero-vero",
+  "id": "ec8755e4-ebf7-4f62-b40f-b2c0eb1f6617",
+  "uid": "maxime-iste-minima",
   "type": "as-artists",
-  "data": {}
+  "data": {
+    "parent": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    }
+  }
 }

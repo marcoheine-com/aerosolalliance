@@ -5,22 +5,12 @@
   "status": true,
   "json": {
     "Main": {
-      "subpages": {
+      "uid": {
         "config": {
-          "label": "subpages",
-          "placeholder": "",
-          "fields": {
-            "subpage": {
-              "config": {
-                "label": "subpage",
-                "customtypes": [],
-                "select": "document"
-              },
-              "type": "Link"
-            }
-          }
+          "label": "uid",
+          "placeholder": ""
         },
-        "type": "Group"
+        "type": "UID"
       },
       "slices": {
         "type": "Slices",

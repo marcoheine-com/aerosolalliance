@@ -5,13 +5,7 @@ import { Backgroundcolor, ImageProps, SVG } from '../../entities'
 import { TwoColumnSection } from '../../components/twoColumnSection'
 import { RichTextBlock } from 'prismic-reactjs'
 import { HorizontalMenu } from '../../components/horizontalMenu'
-
-interface Item {
-  link: {
-    slug: string
-  }
-  linkLabel: RichTextBlock[]
-}
+import { Item } from '../../entities/item'
 
 interface Props {
   slice: {

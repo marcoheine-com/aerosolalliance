@@ -16,23 +16,29 @@ export const accessToken = process.env.PRISMIC_ACCESS_TOKEN
 interface Doc {
   type: string
   uid: string
+  url: string
 }
 
 export const linkResolver = (doc: Doc) => {
-  if (doc.type === 'page') {
-    return `/${doc.uid}`
-  }
-  if (doc.type === 'what-you-can-do-subpage') {
-    return `/what-you-can-do/${doc.uid}`
+  if (doc.type === 'home') {
+    return '/'
   }
 
-  return '/'
+  if (doc.type === 'what-you-can-do-subpage') {
+    return `${doc.url}`
+  }
+
+  return `/${doc.uid}`
 }
 
 // -- Route Resolver rules
 // Manages the url links to internal Prismic documents two levels deep (optionals)
 export const routeResolver = {
   routes: [
+    {
+      type: 'home',
+      path: '/',
+    },
     {
       type: 'what-you-can-do-subpage',
       path: '/what-you-can-do/:uid',

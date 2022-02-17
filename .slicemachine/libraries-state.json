@@ -691,7 +691,7 @@
             "slice_type": "herosection",
             "items": [],
             "primary": {
-              "backgroundcolor": "yellow",
+              "backgroundcolor": "white",
               "herosvg": {
                 "link_type": "media",
                 "url": "https://source.unsplash.com/daily"
@@ -704,7 +704,7 @@
             "slice_type": "herosection",
             "items": [],
             "primary": {
-              "backgroundcolor": "lightblue",
+              "backgroundcolor": "grey",
               "herosvg": {
                 "link_type": "media",
                 "url": "https://source.unsplash.com/daily"
@@ -716,12 +716,12 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
               },
               "heroheadline": [
                 {
                   "type": "heading2",
-                  "text": "Repurpose one-to-one synergies",
+                  "text": "Incubate granular interfaces",
                   "spans": []
                 }
               ]
@@ -733,7 +733,18 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/Herosection/default-slice/preview.png",
+            "width": 1295,
+            "height": 1222
+          },
+          "twoColumnHero": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/Herosection/twoColumnHero/preview.png",
+            "width": 1534,
+            "height": 1059
+          }
+        }
       },
       "image_gallery": {
         "library": "slices",
@@ -826,7 +837,13 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/ImageGallery/default-slice/preview.png",
+            "width": 1536,
+            "height": 1132
+          }
+        }
       },
       "link_image_gallery": {
         "library": "slices",
@@ -1001,7 +1018,13 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/LinkImageGallery/default-slice/preview.png",
+            "width": 1532,
+            "height": 1459
+          }
+        }
       },
       "menu": {
         "library": "slices",
@@ -1207,7 +1230,13 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/Quote/default-slice/preview.png",
+            "width": 1275,
+            "height": 1144
+          }
+        }
       },
       "text_content": {
         "library": "slices",
@@ -1251,7 +1280,7 @@
                 "Content": [
                   {
                     "type": "paragraph",
-                    "text": "Adipisicing exercitation enim eu. Laboris id amet laborum officia. Laborum nostrud irure ut fugiat eiusmod culpa aliqua ad fugiat Lorem velit elit consequat reprehenderit velit.",
+                    "text": "Mollit eiusmod cupidatat ut fugiat culpa nostrud irure amet. Lorem do laboris Lorem sunt consequat exercitation deserunt.",
                     "spans": []
                   }
                 ]
@@ -1260,7 +1289,7 @@
                 "Content": [
                   {
                     "type": "paragraph",
-                    "text": "Nulla culpa elit in pariatur cupidatat ut minim id do deserunt ullamco sit. Duis eiusmod voluptate duis aliqua consequat dolore.",
+                    "text": "Elit nulla ullamco veniam. Sit deserunt consectetur est magna Lorem Lorem excepteur. Sint aute aliqua mollit consectetur.",
                     "spans": []
                   }
                 ]
@@ -1269,7 +1298,7 @@
                 "Content": [
                   {
                     "type": "paragraph",
-                    "text": "Est eiusmod consequat eu ad fugiat adipisicing quis duis ipsum non occaecat. Tempor nisi pariatur elit officia et ea. Veniam anim commodo consequat ea nisi qui labore nulla anim eu ex proident cupidatat.",
+                    "text": "Ex laborum occaecat sunt et ullamco mollit magna ut. Non nulla exercitation elit anim nostrud. Aliquip laboris qui est tempor incididunt voluptate tempor magna deserunt labore officia.",
                     "spans": []
                   }
                 ]
@@ -1278,16 +1307,7 @@
                 "Content": [
                   {
                     "type": "paragraph",
-                    "text": "Aliqua ea fugiat officia sit minim dolore nostrud cupidatat aliqua.",
-                    "spans": []
-                  }
-                ]
-              },
-              {
-                "Content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Magna sit nulla incididunt magna reprehenderit cupidatat elit. Sit elit mollit proident amet anim esse aliquip.",
+                    "text": "Sint exercitation ipsum id amet commodo Lorem laboris voluptate proident et cupidatat laborum.",
                     "spans": []
                   }
                 ]
@@ -1301,7 +1321,13 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/TextContent/default-slice/preview.png",
+            "width": 1538,
+            "height": 1214
+          }
+        }
       }
     }
   }

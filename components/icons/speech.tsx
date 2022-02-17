@@ -1,6 +1,4 @@
-import { FunctionComponent } from 'react'
-
-export const Speech: FunctionComponent = () => {
+export const Speech: React.FunctionComponent = (): JSX.Element => {
   return (
     <svg
       width="333"

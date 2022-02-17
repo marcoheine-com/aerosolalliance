@@ -40,6 +40,9 @@
     font-family: 'SuisseIntlMono';
     @apply text-4xl mb-4;
   }
+  a > p {
+    @apply m-0;
+  }
 }
 
 @layer utilities {

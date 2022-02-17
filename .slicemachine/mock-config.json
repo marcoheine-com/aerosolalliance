@@ -133,7 +133,7 @@
         "slice_type": "herosection",
         "items": [],
         "primary": {
-          "backgroundcolor": "lightblue",
+          "backgroundcolor": "yellow",
           "herosvg": {
             "link_type": "media",
             "url": "https://source.unsplash.com/daily"
@@ -158,12 +158,12 @@
             },
             "alt": "Placeholder image",
             "copyright": null,
-            "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+            "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
           },
           "heroheadline": [
             {
               "type": "heading2",
-              "text": "Deliver dynamic e-services",
+              "text": "Repurpose one-to-one synergies",
               "spans": []
             }
           ]
@@ -171,8 +171,8 @@
       }
     ],
     "TextMedia": {},
-    "TextContent": [
-      {
+    "TextContent": {
+      "0": {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "text_content",
@@ -215,8 +215,18 @@
           }
         ],
         "primary": {}
+      },
+      "default-slice": {
+        "items": {
+          "Content": {
+            "config": {
+              "patternType": "STORY",
+              "blocks": 1
+            }
+          }
+        }
       }
-    ],
+    },
     "CallToAction": [
       {
         "variation": "default-slice",

@@ -5,74 +5,52 @@
     "slice_type": "call_to_action",
     "items": [
       {
-        "Link": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "LinkLabel": [
-          {
-            "type": "paragraph",
-            "text": "Ea labore commodo eiusmod sit nostrud duis labore. Cillum tempor est voluptate ullamco laboris qui cillum.",
-            "spans": []
-          }
-        ],
-        "LinkColor": "1"
-      },
-      {
-        "Link": {
+        "link": {
           "link_type": "Web",
           "url": "http://google.com"
         },
-        "LinkLabel": [
+        "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Minim deserunt nulla excepteur. Laboris voluptate fugiat do ex reprehenderit aliquip quis proident dolore.",
+            "text": "Pariatur excepteur aliqua veniam occaecat do mollit ea culpa ut aute amet consequat laboris qui occaecat.",
             "spans": []
           }
         ],
-        "LinkColor": "2"
+        "linkColor": "purple",
+        "invertedColor": true,
+        "rotation": "right"
       },
       {
-        "Link": {
+        "link": {
           "link_type": "Web",
           "url": "https://prismic.io"
         },
-        "LinkLabel": [
+        "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Exercitation ullamco occaecat laboris ad.",
+            "text": "Mollit duis id tempor occaecat labore reprehenderit magna fugiat nulla do pariatur.",
             "spans": []
           }
         ],
-        "LinkColor": "2"
+        "linkColor": "purple",
+        "invertedColor": false,
+        "rotation": "left"
       },
       {
-        "Link": {
+        "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "https://slicemachine.dev"
         },
-        "LinkLabel": [
+        "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Id quis tempor dolore nostrud. Fugiat occaecat sint et nulla fugiat ad sint elit do.",
+            "text": "Deserunt culpa pariatur laborum aute anim qui sint. Deserunt exercitation mollit ullamco quis esse consectetur excepteur Lorem ea laborum aliqua. Laboris tempor aliquip veniam deserunt dolore nostrud adipisicing adipisicing.",
             "spans": []
           }
         ],
-        "LinkColor": "1"
-      },
-      {
-        "Link": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "LinkLabel": [
-          {
-            "type": "paragraph",
-            "text": "Eiusmod ad dolore consequat pariatur do occaecat dolore nisi nisi nostrud consectetur nostrud ullamco mollit cupidatat. Ut ea proident qui sunt nulla occaecat et laborum tempor. Esse cupidatat adipisicing adipisicing nulla magna nostrud fugiat cupidatat irure nisi id.",
-            "spans": []
-          }
-        ],
-        "LinkColor": "2"
+        "linkColor": "purple",
+        "invertedColor": false,
+        "rotation": "left"
       }
     ],
     "primary": {}

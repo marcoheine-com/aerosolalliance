@@ -20,7 +20,7 @@ interface Props {
 
 const getLinkStyling = (item: Item): string => {
   if (item.invertedColor) {
-    return `text-${item.linkColor} border-${item.linkColor} border-2`
+    return `border-2 border-${item.linkColor} text-${item.linkColor}`
   } else {
     return `bg-${item.linkColor} text-white`
   }
@@ -30,7 +30,7 @@ const CallToAction: React.FunctionComponent<Props> = ({
   slice,
 }): JSX.Element => {
   return (
-    <section className="flex gap-8 px-5 mb-40 max-w-4xl">
+    <section className="flex gap-8 px-5 mx-auto mb-40 max-w-4xl">
       {slice?.items?.map((item: Item) => (
         <Link href={`/${item.link?.uid}`} key={item.link.uid}>
           <a

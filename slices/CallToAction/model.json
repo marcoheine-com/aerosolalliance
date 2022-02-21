@@ -14,7 +14,7 @@
       "items": {
         "link": {
           "config": {
-            "label": "link",
+            "label": "Link",
             "placeholder": "",
             "allowTargetBlank": false
           },
@@ -22,7 +22,7 @@
         },
         "linkLabel": {
           "config": {
-            "label": "linkLabel",
+            "label": "Link Label",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph"
@@ -31,7 +31,7 @@
         },
         "linkColor": {
           "config": {
-            "label": "linkColor",
+            "label": "Link Color",
             "placeholder": "",
             "options": [
               "purple",
@@ -45,7 +45,7 @@
         },
         "invertedColor": {
           "config": {
-            "label": "invertedColor",
+            "label": "Inverted Color",
             "placeholder_false": "false",
             "placeholder_true": "true",
             "default_value": false
@@ -54,7 +54,7 @@
         },
         "rotation": {
           "config": {
-            "label": "rotation",
+            "label": "Rotation",
             "placeholder": "",
             "options": [
               "left",

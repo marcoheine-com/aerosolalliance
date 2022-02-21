@@ -1,0 +1,52 @@
+{
+  "id": "full_width_image",
+  "type": "SharedSlice",
+  "name": "FullWidthImage",
+  "description": "FullWidthImage",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FullWidthImage",
+      "primary": {
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "twoColumn",
+      "name": "two-column",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FullWidthImage",
+      "primary": {
+        "leftImage": {
+          "config": {
+            "label": "Left Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "rightImage": {
+          "config": {
+            "label": "rightImage",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

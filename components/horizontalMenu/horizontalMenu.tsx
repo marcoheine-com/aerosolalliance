@@ -22,7 +22,7 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
 
   return (
     <section
-      className={`flex justify-around items-center p-5 bg-grey ${className}`}
+      className={`flex flex-col lg:flex-row justify-around items-center p-5 bg-grey ${className}`}
     >
       {items?.map((item) =>
         item.link?.url ? (

@@ -1,0 +1,37 @@
+{
+  "id": "about-us",
+  "label": "About Us",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "header": {
+              "type": "SharedSlice"
+            },
+            "text_content": {
+              "type": "SharedSlice"
+            },
+            "image_gallery": {
+              "type": "SharedSlice"
+            },
+            "herosection": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { TwoColumnSection } from '../../components/twoColumnSection'
 import { RichTextBlock } from 'prismic-reactjs'
 import { HorizontalMenu } from '../../components/horizontalMenu'
 import { Item } from '../../entities/item'
+import { FullWidthWithBgImage } from '../../components/fullWidthWithBgImage'
 
 interface Props {
   slice: {
@@ -14,12 +15,14 @@ interface Props {
       headersvg: SVG
       image: ImageProps
       textOnImage: RichTextBlock[]
+      backgroundImage: ImageProps
     }
     variation:
       | 'default-slice'
       | 'twoColumn'
       | 'twoColumnWithMenu'
       | 'fullWidthWithMenu'
+      | 'fullWidthWithBgImage'
   }
 }
 
@@ -60,6 +63,14 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
           <HorizontalMenu items={slice.items} className="h-[10vh]" />
         </section>
       )
+    case 'fullWidthWithBgImage':
+      return (
+        <FullWidthWithBgImage
+          svg={primary.headersvg}
+          bgImage={primary.backgroundImage}
+        />
+      )
+
     default:
       return (
         <FullWidthSVG

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { RichText, RichTextBlock } from 'prismic-reactjs'
 import { linkResolver } from '../../prismicConfiguration'
 import { Arrow, BurgerIcon, CrossIcon } from '../icons'
+import { useOnClickOutside } from '../../hooks/useOnclickOutside'
 
 interface SubLink {
   subLink: {
@@ -32,17 +33,27 @@ interface Props {
 export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
   const [isOpen, setIsOpen] = React.useState(false)
 
+  const ref = React.useRef(null)
+
+  useOnClickOutside(ref, () => setIsOpen(false))
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
   return (
     <>
-      <button onClick={toggleMenu} className="absolute top-12 right-12 z-[2]">
+      <button
+        onClick={toggleMenu}
+        className="absolute top-12 right-12 z-[2] p-4 bg-grey"
+      >
         {isOpen ? <CrossIcon /> : <BurgerIcon />}
       </button>
 
       {isOpen && (
-        <nav className="absolute top-0 right-0 z-[1] p-20 w-full uppercase bg-grey md:w-[50vw] md:max-w-xl fontSwissIntlMono">
+        <nav
+          className="absolute top-0 right-0 z-[1] p-20 w-full uppercase bg-grey md:w-[50vw] md:max-w-xl fontSwissIntlMono"
+          ref={ref}
+        >
           <ul>
             {menuItems?.map((item: Item) => (
               <li
@@ -64,7 +75,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
                               href={linkResolver(item.subLink)}
                               key={item.subLink.uid}
                             >
-                              <a className="flex gap-8 py-2">
+                              <a className="flex gap-8 items-center py-2">
                                 {<Arrow />}
                                 <RichText render={item.subLinkLabel} />
                               </a>

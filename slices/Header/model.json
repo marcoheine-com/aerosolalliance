@@ -209,6 +209,48 @@
           "type": "StructuredText"
         }
       }
+    },
+    {
+      "id": "fullWidthWithBgImage",
+      "name": "Full Width with BG-Image",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Header",
+      "primary": {
+        "backgroundcolor": {
+          "config": {
+            "label": "backgroundcolor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "yellow",
+              "lightblue",
+              "darkblue",
+              "red",
+              "purple"
+            ],
+            "default_value": "white"
+          },
+          "type": "Select"
+        },
+        "headersvg": {
+          "config": {
+            "label": "headersvg",
+            "placeholder": "",
+            "select": "media"
+          },
+          "type": "Link"
+        },
+        "backgroundImage": {
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
     }
   ]
 }

@@ -52,7 +52,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
 
       {isOpen && (
         <nav
-          className="absolute top-0 right-0 z-[1] p-20 w-full uppercase bg-grey md:w-[50vw] md:max-w-xl fontSwissIntlMono"
+          className="absolute top-0 right-0 z-[1] p-5 pt-20 w-full uppercase bg-grey md:p-20 md:w-[50vw] md:max-w-xl fontSwissIntlMono"
           ref={ref}
         >
           <ul>

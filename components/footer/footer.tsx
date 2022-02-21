@@ -47,7 +47,7 @@ export const Footer: FunctionComponent<Props> = ({ data }) => {
               <address className="not-italic">
                 <RichText render={data.adress} />
               </address>
-              <div>
+              <div className="mt-4 md:mt-0">
                 <RichText render={data.links} />
               </div>
             </div>

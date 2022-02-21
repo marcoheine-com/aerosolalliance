@@ -43,7 +43,7 @@ export const Footer: FunctionComponent<Props> = ({ data }) => {
         <section className="flex flex-col mx-auto mb-20 w-full lg:flex-row lg:justify-between xl:justify-around">
           <div className="mb-8 lg:pr-5 lg:mb-0 lg:w-6/12 lg:border-r-2 lg:border-r-darkGrey">
             <RichText render={data.adressHeadline} />
-            <div className="grid grid-cols-2">
+            <div className="grid md:grid-cols-2">
               <address className="not-italic">
                 <RichText render={data.adress} />
               </address>

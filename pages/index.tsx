@@ -33,15 +33,6 @@ interface Props {
   menu: any
 }
 
-interface SubLink {
-  subLink: {
-    uid: string
-    type: string
-    url: string
-  }
-  subLinkLabel: RichTextBlock[]
-}
-
 const Home: NextPage<Props> = (props) => {
   return (
     <>

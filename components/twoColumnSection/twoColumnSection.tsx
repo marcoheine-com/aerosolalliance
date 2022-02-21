@@ -1,10 +1,11 @@
 import { RichText, RichTextBlock } from 'prismic-reactjs'
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
-import { ImageProps, SVG } from '../../entities'
+import { Backgroundcolor, ImageProps, SVG } from '../../entities'
+import { getBackgroundColorClass } from '../../utils/getBackgroundColorClass'
 
 interface Props {
-  backgroundcolor: string
+  backgroundcolor: Backgroundcolor
   className?: string
   svg: SVG
   image: ImageProps
@@ -18,12 +19,13 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
   image,
   headline,
 }) => {
+  const BACKGROUND_COLOR = getBackgroundColorClass(backgroundcolor)
   return (
     <section
       className={`${className} grid grid-rows-2 overflow-hidden 2xl:grid-rows-1 2xl:grid-cols-2`}
     >
       <section
-        className={`${backgroundcolor} flex flex-col justify-center py-20 px-5 lg:px-20`}
+        className={`${BACKGROUND_COLOR} flex flex-col justify-center py-20 px-5 lg:px-20`}
       >
         {svg?.url && (
           <Image

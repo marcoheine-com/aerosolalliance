@@ -18,45 +18,25 @@ interface Props {
   }
 }
 
-const getInvertedStyles = (color: string): string =>
-  ` bg-${color} b-2 text-${color}`
-
-const getNormalStyles = (color: string): string => ` bg-${color} text-white`
-
-const getLinkStyling = (
-  invertedColor: boolean,
-  linkColor: string,
-  rotation: string
-): string => {
-  let STYLES = ''
-  if (rotation === 'left') {
-    STYLES = '-rotate-[40deg]'
-  } else if (rotation === 'right') {
-    STYLES = '-rotate-[-40deg]'
-  }
-
-  if (invertedColor) {
-    STYLES += getInvertedStyles(linkColor)
+const getLinkStyling = (item: Item): string => {
+  if (item.invertedColor) {
+    return `text-${item.linkColor} border-${item.linkColor} border-2`
   } else {
-    STYLES += getNormalStyles(linkColor)
+    return `bg-${item.linkColor} text-white`
   }
-
-  return STYLES
 }
 
 const CallToAction: React.FunctionComponent<Props> = ({
   slice,
 }): JSX.Element => {
   return (
-    <section className="flex gap-8 px-5">
+    <section className="flex gap-8 px-5 mb-40 max-w-4xl">
       {slice?.items?.map((item: Item) => (
         <Link href={`/${item.link?.uid}`} key={item.link.uid}>
           <a
-            className={`${getLinkStyling(
-              item.invertedColor,
-              item.linkColor,
-              item.rotation
-            )} inline-block`}
+            className={`${getLinkStyling(item)} ${
+              item.rotation === 'left' ? 'rotate-[-40deg]' : 'rotate-[40deg]'
+            } fontSwissIntlMono uppercase rounded-3xl py-2 px-5 inline-block`}
           >
             <RichText render={item.linkLabel} />
           </a>

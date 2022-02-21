@@ -12,8 +12,9 @@ import { BurgerMenu } from '../../components/burgerMenu'
 const resolver = ({ sliceName }) => Slices[sliceName]
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const document =
-    (await Client().getByUID('what-you-can-do-subpage', params.uid, {})) || null
+  const type = 'what-you-can-do-subpage'
+  // @ts-ignore
+  const document = (await Client().getByUID(type, params?.uid, {})) || null
   const footer = (await Client().getSingle('footer', {})) || null
   const menu = (await Client().getSingle('burgerMenu', {})) || null
 

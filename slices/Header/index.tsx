@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react'
 import { FullWidthSVG } from '../../components/fullWidthSVG'
-import { getBackgroundColorClass } from '../../utils/getBackgroundColorClass'
 import { Backgroundcolor, ImageProps, SVG } from '../../entities'
 import { TwoColumnSection } from '../../components/twoColumnSection'
 import { RichTextBlock } from 'prismic-reactjs'
@@ -26,13 +25,12 @@ interface Props {
 
 const Header: FunctionComponent<Props> = ({ slice }) => {
   const { variation, primary } = slice
-  const BACKGROUND_COLOR = getBackgroundColorClass(primary.backgroundcolor)
 
   switch (variation) {
     case 'twoColumn':
       return (
         <TwoColumnSection
-          backgroundcolor={BACKGROUND_COLOR}
+          backgroundcolor={primary.backgroundcolor}
           svg={primary.headersvg}
           image={primary.image}
           headline={primary.textOnImage}
@@ -42,11 +40,11 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
       return (
         <>
           <TwoColumnSection
-            backgroundcolor={BACKGROUND_COLOR}
+            backgroundcolor={primary.backgroundcolor}
             svg={primary.headersvg}
             image={primary.image}
             headline={primary.textOnImage}
-            className="h-[90vh]"
+            className={'h-[90vh]'}
           />
           <HorizontalMenu items={slice.items} className="h-[10vh]" />
         </>
@@ -55,9 +53,9 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
       return (
         <section className="h-screen">
           <FullWidthSVG
-            backgroundcolor={BACKGROUND_COLOR}
+            backgroundcolor={primary.backgroundcolor}
             svg={primary.headersvg}
-            className="h-[90vh]"
+            className={'h-[90vh]'}
           />
           <HorizontalMenu items={slice.items} className="h-[10vh]" />
         </section>
@@ -65,7 +63,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
     default:
       return (
         <FullWidthSVG
-          backgroundcolor={BACKGROUND_COLOR}
+          backgroundcolor={primary.backgroundcolor}
           className="h-screen"
           svg={primary.headersvg}
         />

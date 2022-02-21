@@ -12,6 +12,25 @@
         },
         "type": "UID"
       },
+      "subpages": {
+        "config": {
+          "label": "subpages",
+          "placeholder": "",
+          "fields": {
+            "subpage": {
+              "config": {
+                "label": "subpage",
+                "customtypes": [
+                  "what-you-can-do-subpage"
+                ],
+                "select": "document"
+              },
+              "type": "Link"
+            }
+          }
+        },
+        "type": "Group"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

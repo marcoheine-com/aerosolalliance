@@ -45,6 +45,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
       <button
         onClick={toggleMenu}
         className="absolute top-12 right-12 z-[2] p-4 bg-grey"
+        aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >
         {isOpen ? <CrossIcon /> : <BurgerIcon />}
       </button>

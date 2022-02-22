@@ -9,6 +9,13 @@ export const apiEndpoint = `https://${repoName}.cdn.prismic.io/api/v2`
 // -- Access Token if the repository is not public
 // Generate a token in your dashboard and configure it here if your repository is private
 export const accessToken = process.env.PRISMIC_ACCESS_TOKEN
+// -- Firebse API key for connectivity with firebse
+export const firebaseApiKey = process.env.FIREBASE_API_KEY
+// -- Definition of baseURL based on running environment
+export const baseURL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000/'
+    : 'https://www.aerosolalliance.com/'
 
 // -- Link resolution rules
 // Manages the url links to internal Prismic documents

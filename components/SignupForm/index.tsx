@@ -1,7 +1,9 @@
 import React from 'react'
-import { writeUserData } from '../../services/firebase/resource'
+import { postData } from '../../services/resource'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { baseURL } from '../../prismicConfiguration'
+import { toastConfigurations } from '../../services/helpers'
 
 const SignupForm = () => {
   const styles = {
@@ -19,31 +21,26 @@ const SignupForm = () => {
     e.preventDefault()
     let userInfo = {}
     if (e.target.username.value) userInfo.username = e.target.username.value
-    if (e.target.email.value) userInfo.email = e.target.username.value
-    if (e.target.position.value) userInfo.position = e.target.username.value
-    if (e.target.question.value) userInfo.question = e.target.username.value
+    if (e.target.email.value) userInfo.email = e.target.email.value
+    if (e.target.position.value) userInfo.position = e.target.position.value
+    if (e.target.question.value) userInfo.question = e.target.question.value
 
-    try {
-      writeUserData(userInfo)
-    } catch (e) {
-      console.error(e)
-    } finally {
-      toast.success('🦄 Congrats! You successfully signed the petition!', {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      })
-      clearInputValues(e)
-    }
+    postData(`${baseURL}api/sign`, userInfo).then((data) => {
+      if (data.status !== 200) {
+        toast.error('Ooops, something went wrong!', toastConfigurations)
+      } else {
+        toast.success(
+          '🦄 Congrats! You successfully signed the petition!',
+          toastConfigurations
+        )
+        clearInputValues(e)
+      }
+    })
   }
 
   return (
     <>
-      <div className="flex flex-row px-5 relative">
+      <div className="flex relative flex-row px-5">
         <div className="basis-full">
           <h2>JOIN THE ALLIANCE</h2>
           <form action="" onSubmit={handleSignupFormSubmit}>

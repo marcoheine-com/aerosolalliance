@@ -12,10 +12,6 @@ import { RichText, RichTextBlock } from 'prismic-reactjs'
 import { linkResolver } from '../prismicConfiguration'
 import { BurgerMenu } from '../components/burgerMenu'
 
-import { initializeApp } from 'firebase/app'
-import firebaseConfig from '../services/firebase/config'
-initializeApp(firebaseConfig)
-
 // @ts-ignore
 const resolver = ({ sliceName }) => Slices[sliceName]
 
@@ -42,17 +38,7 @@ interface Props {
 const Home: NextPage<Props> = (props) => {
   return (
     <>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+      <ToastContainer />
       <SignupForm />
       <Head>
         <title>Aerosol Aliance</title>

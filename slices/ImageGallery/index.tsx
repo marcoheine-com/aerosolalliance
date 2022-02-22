@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { RichText, RichTextBlock } from 'prismic-reactjs'
 import React, { FunctionComponent } from 'react'
-import { ImageProps } from '../../components/footer/footer'
+import { ImageProps } from '../../entities'
 
 interface Item {
   image: ImageProps

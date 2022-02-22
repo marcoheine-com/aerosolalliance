@@ -1,0 +1,1 @@
+export { FullWidthWithBgImage } from './fullWidthWithBgImage'

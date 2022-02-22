@@ -21,10 +21,18 @@ CMS [Prismic](https://prismic.io/). For deployment we use
 
 Every file inside the pages folder will render as a page with its own route.
 
+### 🍕 Slices
+
+[Slices](https://prismic.io/docs/core-concepts/slices) are reusable Prismic
+Components. They can be used on pages to add dynamic content.
+
+You can use the slicemachine to see all the available slices or add new ones.
+See [Prismic Slicemachine](#prismic-slicemachine) on how to use it.
+
 ### 🧱 Components
 
-Files which are reusable or aren't pages will be located in the components
-folder.
+Files which are reusable and aren't slices or pages will be located in the
+components folder.
 
 ## 🧑🏻‍💻 Contributing
 
@@ -52,6 +60,8 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 result.
 
+### Prismic Slicemachine
+
 To create new prismic slices or custom types locally, you can use the
 slicemachine.
 
@@ -60,6 +70,10 @@ npm run slicemachine
 ```
 
 It will than be availale on [http://localhost:9000](http://localhost:9999).
+
+Check out the
+[documentation](https://prismic.io/docs/technologies/create-and-model-a-component-nextjs)
+on how to use it.
 
 ### Build for production
 

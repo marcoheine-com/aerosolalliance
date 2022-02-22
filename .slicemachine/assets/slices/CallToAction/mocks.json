@@ -5,88 +5,84 @@
     "slice_type": "call_to_action",
     "items": [
       {
-        "Link": {
+        "link": {
           "link_type": "Web",
           "url": "http://twitter.com"
         },
-        "LinkLabel": [
+        "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Aute tempor amet minim quis adipisicing eu nostrud enim consequat ut.",
+            "text": "Laboris ipsum dolore excepteur magna quis aliqua enim duis consectetur culpa. Aliquip culpa ad labore proident amet officia deserunt amet aliquip magna sit.",
             "spans": []
           }
         ],
-        "LinkColor": "1"
+        "linkColor": "purple",
+        "invertedColor": true,
+        "rotation": "left"
       },
       {
-        "Link": {
+        "link": {
           "link_type": "Web",
           "url": "https://slicemachine.dev"
         },
-        "LinkLabel": [
+        "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Magna adipisicing anim amet exercitation labore nostrud et dolor voluptate laborum eiusmod.",
+            "text": "Adipisicing excepteur labore reprehenderit culpa elit deserunt eu. Velit sint pariatur amet do et officia deserunt laborum non irure labore ex non esse. Mollit ipsum proident reprehenderit elit minim exercitation ullamco.",
             "spans": []
           }
         ],
-        "LinkColor": "2"
+        "linkColor": "darkblue",
+        "invertedColor": false,
+        "rotation": "left"
       },
       {
-        "Link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "LinkLabel": [
-          {
-            "type": "paragraph",
-            "text": "Nostrud est elit voluptate ex consequat exercitation laborum cillum eiusmod quis.",
-            "spans": []
-          }
-        ],
-        "LinkColor": "1"
-      },
-      {
-        "Link": {
+        "link": {
           "link_type": "Web",
           "url": "http://google.com"
         },
-        "LinkLabel": [
+        "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Ipsum incididunt velit voluptate laboris do culpa dolore. Laborum amet do consectetur esse pariatur eiusmod deserunt velit minim non tempor minim. Enim tempor ea fugiat enim deserunt ut laboris aliquip aliquip nostrud.",
+            "text": "Et ea consectetur incididunt velit elit do proident labore nulla proident ad et amet proident reprehenderit.",
             "spans": []
           }
         ],
-        "LinkColor": "1"
+        "linkColor": "darkblue",
+        "invertedColor": false,
+        "rotation": "left"
       },
       {
-        "Link": {
+        "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "https://slicemachine.dev"
         },
-        "LinkLabel": [
+        "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Aute ex reprehenderit consequat dolor occaecat proident fugiat et duis. Non ullamco nisi non laborum tempor eu veniam consequat tempor ex officia aute commodo. Nulla elit esse ex occaecat incididunt enim qui aliqua elit ex labore anim.",
+            "text": "Elit magna ullamco velit.",
             "spans": []
           }
         ],
-        "LinkColor": "1"
+        "linkColor": "purple",
+        "invertedColor": true,
+        "rotation": "right"
       },
       {
-        "Link": {
+        "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "https://slicemachine.dev"
         },
-        "LinkLabel": [
+        "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Proident id aliquip deserunt deserunt qui enim. Nostrud est excepteur aliqua aute proident voluptate eu voluptate.",
+            "text": "Ad consectetur irure adipisicing aliquip quis sit culpa commodo Lorem officia veniam.",
             "spans": []
           }
         ],
-        "LinkColor": "2"
+        "linkColor": "purple",
+        "invertedColor": true,
+        "rotation": "right"
       }
     ],
     "primary": {}

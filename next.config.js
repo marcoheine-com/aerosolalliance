@@ -8,5 +8,9 @@ module.exports = {
       'images.unsplash.com',
     ],
   },
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
   reactStrictMode: true,
 }

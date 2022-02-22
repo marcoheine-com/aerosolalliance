@@ -5,6 +5,32 @@
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "subpages": {
+        "config": {
+          "label": "subpages",
+          "placeholder": "",
+          "fields": {
+            "subpage": {
+              "config": {
+                "label": "subpage",
+                "customtypes": [
+                  "what-you-can-do-subpage"
+                ],
+                "select": "document"
+              },
+              "type": "Link"
+            }
+          }
+        },
+        "type": "Group"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -17,6 +43,12 @@
               "type": "SharedSlice"
             },
             "call_to_action": {
+              "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
+            },
+            "full_width_image": {
               "type": "SharedSlice"
             }
           }

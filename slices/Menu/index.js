@@ -1,7 +1,7 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
 
-const CallToAction = ({ slice }) => (
+const Menu = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -28,4 +28,4 @@ const CallToAction = ({ slice }) => (
   </section>
 )
 
-export default CallToAction
+export default Menu

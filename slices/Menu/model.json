@@ -1,0 +1,53 @@
+{
+  "id": "menu",
+  "type": "SharedSlice",
+  "name": "Menu",
+  "description": "Menu",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Menu",
+      "primary": {
+        "link": {
+          "config": {
+            "label": "link",
+            "placeholder": "",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "linkLabel": {
+          "config": {
+            "label": "linkLabel",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "subLink": {
+          "config": {
+            "label": "subLink",
+            "placeholder": "",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "subLinkLabel": {
+          "config": {
+            "label": "subLinkLabel",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        }
+      }
+    }
+  ]
+}

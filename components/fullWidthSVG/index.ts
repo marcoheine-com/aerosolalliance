@@ -1,0 +1,1 @@
+export { FullWidthSVG } from './fullWidthSVG'

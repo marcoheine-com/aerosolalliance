@@ -12,7 +12,7 @@
       "description": "CallToAction",
       "primary": {},
       "items": {
-        "Link": {
+        "link": {
           "config": {
             "label": "Link",
             "placeholder": "",
@@ -20,23 +20,47 @@
           },
           "type": "Link"
         },
-        "LinkLabel": {
+        "linkLabel": {
           "config": {
-            "label": "LinkLabel",
+            "label": "Link Label",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph"
           },
           "type": "StructuredText"
         },
-        "LinkColor": {
+        "linkColor": {
           "config": {
-            "label": "LinkColor",
+            "label": "Link Color",
             "placeholder": "",
             "options": [
-              "1",
-              "2"
-            ]
+              "purple",
+              "red",
+              "darkblue",
+              "green"
+            ],
+            "default_value": "purple"
+          },
+          "type": "Select"
+        },
+        "invertedColor": {
+          "config": {
+            "label": "Inverted Color",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        },
+        "rotation": {
+          "config": {
+            "label": "Rotation",
+            "placeholder": "",
+            "options": [
+              "left",
+              "right"
+            ],
+            "default_value": "left"
           },
           "type": "Select"
         }

@@ -1,8 +1,6 @@
 {
   "apiEndpoint": "https://aerosolalliance.com.prismic.io/api/v2",
-  "libraries": [
-    "@/slices"
-  ],
-  "_latest": "0.1.0",
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+  "libraries": ["@/slices"],
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "_latest": "0.1.0"
 }

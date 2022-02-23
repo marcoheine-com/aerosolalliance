@@ -1,7 +1,8 @@
-export type Backgroundcolor =
+export type Color =
   | 'yellow'
   | 'red'
   | 'purple'
   | 'lightblue'
   | 'darkblue'
   | 'white'
+  | 'green'

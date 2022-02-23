@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { FullWidthSVG } from '../../components/fullWidthSVG'
-import { Backgroundcolor, ImageProps, SVG } from '../../entities'
+import { Color, ImageProps, SVG } from '../../entities'
 import { TwoColumnSection } from '../../components/twoColumnSection'
 import { RichTextBlock } from 'prismic-reactjs'
 import { HorizontalMenu } from '../../components/horizontalMenu'
@@ -11,7 +11,7 @@ interface Props {
   slice: {
     items: Item[]
     primary: {
-      backgroundcolor: Backgroundcolor
+      backgroundcolor: Color
       headersvg: SVG
       image: ImageProps
       textOnImage: RichTextBlock[]

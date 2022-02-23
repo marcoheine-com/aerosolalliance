@@ -28,6 +28,10 @@ export const linkResolver = (doc: Doc) => {
     return `${doc.url}`
   }
 
+  if (doc.type === 'facts-subpage') {
+    return `${doc.url}`
+  }
+
   return `/${doc.uid}`
 }
 
@@ -46,6 +50,10 @@ export const routeResolver = {
     {
       type: 'what-you-can-do',
       path: '/:uid',
+    },
+    {
+      type: 'facts-subpage',
+      path: '/facts/:uid',
     },
   ],
 }

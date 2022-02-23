@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { FunctionComponent } from 'react'
-import { Backgroundcolor, SVG } from '../../entities'
-import { getBackgroundColorClass } from '../../utils/getBackgroundColorClass'
+import { Color, SVG } from '../../entities'
+import { getTailwindClass } from '../../utils/getTailwindClass'
 
 interface Props {
-  backgroundcolor: Backgroundcolor
+  backgroundcolor: Color
   className?: string
   svg: SVG
 }
@@ -14,7 +14,7 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
   className,
   svg,
 }): JSX.Element => {
-  const BACKGROUND_COLOR = getBackgroundColorClass(backgroundcolor)
+  const BACKGROUND_COLOR = getTailwindClass('bg', backgroundcolor)
 
   return (
     <section

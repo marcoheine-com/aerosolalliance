@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react'
 import { RichTextBlock } from 'prismic-reactjs'
-import { Backgroundcolor, ImageProps, SVG } from '../../entities'
+import { Color, ImageProps, SVG } from '../../entities'
 import { FullWidthSVG } from '../../components/fullWidthSVG'
 import { TwoColumnSection } from '../../components/twoColumnSection'
 
 interface HeroSection {
-  backgroundcolor: Backgroundcolor
+  backgroundcolor: Color
   herosvg: SVG
   heroimage: ImageProps
   heroheadline: RichTextBlock[]

@@ -1,3 +1,3 @@
 export * from './imageProps'
-export * from './backgroundcolor'
+export * from './color'
 export * from './svg'

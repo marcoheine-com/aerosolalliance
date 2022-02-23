@@ -1,6 +1,7 @@
 import { firebaseApiKey } from '../prismicConfiguration'
+import { ToastOptions } from 'react-toastify'
 
-export const toastConfigurations = {
+export const toastConfigurations: ToastOptions = {
   position: 'top-right',
   autoClose: 5000,
   hideProgressBar: true,

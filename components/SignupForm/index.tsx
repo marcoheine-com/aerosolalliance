@@ -1,29 +1,40 @@
-import React from 'react'
+import React, { FormEvent, SyntheticEvent } from 'react'
 import { postData } from '../../services/resource'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { baseURL } from '../../prismicConfiguration'
 import { toastConfigurations } from '../../services/helpers'
 
+interface UserInfo {
+  username?: string
+  email?: string
+  position?: string
+  question?: string
+}
+
 const SignupForm = () => {
   const styles = {
     input:
       'placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-2 pr-3 mb-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm',
   }
-  const clearInputValues = (e) => {
-    e.target.username.value = ''
-    e.target.email.value = ''
-    e.target.position.value = ''
-    e.target.question.value = ''
+  const clearInputValues = (e: FormEvent<HTMLFormElement>) => {
+    e.currentTarget.username.value = ''
+    e.currentTarget.email.value = ''
+    e.currentTarget.position.value = ''
+    e.currentTarget.question.value = ''
   }
 
-  const handleSignupFormSubmit = (e) => {
+  const handleSignupFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    let userInfo = {}
-    if (e.target.username.value) userInfo.username = e.target.username.value
-    if (e.target.email.value) userInfo.email = e.target.email.value
-    if (e.target.position.value) userInfo.position = e.target.position.value
-    if (e.target.question.value) userInfo.question = e.target.question.value
+    let userInfo: UserInfo = {}
+    if (e.currentTarget.username.value)
+      userInfo.username = e.currentTarget.username.value
+    if (e.currentTarget.email.value)
+      userInfo.email = e.currentTarget.email.value
+    if (e.currentTarget.position.value)
+      userInfo.position = e.currentTarget.position.value
+    if (e.currentTarget.question.value)
+      userInfo.question = e.currentTarget.question.value
 
     postData(`${baseURL}api/sign`, userInfo).then((data) => {
       if (data.status !== 200) {

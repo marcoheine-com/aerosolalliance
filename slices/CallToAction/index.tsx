@@ -2,7 +2,11 @@ import Link from 'next/link'
 import { RichText, RichTextBlock } from 'prismic-reactjs'
 import React from 'react'
 import { Color } from '../../entities'
-import { getTailwindClass } from '../../utils/getTailwindClass'
+import {
+  getBackgroundcolorClass,
+  getBordercolorClass,
+  getTextcolorClass,
+} from '../../utils'
 
 interface Item {
   invertedColor: boolean
@@ -22,15 +26,13 @@ interface Props {
 
 const getLinkStyling = (item: Item): string => {
   if (item.invertedColor) {
-    return `border-2 ${getTailwindClass(
-      'border',
+    return `border-2 ${getBordercolorClass(item.linkColor)} ${getTextcolorClass(
       item.linkColor
-    )} ${getTailwindClass('text', item.linkColor)}`
+    )}`
   } else {
-    return `${getTailwindClass(
-      'bg',
+    return `${getBackgroundcolorClass(
       item.linkColor
-    )} border-2 ${getTailwindClass('border', item.linkColor)}  text-white`
+    )} border-2 ${getBordercolorClass(item.linkColor)}  text-white`
   }
 }
 

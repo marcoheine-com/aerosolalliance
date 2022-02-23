@@ -2,7 +2,7 @@ import { RichText, RichTextBlock } from 'prismic-reactjs'
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
 import { Color, ImageProps, SVG } from '../../entities'
-import { getTailwindClass } from '../../utils/getTailwindClass'
+import { getBackgroundcolorClass } from '../../utils'
 
 interface Props {
   backgroundcolor: Color
@@ -19,7 +19,7 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
   image,
   headline,
 }) => {
-  const BACKGROUND_COLOR = getTailwindClass('bg', backgroundcolor)
+  const BACKGROUND_COLOR = getBackgroundcolorClass(backgroundcolor)
   return (
     <section
       className={`${className} grid grid-rows-2 overflow-hidden 2xl:grid-rows-1 2xl:grid-cols-2`}

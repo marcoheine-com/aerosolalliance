@@ -67,6 +67,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
       return (
         <FullWidthWithBgImage
           svg={primary.headersvg}
+          className="h-screen"
           bgImage={primary.backgroundImage}
         />
       )

@@ -41,9 +41,8 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
         {image.url && (
           <Image
             src={image?.url}
-            layout="responsive"
-            height={image?.dimensions.height}
-            width={image?.dimensions.width}
+            layout="fill"
+            objectFit="cover"
             alt={image?.alt}
           />
         )}

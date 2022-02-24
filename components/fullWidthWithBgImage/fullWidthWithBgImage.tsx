@@ -5,20 +5,21 @@ import { ImageProps, SVG } from '../../entities'
 interface Props {
   svg: SVG
   bgImage: ImageProps
+  className?: string
 }
 
 export const FullWidthWithBgImage: FunctionComponent<Props> = ({
   svg,
   bgImage,
+  className,
 }) => {
   return (
-    <section className="relative">
+    <section className={`relative ${className}`}>
       {bgImage?.url && (
         <Image
           src={bgImage.url}
-          width={bgImage.dimensions.width}
-          height={bgImage.dimensions.height}
-          layout="responsive"
+          layout="fill"
+          objectFit="cover"
           alt={bgImage.alt}
         />
       )}

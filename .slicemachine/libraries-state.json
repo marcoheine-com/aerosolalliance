@@ -171,7 +171,13 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/CallToAction/default-slice/preview.png",
+            "width": 1678,
+            "height": 796
+          }
+        }
       },
       "full_width_image": {
         "library": "slices",
@@ -280,7 +286,18 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/FullWidthImage/default-slice/preview.png",
+            "width": 2528,
+            "height": 1586
+          },
+          "twoColumn": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/FullWidthImage/twoColumn/preview.png",
+            "width": 2256,
+            "height": 1504
+          }
+        }
       },
       "header": {
         "library": "slices",
@@ -738,6 +755,11 @@
             "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/Header/fullWidthWithMenu/preview.png",
             "width": 1373,
             "height": 949
+          },
+          "fullWidthWithBgImage": {
+            "path": "/Users/marcokuehbauch/development/aerosolalliance/slices/Header/fullWidthWithBgImage/preview.png",
+            "width": 3554,
+            "height": 1948
           }
         }
       },

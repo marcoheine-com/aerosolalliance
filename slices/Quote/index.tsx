@@ -17,7 +17,7 @@ interface Props {
 const Quote: FunctionComponent<Props> = ({ slice }): JSX.Element => {
   return (
     <section>
-      {slice.items.map((item: Item, index: number) => (
+      {slice.items?.map((item: Item, index: number) => (
         <section
           className="grid relative md:grid-cols-2 md:even:reversed"
           key={item.image.alt || index}

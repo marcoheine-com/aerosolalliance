@@ -46,7 +46,7 @@ const CallToAction: React.FunctionComponent<Props> = ({
           <a
             className={`${getLinkStyling(item)} ${
               item.rotation === 'left' ? 'rotate-[-40deg]' : 'rotate-[40deg]'
-            } fontSwissIntlMono uppercase rounded-3xl py-2 px-5 inline-block`}
+            } font-suisseIntlMono uppercase rounded-3xl py-2 px-5 inline-block`}
           >
             <RichText render={item.linkLabel} />
           </a>

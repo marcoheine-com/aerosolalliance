@@ -35,7 +35,7 @@ const LinkImageGallery: FunctionComponent<Props> = ({ slice }) => {
                     height={item.image.dimensions.height}
                   />
                 )}
-                <span className="absolute top-2/4 left-2/4 text-white -translate-x-1/2 fontUvasBlack">
+                <span className="absolute top-2/4 left-2/4 font-UvasBlack-Black text-white -translate-x-1/2">
                   <RichText render={item.linkLabel} />
                 </span>
               </a>

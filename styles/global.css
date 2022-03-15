@@ -17,14 +17,33 @@
 }
 
 @font-face {
+  font-family: 'SuisseIntlBold';
+  src: url('/fonts/SuisseIntl-Bold-WebM.woff'),
+    url('/fonts/SuisseIntl-Bold-WebM.woff2'),
+    url('/fonts/SuisseIntl-Bold-WebXL.woff'),
+    url('/fonts/SuisseIntl-Bold-WebXL.woff2'),
+    url('/fonts/SuisseIntl-Bold-WebS.woff'),
+    url('/fonts/SuisseIntl-Bold-WebS.woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntlSemiBold';
+  src: url('/fonts/SuisseIntl-SemiBold-WebM.woff'),
+    url('/fonts/SuisseIntl-SemiBold-WebM.woff2'),
+    url('/fonts/SuisseIntl-SemiBold-WebXL.woff'),
+    url('/fonts/SuisseIntl-SemiBold-WebXL.woff2'),
+    url('/fonts/SuisseIntl-SemiBold-WebS.woff'),
+    url('/fonts/SuisseIntl-SemiBold-WebS.woff2');
+}
+
+@font-face {
   font-family: 'UvasBlack-Black';
   src: url('/fonts/UvasBlack-Black.woff'), url('/fonts/UvasBlack-Black.woff2');
 }
 
 @layer base {
   body {
-    font-family: 'SuisseIntlRegular';
-    @apply text-darkblue;
+    @apply text-darkblue font-suisseIntlRegular;
   }
 
   p {
@@ -37,8 +56,7 @@
   h4,
   h5,
   h6 {
-    font-family: 'SuisseIntlMono';
-    @apply text-4xl mb-4;
+    @apply text-4xl mb-4 font-suisseIntlMono;
   }
   a > p {
     @apply m-0;
@@ -69,20 +87,11 @@
     @apply xl:text-4xl;
   }
 
-  .fontUvasBlack {
-    font-family: 'UvasBlack-Black';
-  }
-
-  .fontSwissIntlMono {
-    font-family: 'SuisseIntlMono';
-  }
-
   .fontUvasBlack p {
     @apply text-4xl lg:text-5xl 2xl:text-7xl;
   }
   .imageWrapper h2 {
-    @apply uppercase text-2xl mt-4 mb-2;
-    font-family: 'SuisseIntlRegular';
+    @apply uppercase text-2xl mt-4 mb-2 font-suisseIntlRegular;
   }
 
   .imageWrapper p {
@@ -90,7 +99,6 @@
   }
 
   .fontUvasBlack h1 {
-    font-family: 'UvasBlack-Black';
-    @apply text-6xl 2xl:text-7xl;
+    @apply text-6xl 2xl:text-7xl font-UvasBlack-Black;
   }
 }

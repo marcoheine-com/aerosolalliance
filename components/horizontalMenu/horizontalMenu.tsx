@@ -30,7 +30,7 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
             <a
               className={`${
                 isActiveLink(item?.link?.url) ? 'font-bold' : 'font-normal'
-              } uppercase fontSwissIntlMono pt-4 lg:pt-0`}
+              } uppercase font-suisseIntlMono pt-4 lg:pt-0`}
             >
               <RichText render={item.linkLabel} />
             </a>

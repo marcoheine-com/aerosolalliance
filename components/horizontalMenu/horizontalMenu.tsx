@@ -1,9 +1,9 @@
+import { PrismicRichText } from '@prismicio/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { RichText, RichTextBlock } from 'prismic-reactjs'
 import { FunctionComponent } from 'react'
 import { Item } from '../../entities/item'
-import { linkResolver } from '../../prismicConfiguration'
+import { linkResolver } from '../../prismicio'
 
 interface Props {
   className?: string
@@ -22,7 +22,7 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
 
   return (
     <section
-      className={`flex flex-col lg:flex-row justify-around items-center p-5 bg-grey ${className}`}
+      className={`flex flex-col xl:flex-row justify-around items-center p-5 bg-grey ${className}`}
     >
       {items?.map((item) =>
         item.link?.url ? (
@@ -32,7 +32,7 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
                 isActiveLink(item?.link?.url) ? 'font-bold' : 'font-normal'
               } uppercase font-suisseIntlMono pt-4 lg:pt-0`}
             >
-              <RichText render={item.linkLabel} />
+              <PrismicRichText field={item.linkLabel} />
             </a>
           </Link>
         ) : null

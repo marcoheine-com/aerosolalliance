@@ -1,11 +1,12 @@
+import { PrismicRichText } from '@prismicio/react'
+import { RichTextField } from '@prismicio/types'
 import Image from 'next/image'
-import { RichText, RichTextBlock } from 'prismic-reactjs'
 import React, { FunctionComponent } from 'react'
 import { ImageProps } from '../../entities'
 
 interface Item {
   image: ImageProps
-  subtext: RichTextBlock[]
+  subtext: RichTextField
 }
 
 interface Props {
@@ -27,7 +28,7 @@ const ImageGallery: FunctionComponent<Props> = ({ slice }) => {
               height={item.image.dimensions.height}
             />
           )}
-          <RichText render={item.subtext} />
+          <PrismicRichText field={item.subtext} />
         </div>
       ))}
     </section>

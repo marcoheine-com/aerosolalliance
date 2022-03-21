@@ -1,14 +1,14 @@
 import React, { FunctionComponent } from 'react'
-import { RichTextBlock } from 'prismic-reactjs'
 import { Color, ImageProps, SVG } from '../../entities'
 import { FullWidthSVG } from '../../components/fullWidthSVG'
 import { TwoColumnSection } from '../../components/twoColumnSection'
+import { RichTextField } from '@prismicio/types'
 
 interface HeroSection {
   backgroundcolor: Color
   herosvg: SVG
   heroimage: ImageProps
-  heroheadline: RichTextBlock[]
+  heroheadline: RichTextField
 }
 
 interface Slice {

@@ -1,20 +1,17 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import Client from '../prismicHelpers'
-// @ts-ignore
-import SliceZone from 'next-slicezone'
-import * as Slices from '../slices'
 import { Footer } from '../components/footer'
 import { BurgerMenu } from '../components/burgerMenu'
 import { Logo } from '../components/logo'
+import { createClient } from '../prismicio'
+import { Slicemachine } from '../components/slicemachine'
 
-// @ts-ignore
-const resolver = ({ sliceName }) => Slices[sliceName]
+export const getStaticProps: GetStaticProps = async ({ previewData }) => {
+  const client = createClient(previewData)
 
-export const getStaticProps: GetStaticProps = async () => {
-  const aboutUs = (await Client().getSingle('about-us', {})) || null
-  const footer = (await Client().getSingle('footer', {})) || null
-  const menu = (await Client().getSingle('burgerMenu', {})) || null
+  const aboutUs = (await client.getSingle('about-us', {})) || null
+  const footer = (await client.getSingle('footer', {})) || null
+  const menu = (await client.getSingle('burgerMenu', {})) || null
 
   return {
     props: {
@@ -41,7 +38,7 @@ const Manifesto: NextPage<Props> = (props) => {
       <main className="flex relative flex-col mx-auto max-w-[1920px]">
         <Logo />
         <BurgerMenu menuItems={props.menu?.data?.slices} />
-        <SliceZone slices={props.aboutUs?.data?.slices} resolver={resolver} />
+        <Slicemachine slices={props.aboutUs?.data?.slices} />
       </main>
       <Footer data={props.footer.data} />
     </>

@@ -1,8 +1,9 @@
 import React, { FunctionComponent } from 'react'
-import { RichText, RichTextBlock } from 'prismic-reactjs'
+import { RichTextField } from '@prismicio/types'
+import { PrismicRichText } from '@prismicio/react'
 
 interface Item {
-  Content: RichTextBlock[]
+  Content: RichTextField
 }
 
 interface Props {
@@ -17,9 +18,9 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
       {slice?.items?.map((item: Item, i: number) => (
         <section
           key={i}
-          className="px-5 my-20 mx-auto max-w-4xl lg:my-44 textContent"
+          className="px-5 my-20 mx-auto max-w-4xl sm:px-16 lg:my-44 textContent"
         >
-          <RichText render={item.Content} />
+          <PrismicRichText field={item.Content} />
         </section>
       ))}
     </>

@@ -18,7 +18,7 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
 
   return (
     <section
-      className={`${BACKGROUND_COLOR} p-20 lg:p-52 flex flex-col justify-center relative ${className}`}
+      className={`${BACKGROUND_COLOR} pt-56 px-20 pb-32 lg:p-52 flex flex-col justify-center relative ${className}`}
     >
       {svg?.url && (
         <Image

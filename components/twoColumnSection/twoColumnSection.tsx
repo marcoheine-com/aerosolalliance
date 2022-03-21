@@ -1,15 +1,16 @@
-import { RichText, RichTextBlock } from 'prismic-reactjs'
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
 import { Color, ImageProps, SVG } from '../../entities'
 import { getBackgroundcolorClass } from '../../utils'
+import { RichTextField } from '@prismicio/types'
+import { PrismicRichText } from '@prismicio/react'
 
 interface Props {
   backgroundcolor: Color
   className?: string
   svg: SVG
   image: ImageProps
-  headline: RichTextBlock[]
+  headline: RichTextField
 }
 
 export const TwoColumnSection: FunctionComponent<Props> = ({
@@ -22,10 +23,10 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
   const BACKGROUND_COLOR = getBackgroundcolorClass(backgroundcolor)
   return (
     <section
-      className={`${className} grid grid-rows-2 overflow-hidden 2xl:grid-rows-1 2xl:grid-cols-2`}
+      className={`${className} grid grid-rows-2 overflow-hidden lg:grid-rows-1 lg:grid-cols-2`}
     >
       <section
-        className={`${BACKGROUND_COLOR} flex flex-col justify-center py-20 px-5 lg:px-20`}
+        className={`${BACKGROUND_COLOR} flex flex-col justify-center pt-56 px-20 pb-32 xl:p-20`}
       >
         {svg?.url && (
           <Image
@@ -46,9 +47,18 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
             alt={image?.alt}
           />
         )}
-        {headline && headline[0].text ? (
+        {headline ? (
           <span className="absolute top-2/4 left-2/4 font-UvasBlack-Black text-white -translate-x-1/2">
-            <RichText render={headline} />
+            <PrismicRichText
+              field={headline}
+              components={{
+                heading1: ({ children }) => (
+                  <h1 className="absolute top-2/4 left-2/4 font-UvasBlack-Black text-5xl text-center text-white -translate-x-1/2 -translate-y-1/2 lg:text-[80px]">
+                    {children}
+                  </h1>
+                ),
+              }}
+            />
           </span>
         ) : null}
       </section>

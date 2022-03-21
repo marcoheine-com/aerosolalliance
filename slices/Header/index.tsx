@@ -2,10 +2,10 @@ import React, { FunctionComponent } from 'react'
 import { FullWidthSVG } from '../../components/fullWidthSVG'
 import { Color, ImageProps, SVG } from '../../entities'
 import { TwoColumnSection } from '../../components/twoColumnSection'
-import { RichTextBlock } from 'prismic-reactjs'
 import { HorizontalMenu } from '../../components/horizontalMenu'
 import { Item } from '../../entities/item'
 import { FullWidthWithBgImage } from '../../components/fullWidthWithBgImage'
+import { RichTextField } from '@prismicio/types'
 
 interface Props {
   slice: {
@@ -14,7 +14,7 @@ interface Props {
       backgroundcolor: Color
       headersvg: SVG
       image: ImageProps
-      textOnImage: RichTextBlock[]
+      textOnImage: RichTextField
       backgroundImage: ImageProps
     }
     variation:
@@ -47,27 +47,27 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
             svg={primary.headersvg}
             image={primary.image}
             headline={primary.textOnImage}
-            className={'h-[90vh]'}
+            className={'xl:h-[90vh]'}
           />
-          <HorizontalMenu items={slice.items} className="h-[10vh]" />
+          <HorizontalMenu items={slice.items} className="xl:h-[10vh]" />
         </>
       )
     case 'fullWidthWithMenu':
       return (
-        <section className="h-screen">
+        <section className="xl:h-screen">
           <FullWidthSVG
             backgroundcolor={primary.backgroundcolor}
             svg={primary.headersvg}
-            className={'h-[90vh]'}
+            className={'xl:h-[90vh]'}
           />
-          <HorizontalMenu items={slice.items} className="h-[10vh]" />
+          <HorizontalMenu items={slice.items} className="xl:h-[10vh]" />
         </section>
       )
     case 'fullWidthWithBgImage':
       return (
         <FullWidthWithBgImage
           svg={primary.headersvg}
-          className="h-screen"
+          className="xl:h-screen"
           bgImage={primary.backgroundImage}
         />
       )
@@ -76,7 +76,6 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
       return (
         <FullWidthSVG
           backgroundcolor={primary.backgroundcolor}
-          className="h-screen"
           svg={primary.headersvg}
         />
       )

@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import { FunctionComponent } from 'react'
-import { RichText, RichTextBlock } from 'prismic-reactjs'
 import Link from 'next/link'
 import { ImageProps } from '../../entities'
+import { RichTextField } from '@prismicio/types'
+import { PrismicRichText } from '@prismicio/react'
 
 interface Props {
   data: {
@@ -10,12 +11,12 @@ interface Props {
     instagramlink: {
       url: string
     }
-    instagramlinklabel: RichTextBlock[]
-    adressHeadline: RichTextBlock[]
-    adress: RichTextBlock[]
-    links: RichTextBlock[]
-    partnersHeadline: RichTextBlock[]
-    partners: RichTextBlock[]
+    instagramlinklabel: RichTextField
+    adressHeadline: RichTextField
+    adress: RichTextField
+    links: RichTextField
+    partnersHeadline: RichTextField
+    partners: RichTextField
   }
 }
 
@@ -36,27 +37,27 @@ export const Footer: FunctionComponent<Props> = ({ data }) => {
           )}
           <Link href={data.instagramlink.url}>
             <a>
-              <RichText render={data.instagramlinklabel} />
+              <PrismicRichText field={data.instagramlinklabel} />
             </a>
           </Link>
         </section>
         <section className="flex flex-col mx-auto mb-20 w-full lg:flex-row lg:justify-between xl:justify-around">
           <div className="mb-8 lg:pr-5 lg:mb-0 lg:w-6/12 lg:border-r-2 lg:border-r-darkGrey">
-            <RichText render={data.adressHeadline} />
+            <PrismicRichText field={data.adressHeadline} />
             <div className="grid md:grid-cols-2">
               <address className="not-italic">
-                <RichText render={data.adress} />
+                <PrismicRichText field={data.adress} />
               </address>
               <div className="mt-4 md:mt-0">
-                <RichText render={data.links} />
+                <PrismicRichText field={data.links} />
               </div>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-[100px_1fr] lg:pl-5 lg:w-6/12">
-            <RichText render={data.partnersHeadline} />
+            <PrismicRichText field={data.partnersHeadline} />
             <div className="flex gap-16 items-center">
-              <RichText render={data.partners} />
+              <PrismicRichText field={data.partners} />
             </div>
           </div>
         </section>

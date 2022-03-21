@@ -1,12 +1,13 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
-import { RichText, RichTextBlock } from 'prismic-reactjs'
 import { ImageProps } from '../../entities'
 import { Speech } from '../../components/icons'
+import { RichTextField } from '@prismicio/types'
+import { PrismicRichText } from '@prismicio/react'
 
 interface Item {
   image: ImageProps
-  quote: RichTextBlock[]
+  quote: RichTextField
 }
 interface Props {
   slice: {
@@ -32,7 +33,7 @@ const Quote: FunctionComponent<Props> = ({ slice }): JSX.Element => {
           )}
           <section className="relative py-20 px-5 lg:px-20 xl:px-32 xl:pt-28">
             <div className="relative z-[2] quoteText">
-              <RichText render={item.quote} />
+              <PrismicRichText field={item.quote} />
             </div>
             <Speech />
           </section>

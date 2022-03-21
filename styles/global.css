@@ -56,7 +56,7 @@
   h4,
   h5,
   h6 {
-    @apply text-4xl mb-4 font-suisseIntlMono;
+    @apply text-headline mb-4 font-suisseIntlMono;
   }
   a > p {
     @apply m-0;
@@ -65,7 +65,7 @@
 
 @layer utilities {
   .textContent h2 {
-    @apply border-b-2 border-b-darkblue pb-10 mb-12;
+    @apply border-b-2 border-b-darkblue pb-10 mb-12 uppercase;
   }
 
   .footer h3 {
@@ -100,5 +100,9 @@
 
   .fontUvasBlack h1 {
     @apply text-6xl 2xl:text-7xl font-UvasBlack-Black;
+  }
+
+  .hover-trigger:hover .hover-target {
+    @apply -translate-x-96 duration-700;
   }
 }

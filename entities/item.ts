@@ -1,4 +1,4 @@
-import { RichTextBlock } from 'prismic-reactjs'
+import { RichTextField } from '@prismicio/types'
 
 export interface Item {
   link: {
@@ -6,5 +6,5 @@ export interface Item {
     uid: string
     type: string
   }
-  linkLabel: RichTextBlock[]
+  linkLabel: RichTextField
 }

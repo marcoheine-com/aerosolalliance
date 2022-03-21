@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { RichText } from 'prismic-reactjs'
-import { ImageProps, SVG } from '../../entities'
+import { ImageProps } from '../../entities'
 import Image from 'next/image'
 
 type Variation = 'default-slice' | 'twoColumn'

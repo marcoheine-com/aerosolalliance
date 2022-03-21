@@ -1,9 +1,10 @@
 import * as React from 'react'
 import Link from 'next/link'
-import { RichText, RichTextBlock } from 'prismic-reactjs'
-import { linkResolver } from '../../prismicConfiguration'
 import { Arrow, BurgerIcon, CrossIcon } from '../icons'
 import { useOnClickOutside } from '../../hooks/useOnclickOutside'
+import { linkResolver } from '../../prismicio'
+import { RichTextField } from '@prismicio/types'
+import { PrismicRichText } from '@prismicio/react'
 
 interface SubLink {
   subLink: {
@@ -11,7 +12,7 @@ interface SubLink {
     type: string
     url: string
   }
-  subLinkLabel: RichTextBlock[]
+  subLinkLabel: RichTextField
 }
 
 interface Item {
@@ -21,7 +22,7 @@ interface Item {
       type: string
       url: string
     }
-    linkLabel: RichTextBlock[]
+    linkLabel: RichTextField
   }
   items: SubLink[]
 }
@@ -53,7 +54,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
 
       <ul
         className={`absolute top-0 right-0
-         z-[1] p-20 pt-48 w-full h-screen uppercase bg-grey ${
+         z-[1] p-8 md:p-20 pt-48 w-full h-full uppercase bg-grey ${
            isOpen
              ? 'animate-slideInRight'
              : 'opacity-0 pointer-events-none animate-slideOutRight'
@@ -63,11 +64,11 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
         {menuItems?.map((item: Item) => (
           <li
             key={item.primary.link.uid}
-            className="py-8 font-bold border-b-2 last:border-b-0 border-b-darkblue"
+            className="py-8 font-semibold border-b-2 last:border-b-0 border-b-darkblue"
           >
             <Link href={linkResolver(item.primary.link)}>
               <a className="inline-block">
-                <RichText render={item.primary.linkLabel} />
+                <PrismicRichText field={item.primary.linkLabel} />
               </a>
             </Link>
             {item.items?.length > 0 && item.items[0].subLink.uid && (
@@ -82,7 +83,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
                         >
                           <a className="flex gap-4 items-center py-4 font-suisseIntlRegular font-normal">
                             {<Arrow />}
-                            <RichText render={item.subLinkLabel} />
+                            <PrismicRichText field={item.subLinkLabel} />
                           </a>
                         </Link>
                       </li>

@@ -1,0 +1,1 @@
+export { Slicemachine } from './Slicemachine'

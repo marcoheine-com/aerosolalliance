@@ -39,7 +39,7 @@ module.exports = {
             transform: 'translateX(300px)',
           },
           '100%': {
-            transform: 'translateX(0)',
+            transform: 'translateX(0) translateY(0)',
           },
         },
         slideOutRight: {

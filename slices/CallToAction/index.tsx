@@ -1,5 +1,5 @@
-import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
-import { RichTextField, Slice } from '@prismicio/types'
+import { PrismicRichText } from '@prismicio/react'
+import { RichTextField } from '@prismicio/types'
 import Link from 'next/link'
 import React from 'react'
 import { Color } from '../../entities'
@@ -51,7 +51,7 @@ const CallToAction: React.FC<Props> = ({ slice }) => {
   return (
     <section className="flex gap-8 px-5 mx-auto mt-20 mb-40 max-w-4xl">
       {slice?.items?.map((item: Item) => (
-        <>
+        <React.Fragment key={item.link?.uid}>
           <Link href={`/${item.link?.uid}`}>
             <a
               className={`${getLinkStyling(item)} ${
@@ -84,7 +84,7 @@ const CallToAction: React.FC<Props> = ({ slice }) => {
               </span>
             </a>
           </Link>
-        </>
+        </React.Fragment>
       ))}
     </section>
   )

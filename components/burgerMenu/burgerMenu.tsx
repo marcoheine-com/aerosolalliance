@@ -5,6 +5,7 @@ import { useOnClickOutside } from '../../hooks/useOnclickOutside'
 import { linkResolver } from '../../prismicio'
 import { RichTextField } from '@prismicio/types'
 import { PrismicRichText } from '@prismicio/react'
+import { useRouter } from 'next/router'
 
 interface SubLink {
   subLink: {
@@ -35,6 +36,12 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
   const [isOpen, setIsOpen] = React.useState(false)
 
   const ref = React.useRef(null)
+
+  const router = useRouter()
+
+  React.useEffect(() => {
+    setIsOpen(false)
+  }, [router.asPath])
 
   useOnClickOutside(ref, () => setIsOpen(false))
 

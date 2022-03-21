@@ -54,7 +54,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
       )
     case 'fullWidthWithMenu':
       return (
-        <section className="xl:h-screen">
+        <section className="h-screen">
           <FullWidthSVG
             backgroundcolor={primary.backgroundcolor}
             svg={primary.headersvg}
@@ -67,7 +67,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
       return (
         <FullWidthWithBgImage
           svg={primary.headersvg}
-          className="xl:h-screen"
+          className="h-screen"
           bgImage={primary.backgroundImage}
         />
       )

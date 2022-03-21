@@ -26,7 +26,7 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
       className={`${className} grid grid-rows-2 overflow-hidden lg:grid-rows-1 lg:grid-cols-2`}
     >
       <section
-        className={`${BACKGROUND_COLOR} flex flex-col justify-center pt-56 px-20 pb-32 xl:p-20`}
+        className={`${BACKGROUND_COLOR} flex flex-col justify-center pt-56 px-20 pb-32 xl:p-32`}
       >
         {svg?.url && (
           <Image

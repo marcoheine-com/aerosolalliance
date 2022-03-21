@@ -49,14 +49,14 @@ const getBeforeStyling = (item: Item): string => {
 
 const CallToAction: React.FC<Props> = ({ slice }) => {
   return (
-    <section className="flex gap-8 px-5 mx-auto mt-20 mb-40 max-w-4xl">
+    <section className="flex gap-8 px-5 mx-auto mt-20 mb-40">
       {slice?.items?.map((item: Item) => (
         <React.Fragment key={item.link?.uid}>
           <Link href={`/${item.link?.uid}`}>
             <a
               className={`${getLinkStyling(item)} ${
                 item.rotation === 'left' ? 'rotate-[-40deg]' : 'rotate-[40deg]'
-              } font-suisseIntlMono uppercase rounded-full py-6 px-24 inline-block hover-trigger relative overflow-hidden`}
+              } font-suisseIntlMono uppercase rounded-full py-4 px-20 md:py-6 md:px-24 block hover-trigger relative overflow-hidden`}
             >
               {' '}
               <PrismicRichText
@@ -70,7 +70,7 @@ const CallToAction: React.FC<Props> = ({ slice }) => {
               <span
                 className={`${getBeforeStyling(
                   item
-                )} rounded-full py-6 px-24 absolute top-0 left-0 transition-all inline-block hover-target`}
+                )} rounded-full py-4 px-20 md:py-6 md:px-24 absolute top-0 left-0 transition-all inline-block hover-target`}
                 aria-hidden="true"
               >
                 <PrismicRichText

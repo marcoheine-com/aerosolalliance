@@ -56,7 +56,7 @@
   h4,
   h5,
   h6 {
-    @apply text-headline mb-4 font-suisseIntlMono;
+    @apply text-4xl  sm:text-headline mb-4 font-suisseIntlMono;
   }
   a > p {
     @apply m-0;
@@ -103,6 +103,6 @@
   }
 
   .hover-trigger:hover .hover-target {
-    @apply -translate-x-96 duration-700;
+    @apply -translate-x-[500px] duration-700;
   }
 }

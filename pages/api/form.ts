@@ -3,7 +3,7 @@ import sendgrid from '@sendgrid/mail'
 
 // @ts-ignore
 sendgrid.setApiKey(process.env.SEND_GRID_MAIL_API_KEY)
-const MAIL_ADRESS_SEND_GRID = process.env.SEND_GRID_MAIL || ''
+const MAIL_ADRESS_SEND_GRID = 'marco@marcokuehbauch.com'
 
 interface UserInput {
   key: string

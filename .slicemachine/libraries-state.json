@@ -179,6 +179,116 @@
           }
         }
       },
+      "form": {
+        "library": "slices",
+        "id": "form",
+        "name": "Form",
+        "description": "Form",
+        "model": {
+          "id": "form",
+          "type": "SharedSlice",
+          "name": "Form",
+          "description": "Form",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Form",
+              "primary": {
+                "submitButtonText": {
+                  "config": {
+                    "label": "Submit Button Text",
+                    "placeholder": "Submit Button Text"
+                  },
+                  "type": "Text"
+                }
+              },
+              "items": {
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "Text",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                },
+                "label": {
+                  "config": {
+                    "label": "Input Label",
+                    "placeholder": "Input Label"
+                  },
+                  "type": "Text"
+                },
+                "inputType": {
+                  "config": {
+                    "label": "Input Type",
+                    "placeholder": "",
+                    "options": [
+                      "Input",
+                      "Textarea"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "form",
+            "items": [
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ullamco et sint officia officia.",
+                    "spans": []
+                  }
+                ],
+                "label": "benchmark strategic initiatives",
+                "inputType": "Input"
+              },
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Laborum commodo veniam exercitation duis deserunt proident eu dolor pariatur sunt labore velit voluptate nulla duis. Amet enim id veniam dolor.",
+                    "spans": []
+                  }
+                ],
+                "label": "facilitate real-time deliverables",
+                "inputType": "Textarea"
+              },
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Cupidatat proident irure adipisicing dolor ex. Proident occaecat ut anim occaecat ex ipsum consectetur voluptate tempor sint elit deserunt dolor excepteur deserunt.",
+                    "spans": []
+                  }
+                ],
+                "label": "incentivize cutting-edge technologies",
+                "inputType": "Textarea"
+              }
+            ],
+            "primary": {
+              "submitButtonText": "benchmark customized solutions"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
       "full_width_image": {
         "library": "slices",
         "id": "full_width_image",
@@ -836,6 +946,14 @@
                   },
                   "type": "Select"
                 },
+                "herosvgMobile": {
+                  "config": {
+                    "label": "Hervosvg Mobile",
+                    "placeholder": "",
+                    "select": "media"
+                  },
+                  "type": "Link"
+                },
                 "herosvg": {
                   "config": {
                     "label": "herosvg",
@@ -843,6 +961,13 @@
                     "select": "media"
                   },
                   "type": "Link"
+                },
+                "caption": {
+                  "config": {
+                    "label": "Caption",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
                 }
               },
               "items": {}
@@ -907,11 +1032,16 @@
             "slice_type": "herosection",
             "items": [],
             "primary": {
-              "backgroundcolor": "white",
+              "backgroundcolor": "yellow",
+              "herosvgMobile": {
+                "link_type": "media",
+                "url": "https://source.unsplash.com/daily"
+              },
               "herosvg": {
                 "link_type": "media",
                 "url": "https://source.unsplash.com/daily"
-              }
+              },
+              "caption": "utilize turn-key niches"
             }
           },
           "twoColumnHero": {
@@ -920,7 +1050,7 @@
             "slice_type": "herosection",
             "items": [],
             "primary": {
-              "backgroundcolor": "purple",
+              "backgroundcolor": "darkblue",
               "herosvg": {
                 "link_type": "media",
                 "url": "https://source.unsplash.com/daily"
@@ -932,12 +1062,12 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
               },
               "heroheadline": [
                 {
                   "type": "heading2",
-                  "text": "Unleash value-added blockchains",
+                  "text": "Deliver web-enabled portals",
                   "spans": []
                 }
               ]

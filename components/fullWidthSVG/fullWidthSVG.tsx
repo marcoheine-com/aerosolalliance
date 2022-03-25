@@ -6,29 +6,52 @@ import { getBackgroundcolorClass } from '../../utils'
 interface Props {
   backgroundcolor: Color
   className?: string
+  caption?: string
   svg: SVG
+  svgMobile?: SVG
 }
 
 export const FullWidthSVG: FunctionComponent<Props> = ({
   backgroundcolor,
-  className,
+  className = '',
+  caption,
   svg,
+  svgMobile,
 }): JSX.Element => {
   const BACKGROUND_COLOR = getBackgroundcolorClass(backgroundcolor)
 
   return (
     <section
-      className={`${BACKGROUND_COLOR} pt-56 px-20 pb-32 lg:p-52 flex flex-col justify-center relative ${className}`}
+      className={`${BACKGROUND_COLOR} px-5 py-32 md:pt-56 md:px-20 lg:p-32 flex flex-col justify-start relative ${className}`}
     >
-      {svg?.url && (
-        <Image
-          src={svg.url}
-          width={svg.width}
-          height={svg.height}
-          layout="responsive"
-          alt={svg.name}
-        />
+      {svgMobile?.url && (
+        <div className="mb-12 lg:hidden">
+          <Image
+            src={svgMobile.url}
+            width={svgMobile.width}
+            height={svgMobile.height}
+            layout="responsive"
+            alt={svg.name}
+          />
+        </div>
       )}
+
+      {svg?.url && (
+        <div
+          className={`${
+            svgMobile?.url && 'hidden'
+          } lg:block mb-12 lg:max-w-5xl`}
+        >
+          <Image
+            src={svg.url}
+            width={svg.width}
+            height={svg.height}
+            layout="responsive"
+            alt={svg.name}
+          />
+        </div>
+      )}
+      {caption && <p>{caption}</p>}
     </section>
   )
 }

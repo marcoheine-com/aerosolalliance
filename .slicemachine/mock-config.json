@@ -175,8 +175,8 @@
         }
       }
     ],
-    "Herosection": [
-      {
+    "Herosection": {
+      "0": {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "herosection",
@@ -189,7 +189,7 @@
           }
         }
       },
-      {
+      "1": {
         "variation": "twoColumnHero",
         "name": "two-column-hero",
         "slice_type": "herosection",
@@ -217,8 +217,11 @@
             }
           ]
         }
+      },
+      "default-slice": {
+        "primary": {}
       }
-    ],
+    },
     "TextMedia": {},
     "TextContent": [
       {
@@ -843,7 +846,20 @@
         }
       }
     ],
-    "TestSlice": {}
+    "TestSlice": {},
+    "Form": {
+      "default": {
+        "primary": {},
+        "items": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   },
   "_cts": {
     "home": {},
@@ -891,6 +907,7 @@
     "horizontal-menu": {},
     "about-us": {},
     "facts": {},
-    "facts-subpage": {}
+    "facts-subpage": {},
+    "submit-ideas": {}
   }
 }

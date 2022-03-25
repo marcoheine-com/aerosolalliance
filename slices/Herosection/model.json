@@ -27,6 +27,14 @@
           },
           "type": "Select"
         },
+        "herosvgMobile": {
+          "config": {
+            "label": "Hervosvg Mobile",
+            "placeholder": "",
+            "select": "media"
+          },
+          "type": "Link"
+        },
         "herosvg": {
           "config": {
             "label": "herosvg",
@@ -34,6 +42,13 @@
             "select": "media"
           },
           "type": "Link"
+        },
+        "caption": {
+          "config": {
+            "label": "Caption",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       },
       "items": {}

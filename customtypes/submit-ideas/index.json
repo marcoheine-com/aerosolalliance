@@ -1,13 +1,13 @@
 {
-  "id": "home",
-  "label": "Home",
+  "id": "submit-ideas",
+  "label": "Submit Ideas",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
       "uid": {
         "config": {
-          "label": "uid",
+          "label": "Uid",
           "placeholder": ""
         },
         "type": "UID"
@@ -17,25 +17,28 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "herosection": {
-              "type": "SharedSlice"
-            },
-            "text_content": {
-              "type": "SharedSlice"
-            },
             "call_to_action": {
               "type": "SharedSlice"
             },
-            "quote": {
+            "full_width_image": {
               "type": "SharedSlice"
             },
-            "link_image_gallery": {
+            "header": {
+              "type": "SharedSlice"
+            },
+            "herosection": {
               "type": "SharedSlice"
             },
             "image_gallery": {
               "type": "SharedSlice"
             },
-            "header": {
+            "link_image_gallery": {
+              "type": "SharedSlice"
+            },
+            "quote": {
+              "type": "SharedSlice"
+            },
+            "text_content": {
               "type": "SharedSlice"
             },
             "form": {

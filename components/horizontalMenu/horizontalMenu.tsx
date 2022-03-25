@@ -30,7 +30,7 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
             <a
               className={`${
                 isActiveLink(item?.link?.url) ? 'font-bold' : 'font-normal'
-              } uppercase font-suisseIntlMono pt-4 lg:pt-0`}
+              } uppercase font-suisseIntlMono pt-4 xl:pt-0`}
             >
               <PrismicRichText field={item.linkLabel} />
             </a>

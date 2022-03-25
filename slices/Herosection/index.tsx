@@ -7,6 +7,8 @@ import { RichTextField } from '@prismicio/types'
 interface HeroSection {
   backgroundcolor: Color
   herosvg: SVG
+  herosvgMobile?: SVG
+  caption?: string
   heroimage: ImageProps
   heroheadline: RichTextField
 }
@@ -34,6 +36,8 @@ const Herosection: FunctionComponent<Props> = (props): JSX.Element => {
     <FullWidthSVG
       backgroundcolor={primary.backgroundcolor}
       svg={primary.herosvg}
+      svgMobile={primary.herosvgMobile}
+      caption={primary.caption}
     />
   )
 }

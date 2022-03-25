@@ -7,6 +7,7 @@ import {
   LinkImageGallery,
   Quote,
   TextContent,
+  Form,
 } from '../../slices'
 
 type SliceType =
@@ -18,6 +19,7 @@ type SliceType =
   | 'link_image_gallery'
   | 'quote'
   | 'text_content'
+  | 'form'
 
 export const Slicemachine = ({ slices }: { slices: any }) => {
   if (!slices) {
@@ -46,6 +48,8 @@ export const Slicemachine = ({ slices }: { slices: any }) => {
         return <Quote slice={slice} key={index} />
       case 'text_content':
         return <TextContent slice={slice} key={index} />
+      case 'form':
+        return <Form slice={slice} key={index} />
       default:
         return null
     }

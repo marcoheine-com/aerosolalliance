@@ -1,0 +1,53 @@
+{
+  "id": "form",
+  "type": "SharedSlice",
+  "name": "Form",
+  "description": "Form",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Form",
+      "primary": {
+        "submitButtonText": {
+          "config": {
+            "label": "Submit Button Text",
+            "placeholder": "Submit Button Text"
+          },
+          "type": "Text"
+        }
+      },
+      "items": {
+        "text": {
+          "config": {
+            "label": "Text",
+            "placeholder": "Text",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "label": {
+          "config": {
+            "label": "Input Label",
+            "placeholder": "Input Label"
+          },
+          "type": "Text"
+        },
+        "inputType": {
+          "config": {
+            "label": "Input Type",
+            "placeholder": "",
+            "options": [
+              "Input",
+              "Textarea"
+            ]
+          },
+          "type": "Select"
+        }
+      }
+    }
+  ]
+}

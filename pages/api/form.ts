@@ -10,7 +10,10 @@ interface UserInput {
   value: string
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const body = req.body
 
   const errors: String[] = []
@@ -51,7 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         </p>
         `,
     }
-    sendgrid.send(msg)
+    await sendgrid.send(msg)
     return res.status(200).json({ data: body.userInput, errors: null })
   } catch (err) {
     // @ts-ignore

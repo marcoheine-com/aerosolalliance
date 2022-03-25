@@ -63,8 +63,8 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
         className={`absolute top-0 right-0
          z-[1] p-8 md:p-20 pt-48 w-full 2xl:h-screen uppercase bg-grey ${
            isOpen
-             ? 'animate-slideInRight'
-             : 'opacity-0 pointer-events-none animate-slideOutRight'
+             ? 'lg:animate-slideInRight'
+             : 'opacity-0 pointer-events-none lg:animate-slideOutRight'
          }  md:p-20 md:w-[50vw] md:max-w-xl`}
         ref={ref}
       >

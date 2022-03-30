@@ -112,7 +112,7 @@ const Form: React.FC<Props> = ({ slice }) => {
             type="email"
             name="email"
             className="p-5 rounded-xl border-2 border-darkblue"
-            placeholder="Email"
+            placeholder="E-mail"
           />
         </label>
         {data.errors?.length > 0 && (

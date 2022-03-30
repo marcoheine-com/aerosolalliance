@@ -58,7 +58,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
           <FullWidthSVG
             backgroundcolor={primary.backgroundcolor}
             svg={primary.headersvg}
-            className={'xl:h-[90vh]'}
+            className={'pt-56 xl:h-[90vh]'}
           />
           <HorizontalMenu items={slice.items} className="xl:h-[10vh]" />
         </section>
@@ -77,6 +77,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
         <FullWidthSVG
           backgroundcolor={primary.backgroundcolor}
           svg={primary.headersvg}
+          className="pt-56"
         />
       )
   }

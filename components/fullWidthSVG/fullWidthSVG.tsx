@@ -22,7 +22,7 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
 
   return (
     <section
-      className={`${BACKGROUND_COLOR} px-5 py-32 md:pt-56 md:px-20 lg:p-32 flex flex-col justify-start relative ${className}`}
+      className={`${BACKGROUND_COLOR} px-5 py-32 md:pt-56 md:px-20 lg:p-32 flex flex-col justify-center relative ${className}`}
     >
       {svgMobile?.url && (
         <div className="mb-12 lg:hidden">
@@ -39,8 +39,8 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
       {svg?.url && (
         <div
           className={`${
-            svgMobile?.url && 'hidden'
-          } lg:block mb-12 lg:max-w-5xl`}
+            svgMobile?.url ? 'hidden' : ''
+          } mx-auto w-full lg:block mb-12 lg:max-w-5xl`}
         >
           <Image
             src={svg.url}
@@ -51,7 +51,7 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
           />
         </div>
       )}
-      {caption && <p>{caption}</p>}
+      {caption && <p className="text-center">{caption}</p>}
     </section>
   )
 }

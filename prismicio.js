@@ -4,7 +4,15 @@ import sm from './sm.json'
 
 export const endpoint = sm.apiEndpoint
 export const repositoryName = prismic.getRepositoryName(endpoint)
-const accessToken = process.env.PRISMIC_ACCESS_TOKEN
+export const accessToken = process.env.PRISMIC_ACCESS_TOKEN
+
+// -- Firebse API key for connectivity with firebse
+export const firebaseApiKey = process.env.FIREBASE_API_KEY
+// -- Definition of baseURL based on running environment
+export const baseURL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000/'
+    : 'https://www.aerosolalliance.com/'
 
 export const linkResolver = (doc) => {
   if (doc.type === 'home') {

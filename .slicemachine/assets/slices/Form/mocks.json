@@ -8,38 +8,45 @@
         "text": [
           {
             "type": "paragraph",
-            "text": "Ullamco et sint officia officia.",
+            "text": "Incididunt et labore labore veniam eiusmod occaecat irure et proident Lorem ad ex exercitation. Ex et deserunt consectetur Lorem consequat Lorem consequat aliqua enim ad sint.",
             "spans": []
           }
         ],
-        "label": "benchmark strategic initiatives",
+        "label": "envisioneer user-centric relationships",
+        "inputType": "Textarea"
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Culpa ea veniam laboris sint ex. Do esse qui cillum ullamco. In velit nisi quis ex tempor exercitation nulla.",
+            "spans": []
+          }
+        ],
+        "label": "orchestrate efficient mindshare",
+        "inputType": "Textarea"
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Enim irure magna adipisicing aute consequat voluptate. Fugiat proident ea cupidatat exercitation sit consequat do ipsum ullamco anim. Ullamco culpa magna minim dolor duis tempor esse dolore culpa minim occaecat sint laborum aliquip excepteur.",
+            "spans": []
+          }
+        ],
+        "label": "syndicate web-enabled e-commerce",
         "inputType": "Input"
-      },
-      {
-        "text": [
-          {
-            "type": "paragraph",
-            "text": "Laborum commodo veniam exercitation duis deserunt proident eu dolor pariatur sunt labore velit voluptate nulla duis. Amet enim id veniam dolor.",
-            "spans": []
-          }
-        ],
-        "label": "facilitate real-time deliverables",
-        "inputType": "Textarea"
-      },
-      {
-        "text": [
-          {
-            "type": "paragraph",
-            "text": "Cupidatat proident irure adipisicing dolor ex. Proident occaecat ut anim occaecat ex ipsum consectetur voluptate tempor sint elit deserunt dolor excepteur deserunt.",
-            "spans": []
-          }
-        ],
-        "label": "incentivize cutting-edge technologies",
-        "inputType": "Textarea"
       }
     ],
     "primary": {
-      "submitButtonText": "benchmark customized solutions"
+      "submitButtonText": "matrix real-time niches"
     }
+  },
+  {
+    "variation": "manifestoSignupForm",
+    "name": "Manifesto Signup Form",
+    "slice_type": "form",
+    "items": [],
+    "primary": {}
   }
 ]

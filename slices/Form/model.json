@@ -48,6 +48,15 @@
           "type": "Select"
         }
       }
+    },
+    {
+      "id": "manifestoSignupForm",
+      "name": "Manifesto Signup Form",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Form",
+      "primary": {},
+      "items": {}
     }
   ]
 }

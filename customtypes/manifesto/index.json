@@ -5,6 +5,13 @@
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -17,6 +24,9 @@
               "type": "SharedSlice"
             },
             "call_to_action": {
+              "type": "SharedSlice"
+            },
+            "form": {
               "type": "SharedSlice"
             }
           }

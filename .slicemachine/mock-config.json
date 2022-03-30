@@ -858,6 +858,10 @@
             }
           }
         }
+      },
+      "manifestoSignupForm": {
+        "primary": {},
+        "items": {}
       }
     }
   },

@@ -1,6 +1,7 @@
 import { PrismicRichText } from '@prismicio/react'
 import { RichTextField } from '@prismicio/types'
 import React from 'react'
+import SignupForm from '../../components/SignupForm'
 
 interface Item {
   inputType: string
@@ -14,6 +15,7 @@ interface Props {
       submitButtonText: string
     }
     items: Item[]
+    variation: 'default' | 'manifestoSignupForm'
   }
 }
 
@@ -55,6 +57,10 @@ const Form: React.FC<Props> = ({ slice }) => {
     // If server returns the name submitted, that means the form works.
     const result = await response.json()
     setData(result)
+  }
+
+  if (slice.variation === 'manifestoSignupForm') {
+    return <SignupForm />
   }
 
   return (
@@ -130,7 +136,7 @@ const Form: React.FC<Props> = ({ slice }) => {
         )}
         <button
           type="submit"
-          className=" py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-purple rounded-full"
+          className="py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-purple rounded-full"
         >
           {slice.primary.submitButtonText}
         </button>

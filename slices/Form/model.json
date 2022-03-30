@@ -46,6 +46,13 @@
             ]
           },
           "type": "Select"
+        },
+        "placeholder": {
+          "config": {
+            "label": "Placeholder",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       }
     },

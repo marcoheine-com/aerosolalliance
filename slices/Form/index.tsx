@@ -6,6 +6,7 @@ import SignupForm from '../../components/SignupForm'
 interface Item {
   inputType: string
   label: string
+  placeholder: string
   text: RichTextField
 }
 
@@ -87,6 +88,7 @@ const Form: React.FC<Props> = ({ slice }) => {
                 ),
               }}
             />
+
             <label
               htmlFor={item.label}
               className="flex flex-col gap-2 justify-start mb-12 uppercase"
@@ -96,12 +98,14 @@ const Form: React.FC<Props> = ({ slice }) => {
                 <textarea
                   name={item.label}
                   className="p-5 w-full h-64 rounded-xl border-2 border-darkblue"
+                  placeholder={item.placeholder ? item.placeholder : ''}
                 />
               ) : (
                 <input
                   className={`p-5 rounded-xl border-2 border-darkblue `}
                   type={item.inputType}
                   name={item.label}
+                  placeholder={item.placeholder ? item.placeholder : ''}
                 />
               )}
             </label>
@@ -118,7 +122,8 @@ const Form: React.FC<Props> = ({ slice }) => {
             type="email"
             name="email"
             className="p-5 rounded-xl border-2 border-darkblue"
-            placeholder="E-mail"
+            placeholder="E-Mail"
+            required
           />
         </label>
         {data.errors?.length > 0 && (

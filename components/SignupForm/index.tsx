@@ -51,9 +51,12 @@ const SignupForm = () => {
 
   return (
     <>
-      <div className="px-5 mx-auto mb-32 w-full max-w-4xl sm:px-16">
+      <div className="px-6 mx-auto mb-32 w-full max-w-4xl sm:px-16">
         <h2>JOIN THE ALLIANCE</h2>
-        <form action="" onSubmit={handleSignupFormSubmit}>
+        <form
+          action=""
+          onSubmit={handleSignupFormSubmit}
+        >
           <label
             className="flex flex-col gap-2 justify-start mb-8 uppercase"
             htmlFor="username"

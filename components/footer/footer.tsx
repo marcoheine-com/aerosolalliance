@@ -25,7 +25,7 @@ const CURRENT_YEAR = new Date().getFullYear()
 export const Footer: FunctionComponent<Props> = ({ data }) => {
   return (
     <footer className="bg-grey footer ">
-      <section className="flex flex-col py-14 px-5 mx-auto max-w-[1920px] xl:px-40">
+      <section className="flex flex-col py-14 px-6 mx-auto max-w-[1920px] xl:px-40">
         <section className="flex flex-col gap-16 justify-between items-center mb-16 md:flex-row md:gap-0">
           {data.logo.url && (
             <Image

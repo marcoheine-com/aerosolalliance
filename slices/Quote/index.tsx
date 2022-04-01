@@ -31,9 +31,18 @@ const Quote: FunctionComponent<Props> = ({ slice }): JSX.Element => {
               height={item.image.dimensions.height}
             />
           )}
-          <section className="relative py-20 px-5 lg:px-20 xl:px-32 xl:pt-28">
-            <div className="relative z-[2] quoteText">
-              <PrismicRichText field={item.quote} />
+          <section className="relative py-20 px-6 lg:px-20 xl:px-32 xl:pt-28">
+            <div className="relative z-[2]">
+              <PrismicRichText
+                field={item.quote}
+                components={{
+                  paragraph: (props: any) => (
+                    <p className="leading-[2.1] xl:leading-[2.75]">
+                      {props.children}
+                    </p>
+                  ),
+                }}
+              />
             </div>
             <Speech />
           </section>

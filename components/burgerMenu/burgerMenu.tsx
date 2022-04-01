@@ -50,31 +50,39 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
   }
 
   return (
-    <nav className="font-suisseIntlSemiBold">
+    <nav
+      className="font-suisseIntlSemiBold"
+      role="navigation"
+    >
       <button
         onClick={toggleMenu}
-        className="absolute top-12 right-8 z-[2] p-4"
-        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        className="p-4"
+        aria-label="Open menu"
       >
-        {isOpen ? <CrossIcon /> : <BurgerIcon />}
+        <BurgerIcon />
       </button>
-
       <ul
         className={`absolute top-0 right-0
-         z-[1] p-8 md:p-20 pt-48 w-full 2xl:h-screen uppercase bg-grey ${
-           isOpen
-             ? 'lg:animate-slideInRight'
-             : 'opacity-0 pointer-events-none lg:animate-slideOutRight'
-         }  md:p-20 md:w-[50vw] md:max-w-xl`}
+        z-[1] p-8 md:p-20 pt-48 w-full h-screen overflow-x-scroll uppercase bg-grey transition-all translate-x-[300px] ${
+          isOpen ? 'translate-x-0' : 'opacity-0 pointer-events-none'
+        }  md:p-20 md:w-[50vw] md:max-w-xl`}
         ref={ref}
       >
+        <button
+          onClick={toggleMenu}
+          className="absolute top-4 right-4 p-6"
+          aria-label="Close menu"
+        >
+          <CrossIcon />
+        </button>
         {menuItems?.map((item: Item) => (
           <li
             key={item.primary.link.uid}
             className="py-8 font-semibold border-b-2 last:border-b-0 border-b-darkblue"
           >
             <Link href={linkResolver(item.primary.link)}>
-              <a className="inline-block">
+              <a className="flex gap-4 items-center submenuItem-trigger">
+                <Arrow className="submenuItem-arrow" />
                 <PrismicRichText field={item.primary.linkLabel} />
               </a>
             </Link>
@@ -88,8 +96,8 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
                           href={linkResolver(item.subLink)}
                           key={item.subLink.uid}
                         >
-                          <a className="flex gap-4 items-center py-4 font-suisseIntlRegular font-normal">
-                            {<Arrow />}
+                          <a className="flex gap-4 items-center py-4 font-suisseIntlRegular font-normal submenuItem-trigger">
+                            <Arrow className="submenuItem-arrow" />
                             <PrismicRichText field={item.subLinkLabel} />
                           </a>
                         </Link>

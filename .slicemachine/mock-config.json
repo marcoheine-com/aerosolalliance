@@ -278,8 +278,8 @@
         "primary": {}
       }
     ],
-    "CallToAction": [
-      {
+    "CallToAction": {
+      "0": {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "call_to_action",
@@ -366,8 +366,11 @@
           }
         ],
         "primary": {}
+      },
+      "default-slice": {
+        "items": {}
       }
-    ],
+    },
     "Quote": [
       {
         "variation": "default-slice",

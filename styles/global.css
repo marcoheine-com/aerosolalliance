@@ -61,6 +61,11 @@
   a > p {
     @apply m-0;
   }
+
+  h3 {
+    font-size: 1.5rem;
+    @apply border-b-2 border-b-darkblue pb-8 mb-10 uppercase;
+  }
 }
 
 @layer utilities {
@@ -82,11 +87,6 @@
     @apply -scale-x-100 left-[unset] -right-28 rotate-12 z-[1];
   }
 
-  .quoteText h3,
-  .quoteText p {
-    @apply xl:text-4xl;
-  }
-
   .fontUvasBlack p {
     @apply text-4xl lg:text-5xl 2xl:text-7xl;
   }
@@ -102,7 +102,27 @@
     @apply text-6xl 2xl:text-7xl font-UvasBlack-Black;
   }
 
+  .hover-target {
+    @apply translate-x-[500px];
+  }
+
   .hover-trigger:hover .hover-target {
-    @apply -translate-x-[500px] duration-700;
+    @apply translate-x-0 duration-300;
+  }
+
+  .submenuItem-trigger {
+    @apply transition-all;
+  }
+
+  .submenuItem-arrow {
+    @apply w-0 opacity-0 transition-all;
+  }
+
+  .submenuItem-trigger:hover .submenuItem-arrow {
+    @apply w-auto opacity-100;
+  }
+
+  .module-spacing-b {
+    @apply mb-20 lg:mb-44;
   }
 }

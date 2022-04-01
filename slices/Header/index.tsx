@@ -49,7 +49,10 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
             headline={primary.textOnImage}
             className={'xl:h-[90vh]'}
           />
-          <HorizontalMenu items={slice.items} className="xl:h-[10vh]" />
+          <HorizontalMenu
+            items={slice.items}
+            className="xl:h-[10vh] module-spacing-b"
+          />
         </>
       )
     case 'fullWidthWithMenu':
@@ -60,14 +63,17 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
             svg={primary.headersvg}
             className={'pt-56 xl:h-[90vh]'}
           />
-          <HorizontalMenu items={slice.items} className="xl:h-[10vh]" />
+          <HorizontalMenu
+            items={slice.items}
+            className="xl:h-[10vh] module-spacing-b"
+          />
         </section>
       )
     case 'fullWidthWithBgImage':
       return (
         <FullWidthWithBgImage
           svg={primary.headersvg}
-          className="h-[30vh] xl:h-screen"
+          className="h-[30vh] xl:h-screen module-spacing-b"
           bgImage={primary.backgroundImage}
         />
       )

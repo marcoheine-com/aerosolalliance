@@ -31,11 +31,9 @@
                 "linkLabel": {
                   "config": {
                     "label": "Link Label",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph"
+                    "placeholder": ""
                   },
-                  "type": "StructuredText"
+                  "type": "Text"
                 },
                 "linkColor": {
                   "config": {
@@ -59,18 +57,6 @@
                     "default_value": false
                   },
                   "type": "Boolean"
-                },
-                "rotation": {
-                  "config": {
-                    "label": "Rotation",
-                    "placeholder": "",
-                    "options": [
-                      "left",
-                      "right"
-                    ],
-                    "default_value": "left"
-                  },
-                  "type": "Select"
                 }
               }
             }
@@ -85,82 +71,47 @@
               {
                 "link": {
                   "link_type": "Web",
-                  "url": "https://prismic.io"
+                  "url": "http://twitter.com"
                 },
-                "linkLabel": [
-                  {
-                    "type": "paragraph",
-                    "text": "Minim eiusmod enim enim ipsum aliqua est ea dolor consequat ex pariatur eiusmod esse duis. Tempor minim id Lorem est eu duis et incididunt pariatur. Do consequat laboris sint in cupidatat commodo id.",
-                    "spans": []
-                  }
-                ],
-                "linkColor": "darkblue",
-                "invertedColor": true,
-                "rotation": "left"
-              },
-              {
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
-                },
-                "linkLabel": [
-                  {
-                    "type": "paragraph",
-                    "text": "Id velit eu elit cupidatat.",
-                    "spans": []
-                  }
-                ],
-                "linkColor": "red",
-                "invertedColor": true,
-                "rotation": "right"
-              },
-              {
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
-                },
-                "linkLabel": [
-                  {
-                    "type": "paragraph",
-                    "text": "Magna nostrud officia sunt sunt. Duis nulla nulla ipsum veniam.",
-                    "spans": []
-                  }
-                ],
+                "linkLabel": "scale real-time partnerships",
                 "linkColor": "purple",
-                "invertedColor": true,
-                "rotation": "left"
+                "invertedColor": false
+              },
+              {
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                },
+                "linkLabel": "benchmark turn-key metrics",
+                "linkColor": "darkblue",
+                "invertedColor": true
               },
               {
                 "link": {
                   "link_type": "Web",
                   "url": "http://twitter.com"
                 },
-                "linkLabel": [
-                  {
-                    "type": "paragraph",
-                    "text": "Mollit adipisicing velit reprehenderit voluptate exercitation minim velit est nostrud deserunt excepteur occaecat. Duis nulla dolore amet mollit ex.",
-                    "spans": []
-                  }
-                ],
-                "linkColor": "red",
-                "invertedColor": true,
-                "rotation": "right"
+                "linkLabel": "incubate cross-platform paradigms",
+                "linkColor": "purple",
+                "invertedColor": true
+              },
+              {
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                },
+                "linkLabel": "cultivate mission-critical relationships",
+                "linkColor": "purple",
+                "invertedColor": false
               },
               {
                 "link": {
                   "link_type": "Web",
                   "url": "https://prismic.io"
                 },
-                "linkLabel": [
-                  {
-                    "type": "paragraph",
-                    "text": "Aliqua do amet nulla incididunt culpa veniam id sit elit ad sint. Aute eiusmod fugiat esse culpa aute excepteur.",
-                    "spans": []
-                  }
-                ],
-                "linkColor": "green",
-                "invertedColor": true,
-                "rotation": "left"
+                "linkLabel": "harness wireless interfaces",
+                "linkColor": "purple",
+                "invertedColor": false
               }
             ],
             "primary": {}

@@ -23,11 +23,9 @@
         "linkLabel": {
           "config": {
             "label": "Link Label",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "placeholder": ""
           },
-          "type": "StructuredText"
+          "type": "Text"
         },
         "linkColor": {
           "config": {
@@ -51,18 +49,6 @@
             "default_value": false
           },
           "type": "Boolean"
-        },
-        "rotation": {
-          "config": {
-            "label": "Rotation",
-            "placeholder": "",
-            "options": [
-              "left",
-              "right"
-            ],
-            "default_value": "left"
-          },
-          "type": "Select"
         }
       }
     }

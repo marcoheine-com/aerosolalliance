@@ -29,30 +29,6 @@ module.exports = {
         suisseIntlRegular: ['SuisseIntlRegular', 'sans-serif'],
         'UvasBlack-Black': ['UvasBlack-Black', 'sans-serif'],
       },
-      animation: {
-        slideInRight: 'slideInRight 0.2s linear',
-        slideOutRight: 'slideOutRight 0.2s linear',
-      },
-      keyframes: {
-        slideInRight: {
-          '0%': {
-            transform: 'translateX(300px)',
-          },
-          '100%': {
-            transform: 'translateX(0) translateY(0)',
-          },
-        },
-        slideOutRight: {
-          '0%': {
-            transform: 'translateX(0)',
-            opacity: 1,
-          },
-          '100%': {
-            transform: 'translateX(300px)',
-            opacity: 0.5,
-          },
-        },
-      },
     },
   },
   plugins: [],

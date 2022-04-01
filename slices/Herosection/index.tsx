@@ -31,6 +31,7 @@ const Herosection: FunctionComponent<Props> = (props): JSX.Element => {
       svg={primary.herosvg}
       image={primary.heroimage}
       headline={primary.heroheadline}
+      className="module-spacing-b"
     />
   ) : (
     <FullWidthSVG
@@ -38,6 +39,7 @@ const Herosection: FunctionComponent<Props> = (props): JSX.Element => {
       svg={primary.herosvg}
       svgMobile={primary.herosvgMobile}
       caption={primary.caption}
+      className="module-spacing-b"
     />
   )
 }

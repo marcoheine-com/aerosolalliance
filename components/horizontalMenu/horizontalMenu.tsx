@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { FunctionComponent } from 'react'
 import { Item } from '../../entities/item'
 import { linkResolver } from '../../prismicio'
+import { Arrow } from '../icons'
 
 interface Props {
   className?: string
@@ -22,16 +23,25 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
 
   return (
     <section
-      className={`flex flex-col xl:flex-row justify-around items-center p-5 bg-grey ${className}`}
+      className={`flex flex-col xl:flex-row justify-around items-center bg-grey ${className}`}
     >
       {items?.map((item) =>
         item.link?.url ? (
-          <Link href={linkResolver(item.link)} key={item.link.url}>
+          <Link
+            href={linkResolver(item.link)}
+            key={item.link.url}
+          >
             <a
               className={`${
-                isActiveLink(item?.link?.url) ? 'font-bold' : 'font-normal'
-              } uppercase font-suisseIntlMono pt-4 xl:pt-0`}
+                isActiveLink(item?.link?.url)
+                  ? 'bg-darkblue text-white font-bold'
+                  : 'font-normal'
+              } w-full h-full flex gap-4 items-center justify-center uppercase font-suisseIntlMono py-4 xl:py-0 submenuItem-trigger`}
             >
+              <Arrow
+                className="submenuItem-arrow"
+                isActive={isActiveLink(item?.link?.url)}
+              />
               <PrismicRichText field={item.linkLabel} />
             </a>
           </Link>

@@ -65,7 +65,7 @@ const Form: React.FC<Props> = ({ slice }) => {
   }
 
   return (
-    <section className="px-6 my-20 mx-auto max-w-4xl sm:px-16 lg:my-44">
+    <section className="px-6 mx-auto max-w-4xl sm:px-16 module-spacing-b">
       <form onSubmit={handleSubmit}>
         {slice.items.map((item, index) => (
           <React.Fragment key={index}>

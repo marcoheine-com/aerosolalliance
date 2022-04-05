@@ -56,7 +56,7 @@
   h4,
   h5,
   h6 {
-    @apply text-4xl  sm:text-headline mb-4 font-suisseIntlMono;
+    @apply text-4xl sm:text-headline mb-4 font-suisseIntlMono;
   }
   a > p {
     @apply m-0;
@@ -87,9 +87,6 @@
     @apply -scale-x-100 left-[unset] -right-28 rotate-12 z-[1];
   }
 
-  .fontUvasBlack p {
-    @apply text-4xl lg:text-5xl 2xl:text-7xl;
-  }
   .imageWrapper h2 {
     @apply uppercase text-2xl mt-4 mb-2 font-suisseIntlRegular;
   }
@@ -98,16 +95,12 @@
     @apply text-sm;
   }
 
-  .fontUvasBlack h1 {
-    @apply text-6xl 2xl:text-7xl font-UvasBlack-Black;
-  }
-
   .hover-target {
-    @apply translate-x-[500px];
+    @apply translate-x-[500px] opacity-0;
   }
 
   .hover-trigger:hover .hover-target {
-    @apply translate-x-0 duration-300;
+    @apply translate-x-0 opacity-100 duration-300;
   }
 
   .submenuItem-trigger {

@@ -81,22 +81,20 @@ const getRandomRotation = (): string => {
 
 const getLinkStyling = (item: Item): string => {
   if (item.invertedColor) {
-    return `border-2 ${getBordercolorClass(item.linkColor)} ${getTextcolorClass(
+    return `border-1 ${getBordercolorClass(item.linkColor)} ${getTextcolorClass(
       item.linkColor
     )}`
   }
-  return `${getBackgroundcolorClass(
-    item.linkColor
-  )} border-2 ${getBordercolorClass(item.linkColor)}  text-white`
+  return `${getBackgroundcolorClass(item.linkColor)}  text-white`
 }
 
 const getBeforeStyling = (item: Item): string => {
   if (item.invertedColor) {
     return `${getBackgroundcolorClass(
       item.linkColor
-    )} border-1 ${getBordercolorClass(item.linkColor)}  text-white`
+    )} border-2 ${getBordercolorClass(item.linkColor)}  text-white`
   }
-  return `border-1 ${getBordercolorClass(item.linkColor)} ${getTextcolorClass(
+  return `border-2 ${getBordercolorClass(item.linkColor)} ${getTextcolorClass(
     item.linkColor
   )}`
 }

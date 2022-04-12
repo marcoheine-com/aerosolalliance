@@ -14,7 +14,7 @@ export const firebaseApiKey = process.env.FIREBASE_API_KEY
 export const baseURL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000/'
-    : 'https://www.aerosolalliance.verce.app/'
+    : 'https://aerosolalliance.vercel.app/'
 
 export const linkResolver = (doc) => {
   if (doc.type === 'home') {

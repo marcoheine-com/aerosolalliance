@@ -15,7 +15,7 @@ interface Props {
 
 export const TwoColumnSection: FunctionComponent<Props> = ({
   backgroundcolor,
-  className,
+  className = '',
   svg,
   image,
   headline,

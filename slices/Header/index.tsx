@@ -37,6 +37,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
           svg={primary.headersvg}
           image={primary.image}
           headline={primary.textOnImage}
+          className="module-spacing-b"
         />
       )
     case 'twoColumnWithMenu':
@@ -57,7 +58,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
       )
     case 'fullWidthWithMenu':
       return (
-        <section className="xl:h-screen">
+        <section className="xl:h-screen module-spacing-b">
           <FullWidthSVG
             backgroundcolor={primary.backgroundcolor}
             svg={primary.headersvg}
@@ -65,7 +66,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
           />
           <HorizontalMenu
             items={slice.items}
-            className="xl:h-[10vh] module-spacing-b"
+            className="xl:h-[10vh]"
           />
         </section>
       )
@@ -83,7 +84,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
         <FullWidthSVG
           backgroundcolor={primary.backgroundcolor}
           svg={primary.headersvg}
-          className="pt-56"
+          className="pt-56 module-spacing-b"
         />
       )
   }

@@ -1,7 +1,7 @@
 {
   "id": "facts-subpage",
   "label": "Facts Subpage",
-  "repeatable": false,
+  "repeatable": true,
   "status": true,
   "json": {
     "Main": {

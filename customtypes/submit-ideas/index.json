@@ -40,9 +40,6 @@
             },
             "text_content": {
               "type": "SharedSlice"
-            },
-            "form": {
-              "type": "SharedSlice"
             }
           }
         }

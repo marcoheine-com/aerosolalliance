@@ -33,23 +33,68 @@ export const Slicemachine = ({ slices }: { slices: any }) => {
 
     switch (sliceType) {
       case 'call_to_action':
-        return <CallToAction slice={slice} key={index} />
+        return (
+          <CallToAction
+            slice={slice}
+            key={index}
+          />
+        )
       case 'full_width_image':
-        return <FullWidthImage slice={slice} key={index} />
+        return (
+          <FullWidthImage
+            slice={slice}
+            key={index}
+          />
+        )
       case 'header':
-        return <Header slice={slice} key={index} />
+        return (
+          <Header
+            slice={slice}
+            key={index}
+          />
+        )
       case 'herosection':
-        return <Herosection slice={slice} key={index} />
+        return (
+          <Herosection
+            slice={slice}
+            key={index}
+          />
+        )
       case 'image_gallery':
-        return <ImageGallery slice={slice} key={index} />
+        return (
+          <ImageGallery
+            slice={slice}
+            key={index}
+          />
+        )
       case 'link_image_gallery':
-        return <LinkImageGallery slice={slice} key={index} />
+        return (
+          <LinkImageGallery
+            slice={slice}
+            key={index}
+          />
+        )
       case 'quote':
-        return <Quote slice={slice} key={index} />
+        return (
+          <Quote
+            slice={slice}
+            key={index}
+          />
+        )
       case 'text_content':
-        return <TextContent slice={slice} key={index} />
+        return (
+          <TextContent
+            slice={slice}
+            key={index}
+          />
+        )
       case 'form':
-        return <Form slice={slice} key={index} />
+        return (
+          <Form
+            slice={slice}
+            key={index}
+          />
+        )
       default:
         return null
     }

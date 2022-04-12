@@ -25,6 +25,21 @@
             },
             "full_width_image": {
               "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
+            },
+            "link_image_gallery": {
+              "type": "SharedSlice"
+            },
+            "image_gallery": {
+              "type": "SharedSlice"
+            },
+            "quote": {
+              "type": "SharedSlice"
+            },
+            "herosection": {
+              "type": "SharedSlice"
             }
           }
         }

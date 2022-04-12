@@ -9,10 +9,12 @@ export const accessToken = process.env.PRISMIC_ACCESS_TOKEN
 // -- Firebse API key for connectivity with firebse
 export const firebaseApiKey = process.env.FIREBASE_API_KEY
 // -- Definition of baseURL based on running environment
+
+// TODO: change when going to production
 export const baseURL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000/'
-    : 'https://www.aerosolalliance.com/'
+    : 'https://www.aerosolalliance.verce.app/'
 
 export const linkResolver = (doc) => {
   if (doc.type === 'home') {

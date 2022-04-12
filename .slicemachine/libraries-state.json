@@ -24,7 +24,8 @@
                   "config": {
                     "label": "Link",
                     "placeholder": "",
-                    "allowTargetBlank": false
+                    "allowTargetBlank": false,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -58,7 +59,8 @@
                   },
                   "type": "Boolean"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -119,7 +121,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {
@@ -191,7 +192,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "manifestoSignupForm",
@@ -200,7 +202,8 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "Form",
               "primary": {},
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -249,7 +252,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {}
@@ -281,7 +283,8 @@
                   "type": "Image"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "twoColumn",
@@ -307,7 +310,8 @@
                   "type": "Image"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -358,7 +362,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {
@@ -417,7 +420,8 @@
                   "type": "Link"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "twoColumn",
@@ -468,7 +472,8 @@
                   "type": "StructuredText"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "twoColumnWithMenu",
@@ -524,7 +529,8 @@
                   "config": {
                     "label": "link",
                     "placeholder": "",
-                    "allowTargetBlank": false
+                    "allowTargetBlank": false,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -537,7 +543,8 @@
                   },
                   "type": "StructuredText"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "fullWidthWithMenu",
@@ -576,7 +583,8 @@
                   "config": {
                     "label": "link",
                     "placeholder": "",
-                    "allowTargetBlank": false
+                    "allowTargetBlank": false,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -589,7 +597,8 @@
                   },
                   "type": "StructuredText"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "fullWidthWithBgImage",
@@ -631,7 +640,8 @@
                   "type": "Image"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -851,7 +861,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {
@@ -935,7 +944,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "twoColumnHero",
@@ -986,7 +996,8 @@
                   "type": "StructuredText"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1041,7 +1052,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {
@@ -1093,7 +1103,8 @@
                   },
                   "type": "StructuredText"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1181,7 +1192,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {
@@ -1223,7 +1233,8 @@
                   "config": {
                     "label": "link",
                     "placeholder": "",
-                    "allowTargetBlank": false
+                    "allowTargetBlank": false,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -1236,7 +1247,8 @@
                   },
                   "type": "StructuredText"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1340,7 +1352,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {
@@ -1373,7 +1384,8 @@
                   "config": {
                     "label": "link",
                     "placeholder": "",
-                    "allowTargetBlank": false
+                    "allowTargetBlank": false,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -1392,7 +1404,8 @@
                   "config": {
                     "label": "subLink",
                     "placeholder": "",
-                    "allowTargetBlank": false
+                    "allowTargetBlank": false,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -1405,7 +1418,8 @@
                   },
                   "type": "StructuredText"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1459,7 +1473,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "js"
         },
         "screenshotPaths": {}
@@ -1500,7 +1513,8 @@
                   },
                   "type": "StructuredText"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1570,7 +1584,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {
@@ -1609,7 +1622,8 @@
                   },
                   "type": "StructuredText"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1661,7 +1675,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "tsx"
         },
         "screenshotPaths": {

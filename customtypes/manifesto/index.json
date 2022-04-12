@@ -28,6 +28,21 @@
             },
             "form": {
               "type": "SharedSlice"
+            },
+            "full_width_image": {
+              "type": "SharedSlice"
+            },
+            "herosection": {
+              "type": "SharedSlice"
+            },
+            "image_gallery": {
+              "type": "SharedSlice"
+            },
+            "quote": {
+              "type": "SharedSlice"
+            },
+            "link_image_gallery": {
+              "type": "SharedSlice"
             }
           }
         }

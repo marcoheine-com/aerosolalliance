@@ -29,6 +29,10 @@ export const linkResolver = (doc) => {
     return `${doc.url}`
   }
 
+  if (doc.link_type === 'Web') {
+    return `${doc.url}`
+  }
+
   return `/${doc.uid}`
 }
 

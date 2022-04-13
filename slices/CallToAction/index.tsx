@@ -3,6 +3,7 @@ import { RichTextField } from '@prismicio/types'
 import Link from 'next/link'
 import React from 'react'
 import { Color } from '../../entities'
+import { linkResolver } from '../../prismicio'
 import {
   getBackgroundcolorClass,
   getBordercolorClass,
@@ -104,7 +105,7 @@ const CallToAction: React.FC<Props> = ({ slice }) => {
     <section className="flex gap-8 px-6 mx-auto mt-20 mb-40">
       {slice?.items?.map((item: Item, index: number) => (
         <React.Fragment key={`${item.link?.uid}_${index}`}>
-          <Link href={`/${item.link?.uid}`}>
+          <Link href={linkResolver(item.link)}>
             <a
               className={`${getBeforeStyling(
                 item

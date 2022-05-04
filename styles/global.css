@@ -74,7 +74,7 @@
   }
 
   .footer h3 {
-    @apply uppercase text-[10px];
+    @apply uppercase text-[10px] border-none;
   }
   .footer p {
     @apply text-[15px] mb-0;

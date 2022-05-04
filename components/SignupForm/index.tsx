@@ -5,6 +5,8 @@ import { baseURL } from '../../prismicio'
 import { toastConfigurations } from '../../services/helpers'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { FriendlyCaptcha } from '../friendly-captcha'
+import ReactCanvasConfetti from 'react-canvas-confetti'
 
 interface UserInfo {
   username?: string
@@ -22,8 +24,25 @@ const styles = {
 }
 
 const SignupForm = () => {
-  const handleSignupFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [submitButtonEnabled, setSubmitButtonEnabled] = React.useState(false)
+  const [renderConfetti, setRenderConfetti] = React.useState(false)
+  const widgetRef = React.useRef()
+  const reset = () => {
+    setSubmitButtonEnabled(false)
+    if (widgetRef.current) {
+      // The type of widgetRef.current is WidgetInstance, see the JS API details here:
+      // https://docs.friendlycaptcha.com/#/widget_api?id=javascript-api
+      // @ts-ignore
+      widgetRef.current.reset()
+    }
+  }
+
+  const handleSignupFormSubmit = async (
+    e: FormEvent<HTMLFormElement>,
+    resetWidget: () => void
+  ) => {
     e.preventDefault()
+
     let userInfo: UserInfo = {}
     if (e.currentTarget.username.value)
       userInfo.username = e.currentTarget.username.value
@@ -46,18 +65,32 @@ const SignupForm = () => {
     if (e.currentTarget.social.value)
       userInfo.social = e.currentTarget.social.value
 
-    postData(`${baseURL}api/sign`, userInfo).then((data) => {
-      if (data.status !== 200) {
-        toast.error('Ooops, something went wrong!', toastConfigurations)
-      } else {
-        toast.success(
-          '🦄 Congrats! You successfully signed the petition!',
-          toastConfigurations
-        )
+    try {
+      const response = await postData(`${baseURL}api/sign`, {
+        userInfo,
         // @ts-ignore
-        document?.getElementById('signup-form')?.reset()
+        frcCaptchaSolution: e.target['frc-captcha-solution'].value,
+      })
+
+      const data = await response.json()
+
+      if (response.status !== 200) {
+        throw new Error(data.message)
       }
-    })
+
+      toast.success(
+        `🦄 Congrats ${data.message}! You successfully signed the petition!`,
+        toastConfigurations
+      )
+      // @ts-ignore
+      document?.getElementById('signup-form')?.reset()
+      // We should always reset the widget as a solution can not be used twice.
+      setRenderConfetti(true)
+      resetWidget()
+    } catch (e) {
+      toast.error(`Ooops, something went wrong! ${e}`, toastConfigurations)
+      resetWidget()
+    }
   }
 
   return (
@@ -65,7 +98,7 @@ const SignupForm = () => {
       <div className="px-6 mx-auto mb-32 w-full max-w-4xl sm:px-16">
         <form
           action=""
-          onSubmit={handleSignupFormSubmit}
+          onSubmit={(e) => handleSignupFormSubmit(e, reset)}
           className="grid gap-6 lg:grid-cols-2"
           id="signup-form"
         >
@@ -170,12 +203,37 @@ const SignupForm = () => {
               </select>
             </label>
           </fieldset>
+          <FriendlyCaptcha
+            ref={widgetRef}
+            // @ts-ignore
+            sitekey={process.env.NEXT_PUBLIC_FRIENDLY_CAPTCHA_SITEKEY}
+            doneCallback={() => setSubmitButtonEnabled(true)}
+            errorCallback={() => {
+              setSubmitButtonEnabled(true)
+            }}
+          />
           <button
-            className="justify-self-start py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-darkblue rounded-full"
+            className={`justify-self-start py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-darkblue rounded-full ${
+              submitButtonEnabled ? '' : 'opacity-30 cursor-not-allowed'
+            }`}
             type="submit"
+            disabled={!submitButtonEnabled}
           >
             Sign the manifesto
           </button>
+
+          <ReactCanvasConfetti
+            style={{
+              position: 'fixed',
+              width: '100%',
+              height: '100%',
+              top: 0,
+              left: 0,
+              zIndex: -1,
+            }}
+            fire={renderConfetti}
+          />
+
           <ToastContainer />
         </form>
       </div>

@@ -2,7 +2,7 @@ import { firebaseApiKey } from '../prismicio'
 import { ToastOptions } from 'react-toastify'
 
 export const toastConfigurations: ToastOptions = {
-  position: 'top-right',
+  position: 'bottom-center',
   autoClose: 5000,
   hideProgressBar: true,
   closeOnClick: true,
@@ -13,11 +13,10 @@ export const toastConfigurations: ToastOptions = {
 
 export const firebaseConfigurations = {
   apiKey: firebaseApiKey,
-  authDomain: 'aerosolalliance.firebaseapp.com',
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
   projectId: 'aerosolalliance',
   storageBucket: 'aerosolalliance.appspot.com',
-  messagingSenderId: '276816374912',
-  appId: '1:276816374912:web:e42c56fad9a15d8d4b0a65',
-  databaseURL:
-    'https://aerosolalliance-default-rtdb.europe-west1.firebasedatabase.app/',
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+  databaseURL: process.env.FIREBASE_DB_URL,
 }

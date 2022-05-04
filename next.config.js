@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = {
+// Package docs at https://github.com/martpie/next-transpile-modules
+const withTM = require('next-transpile-modules')(['friendly-challenge'])
+
+module.exports = withTM({
   images: {
     domains: [
       'images.prismic.io',
@@ -13,4 +16,4 @@ module.exports = {
     defaultLocale: 'en',
   },
   reactStrictMode: true,
-}
+})

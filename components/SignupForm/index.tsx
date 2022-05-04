@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { FriendlyCaptcha } from '../friendly-captcha'
 import ReactCanvasConfetti from 'react-canvas-confetti'
+import Link from 'next/link'
 
 interface UserInfo {
   username?: string
@@ -203,6 +204,28 @@ const SignupForm = () => {
               </select>
             </label>
           </fieldset>
+
+          <label
+            className="col-span-2 col-start-1 mb-8 uppercase hover:cursor-pointer"
+            htmlFor="readTerms"
+          >
+            <input
+              className={`${styles.input} w-auto mb-0 `}
+              type="checkbox"
+              name="readTerms"
+              id="readTerms"
+              required
+            />
+            <span className="ml-2">
+              I acknowledge that the information I provide will be processed in
+              accordance with our{' '}
+            </span>
+            <Link href="/privacy-policy">
+              <a className="border-b-2 border-darkblue">privacy policy</a>
+            </Link>{' '}
+            .*
+          </label>
+
           <FriendlyCaptcha
             ref={widgetRef}
             // @ts-ignore
@@ -212,8 +235,9 @@ const SignupForm = () => {
               setSubmitButtonEnabled(true)
             }}
           />
+
           <button
-            className={`justify-self-start py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-darkblue rounded-full ${
+            className={`justify-self-start py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-darkblue rounded-full col-start-1  ${
               submitButtonEnabled ? '' : 'opacity-30 cursor-not-allowed'
             }`}
             type="submit"

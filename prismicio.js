@@ -54,6 +54,10 @@ export const routeResolver = {
       type: 'facts-subpage',
       path: '/facts/:uid',
     },
+    {
+      type: 'content-page',
+      path: '/:uid',
+    },
   ],
 }
 

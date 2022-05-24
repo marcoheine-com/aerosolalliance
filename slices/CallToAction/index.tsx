@@ -102,7 +102,7 @@ const getBeforeStyling = (item: Item): string => {
 
 const CallToAction: React.FC<Props> = ({ slice }) => {
   return (
-    <section className="flex gap-8 px-6 mx-auto mt-20 mb-40">
+    <section className="flex gap-8 px-6 mx-auto mt-10 mb-20">
       {slice?.items?.map((item: Item, index: number) => (
         <React.Fragment key={`${item.link?.uid}_${index}`}>
           <Link href={linkResolver(item.link)}>

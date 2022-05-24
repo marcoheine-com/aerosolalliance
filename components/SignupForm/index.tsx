@@ -21,13 +21,16 @@ interface UserInfo {
 
 const styles = {
   input:
-    'placeholder:italic placeholder:text-slate-400 p-5 w-full rounded-xl border-2 border-darkblue mb-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm',
+    'placeholder:italic placeholder:text-slate-400 p-3 w-full rounded-xl border-2 border-darkblue mb-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm',
 }
 
 const SignupForm = () => {
   const [submitButtonEnabled, setSubmitButtonEnabled] = React.useState(false)
   const [renderConfetti, setRenderConfetti] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(false)
+
   const widgetRef = React.useRef()
+
   const reset = () => {
     setSubmitButtonEnabled(false)
     if (widgetRef.current) {
@@ -66,6 +69,8 @@ const SignupForm = () => {
     if (e.currentTarget.social.value)
       userInfo.social = e.currentTarget.social.value
 
+    setIsLoading(true)
+
     try {
       const response = await postData(`${baseURL}api/sign`, {
         userInfo,
@@ -83,6 +88,7 @@ const SignupForm = () => {
         `🦄 Congrats ${data.message}! You successfully signed the petition!`,
         toastConfigurations
       )
+      setIsLoading(false)
       // @ts-ignore
       document?.getElementById('signup-form')?.reset()
       // We should always reset the widget as a solution can not be used twice.
@@ -90,6 +96,7 @@ const SignupForm = () => {
       resetWidget()
     } catch (e) {
       toast.error(`Ooops, something went wrong! ${e}`, toastConfigurations)
+      setIsLoading(false)
       resetWidget()
     }
   }
@@ -100,12 +107,11 @@ const SignupForm = () => {
         <form
           action=""
           onSubmit={(e) => handleSignupFormSubmit(e, reset)}
-          className="grid gap-6 lg:grid-cols-2"
           id="signup-form"
         >
-          <fieldset>
+          <fieldset className="mb-4 w-full">
             <label
-              className="flex flex-col gap-2 justify-start mb-8 uppercase"
+              className="flex flex-col gap-2 justify-start mb-4 uppercase"
               htmlFor="username"
             >
               Name you go by*
@@ -119,7 +125,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex flex-col gap-2 justify-start mb-8 uppercase"
+              className="flex flex-col gap-2 justify-start mb-4 uppercase"
               htmlFor="email"
             >
               E-Mail*
@@ -133,7 +139,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex flex-col gap-2 justify-start mb-8 uppercase"
+              className="flex flex-col gap-2 justify-start mb-4 uppercase"
               htmlFor="location"
             >
               Location*
@@ -147,7 +153,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex flex-col gap-2 justify-start mb-8 uppercase"
+              className="flex flex-col gap-2 justify-start mb-4 uppercase"
               htmlFor="social"
             >
               Website or Instagram
@@ -160,7 +166,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex gap-2 mb-8 uppercase hover:cursor-pointer"
+              className="flex gap-2 mb-4 uppercase hover:cursor-pointer"
               htmlFor="shouldDisplayName"
             >
               <input
@@ -173,7 +179,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex gap-2 mb-8 uppercase hover:cursor-pointer"
+              className="flex gap-2 mb-4 uppercase hover:cursor-pointer"
               htmlFor="signUpForNewsletter"
             >
               <input
@@ -184,10 +190,8 @@ const SignupForm = () => {
               />
               Sign up for newsletter / keep me updated
             </label>
-          </fieldset>
-          <fieldset>
             <label
-              className="flex flex-col gap-2 justify-start mb-8 uppercase"
+              className="flex flex-col gap-2 justify-start mb-4 uppercase"
               htmlFor="position"
             >
               What are you?*
@@ -203,28 +207,28 @@ const SignupForm = () => {
                 <option value="human being">Human being</option>
               </select>
             </label>
-          </fieldset>
 
-          <label
-            className="col-span-2 col-start-1 mb-8 uppercase hover:cursor-pointer"
-            htmlFor="readTerms"
-          >
-            <input
-              className={`${styles.input} w-auto mb-0 `}
-              type="checkbox"
-              name="readTerms"
-              id="readTerms"
-              required
-            />
-            <span className="ml-2">
-              I acknowledge that the information I provide will be processed in
-              accordance with our{' '}
-            </span>
-            <Link href="/privacy-policy">
-              <a className="border-b-2 border-darkblue">privacy policy</a>
-            </Link>{' '}
-            .*
-          </label>
+            <label
+              className="col-span-2 col-start-1 mb-8 uppercase hover:cursor-pointer"
+              htmlFor="readTerms"
+            >
+              <input
+                className={`${styles.input} w-auto mb-0 `}
+                type="checkbox"
+                name="readTerms"
+                id="readTerms"
+                required
+              />
+              <span className="ml-2">
+                I acknowledge that the information I provide will be processed
+                in accordance with our{' '}
+              </span>
+              <Link href="/privacy-policy">
+                <a className="border-b-2 border-darkblue">privacy policy</a>
+              </Link>{' '}
+              .*
+            </label>
+          </fieldset>
 
           <FriendlyCaptcha
             ref={widgetRef}
@@ -237,13 +241,13 @@ const SignupForm = () => {
           />
 
           <button
-            className={`justify-self-start py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-darkblue rounded-full col-start-1  ${
+            className={`justify-self-start mt-10 py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-darkblue rounded-full col-start-1  ${
               submitButtonEnabled ? '' : 'opacity-30 cursor-not-allowed'
             }`}
             type="submit"
             disabled={!submitButtonEnabled}
           >
-            Sign the manifesto
+            {isLoading ? 'Submitting...' : 'Sign the manifesto'}
           </button>
 
           <ReactCanvasConfetti

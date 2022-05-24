@@ -78,7 +78,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
         {menuItems?.map((item: Item) => (
           <li
             key={item.primary.link.uid}
-            className="py-8 font-semibold border-b-2 last:border-b-0 border-b-darkblue"
+            className="py-4 font-semibold border-b-2 last:border-b-0 border-b-darkblue desktop:py-8"
           >
             <Link href={linkResolver(item.primary.link)}>
               <a className="flex gap-4 items-center submenuItem-trigger">
@@ -87,16 +87,19 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
               </a>
             </Link>
             {item.items?.length > 0 && item.items[0].subLink.uid && (
-              <ul className="pt-5">
+              <ul className="pt-1">
                 {item.items?.map(
                   (item: SubLink) =>
                     item.subLink.uid && (
-                      <li key={item.subLink.uid}>
+                      <li
+                        key={item.subLink.uid}
+                        className="py-1 last:pb-0 desktop:py-2"
+                      >
                         <Link
                           href={linkResolver(item.subLink)}
                           key={item.subLink.uid}
                         >
-                          <a className="flex gap-4 items-center py-4 font-suisseIntlRegular font-normal submenuItem-trigger">
+                          <a className="flex gap-4 items-center font-suisseIntlRegular font-normal submenuItem-trigger">
                             <Arrow className="submenuItem-arrow" />
                             <PrismicRichText field={item.subLinkLabel} />
                           </a>

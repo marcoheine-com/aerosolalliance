@@ -10,7 +10,20 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "TextContent",
-      "primary": {},
+      "primary": {
+        "distanceToBottom": {
+          "type": "Select",
+          "config": {
+            "label": "Distance To Bottom",
+            "placeholder": "",
+            "options": [
+              "none",
+              "small",
+              "large"
+            ]
+          }
+        }
+      },
       "items": {
         "Content": {
           "config": {
@@ -20,8 +33,18 @@
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           },
           "type": "StructuredText"
+        },
+        "subline": {
+          "type": "Boolean",
+          "config": {
+            "label": "Subline",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
         }
-      }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

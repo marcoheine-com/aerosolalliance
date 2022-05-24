@@ -8,6 +8,9 @@ module.exports = {
 
   theme: {
     extend: {
+      screens: {
+        desktop: '1200px',
+      },
       colors: {
         yellow: '#FFFDAF',
         white: '#fff',

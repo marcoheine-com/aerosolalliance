@@ -47,7 +47,7 @@
   }
 
   p {
-    @apply text-base leading-[1.35] mb-4;
+    @apply text-base leading-[1.35] mb-4 desktop:text-[1.5rem];
   }
 
   h1,
@@ -56,24 +56,15 @@
   h4,
   h5,
   h6 {
-    @apply text-[1.75rem] leading-[2.5rem] mb-4 font-suisseIntlMono;
+    @apply text-[1.75rem] leading-[2rem] mb-4 font-suisseIntlMono desktop:text-[2rem] desktop:leading-10;
   }
 
   a > p {
     @apply m-0;
   }
-
-  h3 {
-    font-size: 1.5rem;
-    @apply border-b-2 border-b-darkblue pb-8 mb-10 uppercase;
-  }
 }
 
 @layer utilities {
-  .textContent h2 {
-    @apply border-b-2 border-b-darkblue pb-10 mb-12 uppercase;
-  }
-
   .footer h3 {
     @apply uppercase text-[10px] border-none;
   }

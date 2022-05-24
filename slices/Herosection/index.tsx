@@ -1,8 +1,9 @@
 import React, { FunctionComponent } from 'react'
-import { Color, ImageProps, SVG } from '../../entities'
+import { Color, DistanceToBottom, ImageProps, SVG } from '../../entities'
 import { FullWidthSVG } from '../../components/fullWidthSVG'
 import { TwoColumnSection } from '../../components/twoColumnSection'
 import { RichTextField } from '@prismicio/types'
+import { getDistanceToBottom } from '../../utils/getDistanceToBottom'
 
 interface HeroSection {
   backgroundcolor: Color
@@ -11,6 +12,7 @@ interface HeroSection {
   caption?: string
   heroimage: ImageProps
   heroheadline: RichTextField
+  distanceToBottom: DistanceToBottom
 }
 
 interface Slice {
@@ -31,7 +33,7 @@ const Herosection: FunctionComponent<Props> = (props): JSX.Element => {
       svg={primary.herosvg}
       image={primary.heroimage}
       headline={primary.heroheadline}
-      className="module-spacing-b"
+      className={`${getDistanceToBottom(primary.distanceToBottom)}`}
     />
   ) : (
     <FullWidthSVG
@@ -39,7 +41,7 @@ const Herosection: FunctionComponent<Props> = (props): JSX.Element => {
       svg={primary.herosvg}
       svgMobile={primary.herosvgMobile}
       caption={primary.caption}
-      className="module-spacing-b"
+      className={`${getDistanceToBottom(primary.distanceToBottom)}`}
     />
   )
 }

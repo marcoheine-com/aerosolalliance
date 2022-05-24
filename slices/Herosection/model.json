@@ -49,9 +49,22 @@
             "placeholder": ""
           },
           "type": "Text"
+        },
+        "distanceToBottom": {
+          "type": "Select",
+          "config": {
+            "label": "Distance To Bottom",
+            "placeholder": "",
+            "options": [
+              "none",
+              "small",
+              "large"
+            ]
+          }
         }
       },
-      "items": {}
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     },
     {
       "id": "twoColumnHero",
@@ -100,9 +113,22 @@
             "single": "heading2,heading3,heading4,heading5,heading6"
           },
           "type": "StructuredText"
+        },
+        "distanceToBottom": {
+          "type": "Select",
+          "config": {
+            "label": "Distance To Bottom",
+            "placeholder": "",
+            "options": [
+              "none",
+              "small",
+              "large"
+            ]
+          }
         }
       },
-      "items": {}
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

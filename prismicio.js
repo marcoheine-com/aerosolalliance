@@ -29,6 +29,10 @@ export const linkResolver = (doc) => {
     return `${doc.url}`
   }
 
+  if (doc.type === 'about-us-subpage') {
+    return `${doc.url}`
+  }
+
   if (doc.link_type === 'Web') {
     return `${doc.url}`
   }
@@ -53,6 +57,10 @@ export const routeResolver = {
     {
       type: 'facts-subpage',
       path: '/facts/:uid',
+    },
+    {
+      type: 'about-us-subpage',
+      path: '/about-us/:uid',
     },
     {
       type: 'content-page',

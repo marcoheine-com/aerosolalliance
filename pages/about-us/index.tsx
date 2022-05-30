@@ -1,9 +1,9 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import { Footer } from '../components/footer'
-import { createClient } from '../prismicio'
-import { Slicemachine } from '../components/slicemachine'
-import { Header } from '../components/header'
+import { Footer } from '../../components/footer'
+import { createClient } from '../../prismicio'
+import { Slicemachine } from '../../components/slicemachine'
+import { Header } from '../../components/header'
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient(previewData)

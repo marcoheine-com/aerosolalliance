@@ -166,6 +166,24 @@ const SignupForm = () => {
             </label>
 
             <label
+              className="flex flex-col gap-2 justify-start mb-4 uppercase"
+              htmlFor="position"
+            >
+              What are you?*
+              <select
+                className={`${styles.input} bg-none`}
+                name="position"
+                required
+              >
+                <option value="artist">Artist</option>
+                <option value="curator">Curator</option>
+                <option value="manufacturer">Manufacturer</option>
+                <option value="recycler">Recycler</option>
+                <option value="human being">Human being</option>
+              </select>
+            </label>
+
+            <label
               className="flex gap-2 mb-4 uppercase hover:cursor-pointer"
               htmlFor="shouldDisplayName"
             >
@@ -189,23 +207,6 @@ const SignupForm = () => {
                 id="signUpForNewsletter"
               />
               Sign up for newsletter / keep me updated
-            </label>
-            <label
-              className="flex flex-col gap-2 justify-start mb-4 uppercase"
-              htmlFor="position"
-            >
-              What are you?*
-              <select
-                className={`${styles.input} bg-none`}
-                name="position"
-                required
-              >
-                <option value="artist">Artist</option>
-                <option value="curator">Curator</option>
-                <option value="manufacturer">Manufacturer</option>
-                <option value="recycler">Recycler</option>
-                <option value="human being">Human being</option>
-              </select>
             </label>
 
             <label

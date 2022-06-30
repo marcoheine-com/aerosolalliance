@@ -59,6 +59,10 @@
     @apply text-[1.75rem] leading-[2rem] mb-4 font-suisseIntlMono desktop:text-[2rem] desktop:leading-10;
   }
 
+  ol li a {
+    @apply break-words;
+  }
+
   a > p {
     @apply m-0;
   }

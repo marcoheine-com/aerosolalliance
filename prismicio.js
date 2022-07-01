@@ -10,11 +10,10 @@ export const accessToken = process.env.PRISMIC_ACCESS_TOKEN
 export const firebaseApiKey = process.env.FIREBASE_API_KEY
 // -- Definition of baseURL based on running environment
 
-// TODO: change when going to production
 export const baseURL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000/'
-    : 'https://aerosolalliance.vercel.app/'
+    : 'https://aerosolalliance.com'
 
 export const linkResolver = (doc) => {
   if (doc.type === 'home') {

@@ -13,7 +13,7 @@ export const firebaseApiKey = process.env.FIREBASE_API_KEY
 export const baseURL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000/'
-    : 'https://aerosolalliance.com'
+    : 'https://aerosolalliance.com/'
 
 export const linkResolver = (doc) => {
   if (doc.type === 'home') {

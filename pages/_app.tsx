@@ -4,6 +4,7 @@ import Link from 'next/link'
 import '../styles/global.css'
 import { linkResolver, repositoryName } from '../prismicio'
 import { PrismicPreview } from '@prismicio/next'
+import PlausibleProvider from 'next-plausible'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       )}
     >
       <PrismicPreview repositoryName={repositoryName}>
-        <Component {...pageProps} />
+        <PlausibleProvider domain="https://aerosolalliance.com">
+          <Component {...pageProps} />
+        </PlausibleProvider>
       </PrismicPreview>
     </PrismicProvider>
   )

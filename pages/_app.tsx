@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       )}
     >
       <PrismicPreview repositoryName={repositoryName}>
-        <PlausibleProvider domain="https://aerosolalliance.com">
+        <PlausibleProvider domain="aerosolalliance.com">
           <Component {...pageProps} />
         </PlausibleProvider>
       </PrismicPreview>

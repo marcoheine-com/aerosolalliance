@@ -28,7 +28,10 @@ const FullWidthImage: FunctionComponent<Props> = ({ slice }) => {
     case 'twoColumn':
       return (
         <>
-          <section className="grid lg:grid-cols-2" key={primary.leftImage.alt}>
+          <section
+            className="grid lg:grid-cols-2"
+            key={primary.leftImage.alt}
+          >
             <Image
               src={primary.leftImage.url}
               width={primary.leftImage.dimensions.width}
@@ -45,7 +48,7 @@ const FullWidthImage: FunctionComponent<Props> = ({ slice }) => {
         </>
       )
     case 'default-slice':
-      return (
+      return primary.image.url ? (
         <Image
           src={primary.image?.url}
           alt={primary.image?.alt}
@@ -53,7 +56,7 @@ const FullWidthImage: FunctionComponent<Props> = ({ slice }) => {
           height={primary.image?.dimensions.height}
           layout="responsive"
         />
-      )
+      ) : null
     default:
       return null
   }

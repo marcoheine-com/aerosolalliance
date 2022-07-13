@@ -30,6 +30,7 @@ interface Props {
         url: string
         alt: string
       }
+      imageAlt: string
       slices: any
     }
   }
@@ -44,6 +45,7 @@ const WhatYouCanDo: NextPage<Props> = (props) => {
         title={props.facts?.data?.title}
         description={props.facts?.data?.description}
         image={props.facts?.data?.image}
+        imageAlt={props.facts?.data?.imageAlt}
       />
 
       <main className="flex relative flex-col mx-auto max-w-[1920px]">

@@ -7,12 +7,14 @@ interface Props {
   title: string
   description: string
   image: { url: string; alt: string }
+  imageAlt: string
   favicon?: string
 }
 export const HeadComponent: React.FC<Props> = ({
   title,
   description,
   image,
+  imageAlt,
   favicon = '/favicon.ico',
 }) => {
   const router = useRouter()
@@ -35,7 +37,7 @@ export const HeadComponent: React.FC<Props> = ({
       />
       <meta
         property="og:image:alt"
-        content={image?.alt}
+        content={imageAlt}
       />
       <meta
         property="og:title"

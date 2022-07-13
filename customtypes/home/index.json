@@ -27,11 +27,18 @@
         }
       },
       "image": {
-        "type": "Image",
+        "type": "Link",
         "config": {
           "label": "Image",
-          "constraint": {},
-          "thumbnails": []
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "imageAlt": {
+        "type": "Text",
+        "config": {
+          "label": "Image Alt",
+          "placeholder": ""
         }
       },
       "slices": {

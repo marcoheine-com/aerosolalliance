@@ -1,14 +1,21 @@
 {
-  "id": "065e1887-a03a-4147-80c4-832c047bcd97",
-  "uid": "autem-voluptatem-hic",
+  "id": "0929137b-9e32-4a71-a9fa-538e68067bc3",
+  "uid": "quam-qui-voluptate",
   "type": "what-you-can-do-subpage",
   "data": {
     "name": [
       {
         "type": "paragraph",
-        "text": "Amet ut dolore nisi sint magna nostrud tempor. In consequat fugiat voluptate incididunt aliquip est tempor ipsum aute.",
+        "text": "Elit et duis excepteur. Enim commodo cupidatat laboris ullamco id laboris.",
         "spans": []
       }
-    ]
+    ],
+    "title": "generate synergistic infomediaries",
+    "description": "streamline 24/365 users",
+    "image": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "imageAlt": "implement virtual web services"
   }
 }

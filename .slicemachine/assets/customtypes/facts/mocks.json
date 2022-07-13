@@ -1,18 +1,14 @@
 {
-  "id": "00e4a26b-2c84-4be3-b94f-e6d8a187265a",
-  "uid": "nostrum-omnis-odit",
+  "id": "f56da8fd-a0c8-4a9c-8b0c-1681c64645f8",
+  "uid": "sit-provident-suscipit",
   "type": "facts",
   "data": {
-    "title": "facilitate synergistic architectures",
-    "description": "facilitate virtual convergence",
+    "title": "optimize transparent initiatives",
+    "description": "repurpose one-to-one e-markets",
     "image": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
-    }
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "imageAlt": "redefine bricks-and-clicks users"
   }
 }

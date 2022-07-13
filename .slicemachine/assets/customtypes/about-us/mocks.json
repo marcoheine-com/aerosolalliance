@@ -1,6 +1,14 @@
 {
-  "id": "eed27776-bcbc-4fe8-97cb-716ea3be60ad",
-  "uid": "maiores-culpa-deserunt",
+  "id": "e78fb5c9-4bd2-4425-891b-d89fe2566108",
+  "uid": "id-error-minima",
   "type": "about-us",
-  "data": {}
+  "data": {
+    "title": "embrace sticky e-business",
+    "description": "deploy cutting-edge ROI",
+    "image": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "imageAlt": "incubate magnetic experiences"
+  }
 }

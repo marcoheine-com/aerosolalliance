@@ -1,9 +1,22 @@
 {
-  "id": "07f683d1-8fa1-4ec8-b8f4-aac52202bfca",
-  "uid": "occaecati-nemo-quaerat",
+  "id": "39b4853a-ed2c-491e-91fe-6ac3aa9b8b1f",
+  "uid": "ipsum-sit-dignissimos",
   "type": "what-you-can-do",
   "data": {
+    "title": "innovate integrated platforms",
+    "description": "deploy cross-media platforms",
+    "image": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "imageAlt": "empower one-to-one technologies",
     "subpages": [
+      {
+        "subpage": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
       {
         "subpage": {
           "link_type": "Web",
@@ -25,7 +38,7 @@
       {
         "subpage": {
           "link_type": "Web",
-          "url": "https://prismic.io"
+          "url": "http://google.com"
         }
       }
     ]

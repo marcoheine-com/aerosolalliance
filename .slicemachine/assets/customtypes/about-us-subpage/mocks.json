@@ -1,14 +1,26 @@
 {
-  "id": "921a6b59-8eda-4ab0-9df2-31e16058ba9c",
-  "uid": "architecto-dicta-qui",
+  "id": "0f2a13ae-e056-4d6b-ac58-ad511d15351a",
+  "uid": "atque-excepturi-adipisci",
   "type": "about-us-subpage",
   "data": {
     "name": [
       {
         "type": "paragraph",
-        "text": "Officia ut est ullamco cupidatat ullamco minim. Occaecat sunt proident ad voluptate aliquip ullamco deserunt voluptate sunt nisi adipisicing eiusmod.",
+        "text": "Consectetur aute duis minim ullamco ad voluptate eiusmod ut dolor pariatur reprehenderit dolore ex irure est.",
         "spans": []
       }
-    ]
+    ],
+    "title": "extend extensible vortals",
+    "description": "disintermediate vertical interfaces",
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+    },
+    "imageAlt": "optimize collaborative systems"
   }
 }

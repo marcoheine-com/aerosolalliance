@@ -15,6 +15,7 @@ interface Props {
     items: Item[]
     primary: {
       distanceToBottom: DistanceToBottom
+      tableOfContent: boolean
     }
   }
 }
@@ -23,6 +24,7 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
   return (
     <>
       {slice?.items?.map((item: Item, i: number) => {
+        // TODO: add check for tableOContents === true
         const tableOfContents = item.Content.filter(
           (node: any) => node.type === 'heading1' || node.type === 'heading2'
         )
@@ -34,7 +36,7 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
               slice.primary.distanceToBottom
             )}`}
           >
-            {tableOfContents.length >= 1 ? (
+            {tableOfContents.length >= 2 ? (
               <ul className="flex flex-col gap-4 pl-4 mb-10 list-disc">
                 {tableOfContents?.map((node: any, i: number) => (
                   <li key={i}>

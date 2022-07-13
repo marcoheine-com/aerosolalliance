@@ -42,6 +42,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply text-darkblue font-suisseIntlRegular;
   }

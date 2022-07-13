@@ -63,7 +63,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
       </button>
       <ul
         className={`absolute top-0 right-0
-        z-[1] p-8 md:p-20 pt-48 w-full h-screen overflow-x-scroll uppercase bg-grey transition-all translate-x-[300px] ${
+        z-[1] p-8 md:p-20 pt-32 lg:pt-48 w-full h-screen overflow-x-scroll uppercase bg-grey transition-all translate-x-[300px] ${
           isOpen ? 'translate-x-0' : 'opacity-0 pointer-events-none'
         }  md:p-20 md:w-[50vw] md:max-w-xl`}
         ref={ref}

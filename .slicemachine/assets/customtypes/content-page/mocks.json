@@ -1,6 +1,14 @@
 {
-  "id": "2f3ea489-4358-4dd1-9d90-5e863d6618cb",
-  "uid": "aut-ipsa-impedit",
+  "id": "7b66276f-4b5d-41e2-ac7b-01214dddcd88",
+  "uid": "fuga-quasi-animi",
   "type": "content-page",
-  "data": {}
+  "data": {
+    "title": "cultivate interactive paradigms",
+    "description": "innovate plug-and-play e-markets",
+    "image": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "imageAlt": "integrate innovative content"
+  }
 }

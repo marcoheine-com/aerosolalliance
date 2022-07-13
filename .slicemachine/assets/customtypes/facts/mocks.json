@@ -1,6 +1,18 @@
 {
-  "id": "2e8c2ccb-43d5-4877-a761-d49aa1bc3f3a",
-  "uid": "ut-eum-consectetur",
+  "id": "00e4a26b-2c84-4be3-b94f-e6d8a187265a",
+  "uid": "nostrum-omnis-odit",
   "type": "facts",
-  "data": {}
+  "data": {
+    "title": "facilitate synergistic architectures",
+    "description": "facilitate virtual convergence",
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+    }
+  }
 }

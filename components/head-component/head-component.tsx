@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { ImageProps } from '../../entities'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -15,7 +14,7 @@ export const HeadComponent: React.FC<Props> = ({
   description,
   image,
   imageAlt,
-  favicon = '/favicon.ico',
+  favicon = '/favicon.png',
 }) => {
   const router = useRouter()
   const canonical = `https://aerosolalliance.com${router.asPath}`

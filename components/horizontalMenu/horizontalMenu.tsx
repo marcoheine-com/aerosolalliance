@@ -39,7 +39,7 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
               } w-full h-full flex gap-4 items-center justify-center uppercase font-suisseIntlMono py-4 xl:py-0 submenuItem-trigger border-[1px] border-separate border-white`}
             >
               <Arrow
-                className="submenuItem-arrow"
+                className="horizontalmenuItem-arrow"
                 isActive={isActiveLink(item?.link?.url)}
               />
               <PrismicRichText field={item.linkLabel} />

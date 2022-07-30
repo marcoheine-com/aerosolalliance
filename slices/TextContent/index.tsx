@@ -2,8 +2,9 @@ import React, { FunctionComponent } from 'react'
 import { RichTextField } from '@prismicio/types'
 import { PrismicRichText } from '@prismicio/react'
 import { DistanceToBottom } from '../../entities'
-import { getDistanceToBottom } from '../../utils/getDistanceToBottom'
+import { getDistance } from '../../utils/getDistance'
 import Link from 'next/link'
+import { linkResolver } from '../../prismicio'
 
 interface Item {
   Content: RichTextField
@@ -15,7 +16,9 @@ interface Props {
     items: Item[]
     primary: {
       distanceToBottom: DistanceToBottom
-      tableOfContent: boolean
+      distanceToTop: DistanceToBottom
+      line: boolean
+      intro: boolean
     }
   }
 }
@@ -32,22 +35,28 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
         return (
           <section
             key={i}
-            className={`px-6 mx-auto max-w-4xl sm:px-16 ${getDistanceToBottom(
-              slice.primary.distanceToBottom
-            )}`}
+            className={`px-6 mx-auto ${
+              slice.primary.intro ? 'max-w-[1400px]' : 'max-w-4xl'
+            } sm:px-16 ${getDistance(
+              slice.primary.distanceToBottom,
+              true
+            )} ${getDistance(slice.primary.distanceToTop, false)}`}
           >
             {tableOfContents.length >= 2 ? (
-              <ul className="flex flex-col gap-4 pl-4 mb-10 list-disc">
-                {tableOfContents?.map((node: any, i: number) => (
-                  <li key={i}>
-                    <Link
-                      href={`#${node.text.replace(/\W+/g, '').toLowerCase()}`}
-                    >
-                      <a>{`[${i + 1}] ${node.text}`}</a>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <>
+                <ol className="flex flex-col gap-4 pl-0 ml-0 list-none">
+                  {tableOfContents?.map((node: any, i: number) => (
+                    <li key={i}>
+                      <Link
+                        href={`#${node.text.replace(/\W+/g, '').toLowerCase()}`}
+                      >
+                        <a>{`${node.text}`}</a>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+                <hr className="mb-10 border-b-2 border-darkblue border-solid lg:mb-16" />
+              </>
             ) : null}
 
             <PrismicRichText
@@ -57,7 +66,12 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
                   <p
                     className={`mb-8 indent-5 first:indent-0 ${
                       item.subline ? 'text-[1.35rem]' : ''
-                    }`}
+                    } ${
+                      slice.primary.intro
+                        ? 'text-[2rem] leading-[2.3rem] desktop:text-[2.25rem] desktop:leading-[2.5rem]'
+                        : ''
+                    }
+                    `}
                   >
                     {props.children}
                   </p>
@@ -73,13 +87,23 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
                   </h2>
                 ),
                 oList: (props: any) => (
-                  <ol className="pl-4 mb-8 list-disc">{props.children}</ol>
+                  <ol className="pl-4">{props.children}</ol>
                 ),
                 list: (props: any) => (
-                  <ul className="pl-4 mb-8 list-disc">{props.children}</ul>
+                  <ul className="pl-4 mb-8 ml-6 list-disc">{props.children}</ul>
+                ),
+                hyperlink: (props: any) => (
+                  <Link href={linkResolver(props.node.data)}>
+                    <a className="border-b-[1px] hover:border-b-2 border-b-darkblue">
+                      {props.children}
+                    </a>
+                  </Link>
                 ),
               }}
             />
+            {slice.primary.line ? (
+              <hr className="border-b-2 border-darkblue border-solid" />
+            ) : null}
           </section>
         )
       })}

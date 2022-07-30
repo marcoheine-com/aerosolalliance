@@ -6,7 +6,7 @@ import { HorizontalMenu } from '../../components/horizontalMenu'
 import { Item } from '../../entities/item'
 import { FullWidthWithBgImage } from '../../components/fullWidthWithBgImage'
 import { RichTextField } from '@prismicio/types'
-import { getDistanceToBottom } from '../../utils/getDistanceToBottom'
+import { getDistance } from '../../utils/getDistance'
 
 interface Props {
   slice: {
@@ -39,7 +39,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
           svg={primary.headersvg}
           image={primary.image}
           headline={primary.textOnImage}
-          className={getDistanceToBottom(primary.distanceToBottom)}
+          className={getDistance(primary.distanceToBottom, true)}
         />
       )
     case 'twoColumnWithMenu':
@@ -54,8 +54,9 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
           />
           <HorizontalMenu
             items={slice.items}
-            className={`xl:h-[10vh] ${getDistanceToBottom(
-              primary.distanceToBottom
+            className={`xl:h-[10vh] ${getDistance(
+              primary.distanceToBottom,
+              true
             )}`}
           />
         </>
@@ -63,8 +64,9 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
     case 'fullWidthWithMenu':
       return (
         <section
-          className={`xl:h-screen ${getDistanceToBottom(
-            primary.distanceToBottom
+          className={`xl:h-screen ${getDistance(
+            primary.distanceToBottom,
+            true
           )}`}
         >
           <FullWidthSVG
@@ -82,8 +84,9 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
       return (
         <FullWidthWithBgImage
           svg={primary.headersvg}
-          className={`h-[30vh] xl:h-screen ${getDistanceToBottom(
-            primary.distanceToBottom
+          className={`h-[30vh] xl:h-screen ${getDistance(
+            primary.distanceToBottom,
+            true
           )}`}
           bgImage={primary.backgroundImage}
         />
@@ -94,7 +97,7 @@ const Header: FunctionComponent<Props> = ({ slice }) => {
         <FullWidthSVG
           backgroundcolor={primary.backgroundcolor}
           svg={primary.headersvg}
-          className={`pt-56 ${getDistanceToBottom(primary.distanceToBottom)}`}
+          className={`pt-56 ${getDistance(primary.distanceToBottom, true)}`}
         />
       )
   }

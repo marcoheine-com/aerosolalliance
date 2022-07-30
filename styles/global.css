@@ -55,12 +55,33 @@
   }
 
   h1,
-  h2,
+  h2 {
+    @apply text-[2rem] leading-[2rem] mb-4 font-suisseIntlMono desktop:text-[2.25rem] desktop:leading-10;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    @apply text-[1.75rem] leading-[2rem] mb-4 font-suisseIntlMono desktop:text-[2rem] desktop:leading-10;
+    @apply text-[1.5rem] leading-[2rem] mb-4 font-suisseIntlMono desktop:text-[1.75rem] desktop:leading-10;
+  }
+
+  h4,
+  h5 {
+    @apply text-[0.75rem] desktop:text-[0.9rem];
+  }
+
+  h5 {
+    @apply mb-4 leading-[1rem];
+  }
+
+  ul,
+  ol {
+    @apply text-base leading-[1.35] desktop:text-[1.5rem];
+  }
+
+  ol {
+    @apply ml-11 list-[decimal-leading-zero] mb-8 font-suisseIntlMono;
   }
 
   ol li a {
@@ -113,6 +134,14 @@
 
   .submenuItem-trigger:hover .submenuItem-arrow {
     @apply opacity-100;
+  }
+
+  .horizontalmenuItem-arrow {
+    @apply w-0 -translate-x-3 transition-all;
+  }
+
+  .submenuItem-trigger:hover .horizontalmenuItem-arrow {
+    @apply w-auto translate-x-0;
   }
 
   .module-spacing-b {

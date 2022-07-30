@@ -1688,6 +1688,36 @@
                       "large"
                     ]
                   }
+                },
+                "line": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Line",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
+                },
+                "distanceToTop": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Distance To Top",
+                    "placeholder": "",
+                    "options": [
+                      "small",
+                      "medium",
+                      "large"
+                    ]
+                  }
+                },
+                "intro": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Intro",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
                 }
               },
               "items": {
@@ -1724,7 +1754,7 @@
                 "Content": [
                   {
                     "type": "paragraph",
-                    "text": "Non culpa mollit laboris cupidatat aliquip tempor consectetur sint nulla consequat amet ea commodo.",
+                    "text": "Ipsum ullamco proident consectetur nostrud ad magna pariatur dolor nostrud dolore. Ex veniam ipsum aute non non ipsum. Sunt anim aute ullamco ullamco cupidatat voluptate reprehenderit aliqua sit deserunt commodo Lorem non in.",
                     "spans": []
                   }
                 ],
@@ -1734,17 +1764,7 @@
                 "Content": [
                   {
                     "type": "paragraph",
-                    "text": "Ea non eu in laborum commodo enim ex.",
-                    "spans": []
-                  }
-                ],
-                "subline": false
-              },
-              {
-                "Content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Labore ad ut aute proident officia et dolore eu sint id ad occaecat.",
+                    "text": "Et ex anim adipisicing in Lorem. Proident cupidatat est ut.",
                     "spans": []
                   }
                 ],
@@ -1752,7 +1772,10 @@
               }
             ],
             "primary": {
-              "distanceToBottom": "small"
+              "distanceToBottom": "small",
+              "line": false,
+              "distanceToTop": "small",
+              "intro": true
             }
           }
         },

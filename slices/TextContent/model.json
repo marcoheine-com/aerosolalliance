@@ -22,6 +22,36 @@
               "large"
             ]
           }
+        },
+        "line": {
+          "type": "Boolean",
+          "config": {
+            "label": "Line",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "distanceToTop": {
+          "type": "Select",
+          "config": {
+            "label": "Distance To Top",
+            "placeholder": "",
+            "options": [
+              "small",
+              "medium",
+              "large"
+            ]
+          }
+        },
+        "intro": {
+          "type": "Boolean",
+          "config": {
+            "label": "Intro",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
         }
       },
       "items": {

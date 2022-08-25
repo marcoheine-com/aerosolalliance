@@ -86,29 +86,30 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
                 <PrismicRichText field={item.primary.linkLabel} />
               </a>
             </Link>
-            {item.items?.length > 0 && item.items[0].subLink.uid && (
-              <ul className="pt-1">
-                {item.items?.map(
-                  (item: SubLink) =>
-                    item.subLink.uid && (
-                      <li
-                        key={item.subLink.uid}
-                        className="py-1 last:pb-0 desktop:py-2"
-                      >
-                        <Link
-                          href={linkResolver(item.subLink)}
-                          key={item.subLink.uid}
+            {item.items?.length > 0 &&
+              (item.items[0].subLink.uid || item.items[0].subLink.url) && (
+                <ul className="pt-1">
+                  {item.items?.map(
+                    (item: SubLink, index: number) =>
+                      (item.subLink.uid || item.subLink.url) && (
+                        <li
+                          key={item.subLink.uid || index}
+                          className="py-1 last:pb-0 desktop:py-2"
                         >
-                          <a className="flex gap-4 items-center font-suisseIntlRegular font-normal submenuItem-trigger">
-                            <Arrow className="submenuItem-arrow" />
-                            <PrismicRichText field={item.subLinkLabel} />
-                          </a>
-                        </Link>
-                      </li>
-                    )
-                )}
-              </ul>
-            )}
+                          <Link
+                            href={linkResolver(item.subLink)}
+                            key={item.subLink.uid || index}
+                          >
+                            <a className="flex gap-4 items-center font-suisseIntlRegular font-normal submenuItem-trigger">
+                              <Arrow className="submenuItem-arrow" />
+                              <PrismicRichText field={item.subLinkLabel} />
+                            </a>
+                          </Link>
+                        </li>
+                      )
+                  )}
+                </ul>
+              )}
           </li>
         ))}
       </ul>

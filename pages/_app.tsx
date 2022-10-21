@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import Link from 'next/link'
 import '../styles/global.css'
 import { linkResolver, repositoryName } from '../prismicio'
-import { PrismicPreview } from '@prismicio/next'
+// import { PrismicPreview } from '@prismicio/next'
 import PlausibleProvider from 'next-plausible'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -16,11 +16,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Link>
       )}
     >
-      <PrismicPreview repositoryName={repositoryName}>
-        <PlausibleProvider domain="aerosolalliance.com">
-          <Component {...pageProps} />
-        </PlausibleProvider>
-      </PrismicPreview>
+      {/* Disable preview temporarily because the prismic preview 
+      loads google fonts which is not GDPR compliant */}
+      {/* <PrismicPreview repositoryName={repositoryName}> */}
+      <PlausibleProvider domain="aerosolalliance.com">
+        <Component {...pageProps} />
+      </PlausibleProvider>
+      {/* </PrismicPreview> */}
     </PrismicProvider>
   )
 }

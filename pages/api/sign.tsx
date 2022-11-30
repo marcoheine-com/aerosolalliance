@@ -1,10 +1,12 @@
-import { initializeApp } from 'firebase/app'
-import { getDatabase, ref, set } from 'firebase/database'
 import { NextApiRequest, NextApiResponse } from 'next'
-import { firebaseConfigurations } from '../../services/helpers'
+import { v4 as uuidv4 } from 'uuid'
+import Airtable from 'airtable'
 
-initializeApp(firebaseConfigurations)
-const db = getDatabase()
+Airtable.configure({
+  endpointUrl: 'https://api.airtable.com',
+  apiKey: process.env.AIRTABLE_API_KEY,
+})
+const base = Airtable.base(process.env.AIRTABLE_BASE_ID || '')
 
 const FRIENDLY_CAPTCHA_SITEVERIFY_API_URL =
   'https://api.friendlycaptcha.com/api/v1/siteverify'
@@ -92,21 +94,27 @@ export default async function sign(req: NextApiRequest, res: NextApiResponse) {
     }
 
     try {
-      const mailWithoutDots = body.userInfo.email.replace(/\./g, '_')
-      await set(
-        ref(
-          db,
-          `users/${body.userInfo.username}_${mailWithoutDots}_${body.userInfo.location}`
-        ),
-        body.userInfo
-      )
+      await base('manifesto_signups').create([
+        {
+          fields: {
+            created_at: new Date().toISOString(),
+            email: body.userInfo.email,
+            location: body.userInfo.location,
+            position: body.userInfo.position,
+            shouldDisplayName: body.userInfo.shouldDisplayName,
+            signUpForNewsletter: body.userInfo.signUpForNewsletter,
+            username: body.userInfo.username,
+            social: body.userInfo.social,
+            id: uuidv4(),
+          },
+        },
+      ])
 
       return res.status(200).json({ message: body.userInfo.username })
     } catch (error) {
       console.log(error)
-      return res.status(400).json({
-        message: `User ${body.userInfo.username} with email ${body.userInfo.email} already exists. Seems like you already signed the petition!`,
-      })
+      // @ts-ignore
+      return res.status(500).json({ message: error?.message })
     }
   } catch (err) {
     console.error(err)

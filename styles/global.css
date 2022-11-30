@@ -168,4 +168,16 @@
     font-size: clamp(1.333rem, 1.042rem + 0.9312vw, 2.369rem);
     line-height: 1.2;
   }
+
+  .references-text {
+    font-size: clamp(0.6625rem, 0.5677rem + 0.3034vw, 1rem);
+  }
+
+  .references-list {
+    font-size: clamp(0.6625rem, 0.5677rem + 0.3034vw, 1rem);
+    @apply font-suisseIntlRegular;
+  }
+  .references-list ::marker {
+    @apply font-suisseIntlMono;
+  }
 }

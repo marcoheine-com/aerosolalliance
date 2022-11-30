@@ -8,6 +8,7 @@ import {
   Quote,
   TextContent,
   Form,
+  References,
 } from '../../slices'
 
 type SliceType =
@@ -20,6 +21,7 @@ type SliceType =
   | 'quote'
   | 'text_content'
   | 'form'
+  | 'references'
 
 export const Slicemachine = ({ slices }: { slices: any }) => {
   if (!slices) {
@@ -91,6 +93,14 @@ export const Slicemachine = ({ slices }: { slices: any }) => {
       case 'form':
         return (
           <Form
+            slice={slice}
+            key={index}
+          />
+        )
+      case 'references':
+        return (
+          // @ts-ignore
+          <References
             slice={slice}
             key={index}
           />

@@ -5,7 +5,7 @@ import { ReferencesSlice } from '../../types.generated'
 const References: React.FC<SliceComponentProps<ReferencesSlice>> = ({
   slice,
 }) => (
-  <section className="px-6 mx-auto mb-10 max-w-4xl sm:px-16">
+  <section className="px-6 mx-auto mb-10 w-full max-w-4xl sm:px-16">
     <PrismicRichText
       field={slice.primary.content}
       components={{

@@ -29,7 +29,7 @@ export const linkResolver = (doc) => {
   }
 
   if (doc.type === 'about-us-subpage') {
-    return `${doc.url}`
+    return `${doc.uid}`
   }
 
   if (doc.link_type === 'Web') {

@@ -36,15 +36,15 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
           <section
             key={i}
             className={`px-6 mx-auto ${
-              slice.primary.intro ? 'max-w-[1400px] mb-10' : 'max-w-4xl'
-            } sm:px-16 ${getDistance(
+              slice.primary.intro ? 'mb-10' : ''
+            } max-w-4xl sm:px-16 ${getDistance(
               slice.primary.distanceToBottom,
               true
             )} ${getDistance(slice.primary.distanceToTop, false)}`}
           >
             {tableOfContents.length >= 2 ? (
               <>
-                <ol className="flex flex-col gap-4 pl-0 ml-0 list-none">
+                <ol className="flex flex-col gap-4 pl-0 ml-0 font-suisseIntlMono list-none">
                   {tableOfContents?.map((node: any, i: number) => (
                     <li key={i}>
                       <Link
@@ -55,7 +55,7 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
                     </li>
                   ))}
                 </ol>
-                <hr className="mb-8 h-[1px] border-t-0 border-b-[1px] border-darkblue border-solid opacity-50 lg:mb-16" />
+                <hr className="mb-8 h-[1px] border-t-0 border-b-[1px] border-darkblue border-solid opacity-50" />
               </>
             ) : null}
 
@@ -98,7 +98,7 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
               }}
             />
             {slice.primary.line ? (
-              <hr className="border-b-2 border-darkblue border-solid" />
+              <hr className="border-t-0 border-b-[1px] border-darkblue border-solid" />
             ) : null}
           </section>
         )

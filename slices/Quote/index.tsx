@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 import { ImageProps } from '../../entities'
-import { Speech } from '../../components/icons'
 import { RichTextField } from '@prismicio/types'
 import { PrismicRichText } from '@prismicio/react'
 
@@ -36,16 +35,12 @@ const Quote: FunctionComponent<Props> = ({ slice }): JSX.Element => {
               <PrismicRichText
                 field={item.quote}
                 components={{
-                  paragraph: (props: any) => (
-                    <p className="text-2xl leading-[1.35]">{props.children}</p>
-                  ),
                   heading2: (props: any) => (
                     <h2 className="mb-0">{props.children}</h2>
                   ),
                 }}
               />
             </div>
-            <Speech />
           </section>
         </section>
       ))}

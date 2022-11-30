@@ -93,11 +93,15 @@
 
   ul,
   ol {
-    @apply text-base leading-[1.35] desktop:text-[1.5rem];
+    font-size: clamp(1rem, 0.8596rem + 0.4494vw, 1.5rem);
   }
 
   ol {
-    @apply ml-11 list-[decimal-leading-zero] mb-8 font-suisseIntlMono;
+    @apply list-decimal mb-8 ml-6;
+  }
+
+  li::marker {
+    @apply font-suisseIntlMono;
   }
 
   ol li a {

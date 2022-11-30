@@ -1789,6 +1789,16 @@ export interface QuoteSliceDefaultSliceItem {
      *
      */
     quote: prismicT.RichTextField;
+    /**
+     * caption field in *Quote → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: quote.items[].caption
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    caption: prismicT.KeyTextField;
 }
 /**
  * Default slice variation for Quote Slice

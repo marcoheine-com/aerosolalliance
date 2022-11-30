@@ -25,61 +25,6 @@ interface Props {
   }
 }
 
-// Ugh
-const getRandomRotation = (): string => {
-  const minRotation = 0
-  const maxRotation = 10
-  const rotation =
-    Math.floor(Math.random() * (maxRotation - minRotation + 1)) + minRotation
-
-  switch (rotation) {
-    case -10:
-      return '-rotate-[10deg]'
-    case -9:
-      return '-rotate-[9deg]'
-    case -8:
-      return '-rotate-[8deg]'
-    case -7:
-      return '-rotate-[7deg]'
-    case -6:
-      return '-rotate-[6deg]'
-    case -5:
-      return '-rotate-[5deg]'
-    case -4:
-      return '-rotate-[4deg]'
-    case -3:
-      return '-rotate-[3deg]'
-    case -2:
-      return '-rotate-[2deg]'
-    case -1:
-      return '-rotate-[1deg]'
-    case 0:
-      return 'rotate-0'
-    case 1:
-      return 'rotate-1'
-    case 2:
-      return 'rotate-2'
-    case 3:
-      return 'rotate-3'
-    case 4:
-      return 'rotate-[4deg]'
-    case 5:
-      return 'rotate-[5deg]'
-    case 6:
-      return 'rotate-6'
-    case 7:
-      return 'rotate-[7deg]'
-    case 8:
-      return 'rotate-[8deg]'
-    case 9:
-      return 'rotate-[9deg]'
-    case 10:
-      return 'rotate-[10deg]'
-    default:
-      return 'rotate-0'
-  }
-}
-
 const getLinkStyling = (item: Item): string => {
   if (item.invertedColor) {
     return `border-1 ${getBordercolorClass(item.linkColor)} ${getTextcolorClass(
@@ -109,7 +54,7 @@ const CallToAction: React.FC<Props> = ({ slice }) => {
             <a
               className={`${getBeforeStyling(
                 item
-              )} ${getRandomRotation()} font-suisseIntlMono uppercase rounded-full py-4 px-20 md:py-6 md:px-24 block hover-trigger relative overflow-hidden text-2xl`}
+              )} font-suisseIntlMono uppercase rounded-full py-4 px-20 md:py-6 md:px-24 block hover-trigger relative overflow-hidden text-2xl`}
             >
               {' '}
               {item.linkLabel}

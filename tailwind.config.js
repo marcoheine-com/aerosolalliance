@@ -21,6 +21,7 @@ module.exports = {
         grey: '#EFEFEF',
         green: '#00948B',
         darkGrey: 'rgb(39, 47, 102, 0.3)',
+        header: '#c8aa82',
       },
       fontSize: {
         headline: ['2.5rem', { lineHeight: '1.3' }],

@@ -1659,6 +1659,64 @@
           }
         }
       },
+      "references": {
+        "library": "slices",
+        "id": "references",
+        "name": "References",
+        "description": "References",
+        "model": {
+          "id": "references",
+          "type": "SharedSlice",
+          "name": "References",
+          "description": "References",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "References",
+              "primary": {
+                "content": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "content",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,heading6,hyperlink,list-item,o-list-item"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Dolor ullamco velit laborum ea consectetur voluptate ad sit nostrud deserunt commodo. Non quis ea est. Proident laborum nulla Lorem mollit exercitation quis incididunt.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "references"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
       "text_content": {
         "library": "slices",
         "id": "text_content",

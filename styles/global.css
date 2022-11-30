@@ -165,7 +165,7 @@
   }
 
   .intro-text {
-    font-size: clamp(1.777rem, 1.3894rem + 1.2404vw, 3.157rem);
+    font-size: clamp(1.333rem, 1.042rem + 0.9312vw, 2.369rem);
     line-height: 1.2;
   }
 }

@@ -81,6 +81,9 @@
             },
             "text_content": {
               "type": "SharedSlice"
+            },
+            "references": {
+              "type": "SharedSlice"
             }
           }
         }

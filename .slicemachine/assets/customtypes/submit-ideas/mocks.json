@@ -1,6 +1,16 @@
 {
-  "id": "4af94d17-5d41-44d7-ad59-58fa573d1ab7",
-  "uid": "eos-cumque-tempore",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "submit-ideas",
-  "data": {}
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "slices": []
+  }
 }

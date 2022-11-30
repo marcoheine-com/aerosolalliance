@@ -78,6 +78,9 @@
             },
             "link_image_gallery": {
               "type": "SharedSlice"
+            },
+            "references": {
+              "type": "SharedSlice"
             }
           }
         }

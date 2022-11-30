@@ -1,14 +1,26 @@
 {
-  "id": "7b66276f-4b5d-41e2-ac7b-01214dddcd88",
-  "uid": "fuga-quasi-animi",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "content-page",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
   "data": {
-    "title": "cultivate interactive paradigms",
-    "description": "innovate plug-and-play e-markets",
+    "title": "appropriate",
+    "description": "grew",
     "image": {
-      "link_type": "media",
-      "url": "https://source.unsplash.com/daily"
+      "link_type": "Media",
+      "name": "mock",
+      "kind": "image",
+      "url": "https://source.unsplash.com/random",
+      "size": "10kB"
     },
-    "imageAlt": "integrate innovative content"
+    "imageAlt": "solid",
+    "slices": []
   }
 }

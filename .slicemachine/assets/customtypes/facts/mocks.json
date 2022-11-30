@@ -1,14 +1,26 @@
 {
-  "id": "f56da8fd-a0c8-4a9c-8b0c-1681c64645f8",
-  "uid": "sit-provident-suscipit",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "facts",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
   "data": {
-    "title": "optimize transparent initiatives",
-    "description": "repurpose one-to-one e-markets",
+    "title": "fort",
+    "description": "division",
     "image": {
-      "link_type": "media",
-      "url": "https://source.unsplash.com/daily"
+      "link_type": "Media",
+      "name": "mock",
+      "kind": "image",
+      "url": "https://source.unsplash.com/random",
+      "size": "10kB"
     },
-    "imageAlt": "redefine bricks-and-clicks users"
+    "imageAlt": "heavy",
+    "slices": []
   }
 }

@@ -1,6 +1,16 @@
 {
-  "id": "be80404f-2e4d-400c-8e25-cb6890a68188",
-  "uid": "voluptas-autem-ad",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "manifesto",
-  "data": {}
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "slices": []
+  }
 }

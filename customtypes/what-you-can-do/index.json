@@ -78,6 +78,9 @@
             },
             "full_width_image": {
               "type": "SharedSlice"
+            },
+            "references": {
+              "type": "SharedSlice"
             }
           }
         }

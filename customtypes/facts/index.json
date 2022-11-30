@@ -69,6 +69,9 @@
             },
             "herosection": {
               "type": "SharedSlice"
+            },
+            "references": {
+              "type": "SharedSlice"
             }
           }
         }

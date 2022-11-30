@@ -888,6 +888,18 @@
         "primary": {},
         "items": {}
       }
+    },
+    "References": {
+      "default": {
+        "primary": {
+          "content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   },
   "_cts": {

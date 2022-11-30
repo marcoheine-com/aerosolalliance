@@ -1,14 +1,26 @@
 {
-  "id": "e78fb5c9-4bd2-4425-891b-d89fe2566108",
-  "uid": "id-error-minima",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "about-us",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
   "data": {
-    "title": "embrace sticky e-business",
-    "description": "deploy cutting-edge ROI",
+    "title": "opposite",
+    "description": "receive",
     "image": {
-      "link_type": "media",
-      "url": "https://source.unsplash.com/daily"
+      "link_type": "Media",
+      "name": "mock",
+      "kind": "image",
+      "url": "https://source.unsplash.com/random",
+      "size": "10kB"
     },
-    "imageAlt": "incubate magnetic experiences"
+    "imageAlt": "pretty",
+    "slices": []
   }
 }

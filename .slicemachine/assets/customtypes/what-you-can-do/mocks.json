@@ -1,46 +1,40 @@
 {
-  "id": "39b4853a-ed2c-491e-91fe-6ac3aa9b8b1f",
-  "uid": "ipsum-sit-dignissimos",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "what-you-can-do",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
   "data": {
-    "title": "innovate integrated platforms",
-    "description": "deploy cross-media platforms",
-    "image": {
-      "link_type": "media",
-      "url": "https://source.unsplash.com/daily"
-    },
-    "imageAlt": "empower one-to-one technologies",
     "subpages": [
       {
         "subpage": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "subpage": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "subpage": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "subpage": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "subpage": {
-          "link_type": "Web",
-          "url": "http://google.com"
+          "id": "mock_document_id",
+          "link_type": "Document",
+          "type": "what-you-can-do-subpage",
+          "tags": [],
+          "lang": "en-us",
+          "slug": null,
+          "first_publication_date": "1970-01-01T00:00:01+0000",
+          "last_publication_date": "1970-01-01T01:00:00+0000"
         }
       }
-    ]
+    ],
+    "title": "fresh",
+    "description": "mass",
+    "image": {
+      "link_type": "Media",
+      "name": "mock",
+      "kind": "image",
+      "url": "https://source.unsplash.com/random",
+      "size": "10kB"
+    },
+    "imageAlt": "brief",
+    "slices": []
   }
 }

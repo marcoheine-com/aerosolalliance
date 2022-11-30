@@ -13,7 +13,7 @@ export const getBordercolorClass = (color: Color): string => {
     case 'darkblue':
       return 'border-darkblue'
     case 'green':
-      return 'orderg-green'
+      return 'border-green'
     default:
       return 'border-white'
   }

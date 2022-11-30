@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ImageProps } from '../../entities'
 import { RichTextField } from '@prismicio/types'
 import { PrismicRichText } from '@prismicio/react'
+import { Logo } from '../logo'
 
 interface Props {
   data: {
@@ -27,14 +28,7 @@ export const Footer: FunctionComponent<Props> = ({ data }) => {
     <footer className="bg-grey footer ">
       <section className="flex flex-col py-14 px-6 mx-auto max-w-[1920px] xl:px-40">
         <section className="flex flex-col gap-16 justify-between items-center mb-16 md:flex-row md:gap-0">
-          {data.logo.url && (
-            <Image
-              src={data.logo.url}
-              width={data.logo.dimensions.width}
-              height={data.logo.dimensions.height}
-              alt={data.logo.alt}
-            />
-          )}
+          <Logo />
           <Link href={data.instagramlink.url}>
             <a>
               <PrismicRichText field={data.instagramlinklabel} />

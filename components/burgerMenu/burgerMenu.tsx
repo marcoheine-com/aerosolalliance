@@ -51,7 +51,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
 
   return (
     <nav
-      className="font-suisseIntlSemiBold"
+      className="flex font-suisseIntlSemiBold"
       role="navigation"
     >
       <button
@@ -63,9 +63,11 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
       </button>
       <ul
         className={`absolute top-0 right-0
-        z-[1] p-8 md:p-20 pt-32 w-full h-screen overflow-x-scroll uppercase bg-grey transition-all translate-x-[300px] ${
-          isOpen ? 'translate-x-0' : 'opacity-0 pointer-events-none'
-        }  md:p-20 md:w-[50vw] md:max-w-xl`}
+        z-[1] h-screen overflow-x-scroll uppercase bg-grey transition-all translate-x-[300px] ${
+          isOpen
+            ? 'translate-x-0 w-full md:w-[50vw] p-8 md:p-20 pt-32'
+            : 'opacity-0 pointer-events-none w-0 p-0'
+        }    md:max-w-xl`}
         ref={ref}
       >
         <button
@@ -83,7 +85,14 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
             <Link href={linkResolver(item.primary.link)}>
               <a className="flex gap-4 items-center submenuItem-trigger">
                 <Arrow className="submenuItem-arrow" />
-                <PrismicRichText field={item.primary.linkLabel} />
+                <PrismicRichText
+                  field={item.primary.linkLabel}
+                  components={{
+                    paragraph: ({ children }) => (
+                      <p className="pb-0">{children}</p>
+                    ),
+                  }}
+                />
               </a>
             </Link>
             {item.items?.length > 0 &&
@@ -102,7 +111,14 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
                           >
                             <a className="flex gap-4 items-center font-suisseIntlRegular font-normal submenuItem-trigger">
                               <Arrow className="submenuItem-arrow" />
-                              <PrismicRichText field={item.subLinkLabel} />
+                              <PrismicRichText
+                                field={item.subLinkLabel}
+                                components={{
+                                  paragraph: ({ children }) => (
+                                    <p className="pb-0">{children}</p>
+                                  ),
+                                }}
+                              />
                             </a>
                           </Link>
                         </li>

@@ -50,29 +50,45 @@
     @apply text-darkblue font-suisseIntlRegular;
   }
 
-  p {
-    @apply text-base leading-[1.35] mb-4 desktop:text-[1.5rem];
+  h1 {
+    font-size: clamp(2.369rem, 1.8521rem + 1.6539vw, 4.209rem);
+  }
+
+  h2 {
+    font-size: clamp(1.777rem, 1.3894rem + 1.2404vw, 3.157rem);
+  }
+
+  h3 {
+    font-size: clamp(1.333rem, 1.042rem + 0.9312vw, 2.369rem);
+  }
+  h4 {
+    font-size: clamp(1rem, 0.7817rem + 0.6984vw, 1.777rem);
+  }
+  h5 {
+    font-size: clamp(0.75rem, 0.5862rem + 0.524vw, 1.333rem);
+  }
+  h6 {
+    font-size: clamp(1rem, 0.8596rem + 0.4494vw, 1.5rem);
   }
 
   h1,
-  h2 {
-    @apply text-[2rem] leading-[2rem] mb-4 font-suisseIntlMono desktop:text-[2.25rem] desktop:leading-10;
-  }
-
+  h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply text-[1.5rem] leading-[2rem] mb-4 font-suisseIntlMono desktop:text-[1.75rem] desktop:leading-10;
+    @apply font-suisseIntlMono mt-4 pb-4 first:mt-0;
+    line-height: 1;
   }
 
-  h4,
-  h5 {
-    @apply text-[0.75rem] desktop:text-[0.9rem];
-  }
-
-  h5 {
-    @apply mb-4 leading-[1rem];
+  p {
+    font-size: clamp(1rem, 0.8596rem + 0.4494vw, 1.5rem);
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    @apply pb-4;
   }
 
   ul,
@@ -146,5 +162,10 @@
 
   .module-spacing-b {
     @apply mb-20 lg:mb-44;
+  }
+
+  .intro-text {
+    font-size: clamp(1.777rem, 1.3894rem + 1.2404vw, 3.157rem);
+    line-height: 1.2;
   }
 }

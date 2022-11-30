@@ -36,7 +36,7 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
           <section
             key={i}
             className={`px-6 mx-auto ${
-              slice.primary.intro ? 'max-w-[1400px]' : 'max-w-4xl'
+              slice.primary.intro ? 'max-w-[1400px] mb-10' : 'max-w-4xl'
             } sm:px-16 ${getDistance(
               slice.primary.distanceToBottom,
               true
@@ -55,7 +55,7 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
                     </li>
                   ))}
                 </ol>
-                <hr className="mb-10 border-b-2 border-darkblue border-solid lg:mb-16" />
+                <hr className="mb-8 h-[1px] border-t-0 border-b-[1px] border-darkblue border-solid opacity-50 lg:mb-16" />
               </>
             ) : null}
 
@@ -64,12 +64,8 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
               components={{
                 paragraph: (props: any) => (
                   <p
-                    className={`mb-8 indent-5 first:indent-0 ${
-                      item.subline ? 'text-[1.35rem]' : ''
-                    } ${
-                      slice.primary.intro
-                        ? 'text-[2rem] leading-[2.3rem] desktop:text-[2.25rem] desktop:leading-[2.5rem]'
-                        : ''
+                    className={`${item.subline ? '' : ''} ${
+                      slice.primary.intro ? 'intro-text' : ''
                     }
                     `}
                   >

@@ -42,7 +42,14 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
                 className="horizontalmenuItem-arrow"
                 isActive={isActiveLink(item?.link?.url)}
               />
-              <PrismicRichText field={item.linkLabel} />
+              <PrismicRichText
+                field={item.linkLabel}
+                components={{
+                  paragraph: ({ children }) => (
+                    <p className="pb-0">{children}</p>
+                  ),
+                }}
+              />
             </a>
           </Link>
         ) : null

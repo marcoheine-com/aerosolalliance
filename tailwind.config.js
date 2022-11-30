@@ -31,6 +31,7 @@ module.exports = {
         suisseIntlBold: ['SuisseIntlBold', 'sans-serif'],
         suisseIntlSemiBold: ['SuisseIntlSemiBold', 'sans-serif'],
         suisseIntlRegular: ['SuisseIntlRegular', 'sans-serif'],
+        suisseIntlRegularItalic: ['SuisseIntlRegularItalic', 'sans-serif'],
         'UvasBlack-Black': ['UvasBlack-Black', 'sans-serif'],
       },
     },

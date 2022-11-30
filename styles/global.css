@@ -17,6 +17,12 @@
 }
 
 @font-face {
+  font-family: 'SuisseIntlRegularItalic';
+  src: url('/fonts/SuisseIntl-RegularItalic-WebS.woff'),
+    url('/fonts/SuisseIntl-RegularItalic-WebS.woff2');
+}
+
+@font-face {
   font-family: 'SuisseIntlBold';
   src: url('/fonts/SuisseIntl-Bold-WebM.woff'),
     url('/fonts/SuisseIntl-Bold-WebM.woff2'),
@@ -110,6 +116,15 @@
 
   a > p {
     @apply m-0;
+  }
+
+  strong {
+    @apply font-suisseIntlSemiBold font-normal not-italic;
+  }
+
+  em,
+  i {
+    @apply font-suisseIntlRegularItalic not-italic;
   }
 }
 

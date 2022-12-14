@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react'
 export const Logo: FunctionComponent = () => {
   return (
     <Link href="/">
-      <a className="p-6 w-full max-w-xs backdrop-blur-xl">
+      <a className="w-full max-w-xs p-6">
         <svg
           version="1.1"
           id="Ebene_1"

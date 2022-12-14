@@ -436,93 +436,128 @@ interface FooterDocumentData {
      */
     logo: prismicT.ImageField<never>;
     /**
-     * instagramlink field in *Footer*
+     * External Links Headline field in *Footer*
      *
-     * - **Field Type**: Link
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.instagramlink
+     * - **API ID Path**: footer.externallinksheadline
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    instagramlink: prismicT.LinkField;
+    externallinksheadline: prismicT.KeyTextField;
     /**
-     * instagramlinklabel field in *Footer*
+     * externalLinks field in *Footer*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Group
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.instagramlinklabel
+     * - **API ID Path**: footer.externallinks[]
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
      *
      */
-    instagramlinklabel: prismicT.RichTextField;
+    externallinks: prismicT.GroupField<Simplify<FooterDocumentDataExternallinksItem>>;
     /**
-     * adressHeadline field in *Footer*
+     * Partners Headline field in *Footer*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.adressHeadline
+     * - **API ID Path**: footer.partnersheadline
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    adressHeadline: prismicT.RichTextField;
-    /**
-     * adress field in *Footer*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.adress
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    adress: prismicT.RichTextField;
-    /**
-     * links field in *Footer*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.links
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    links: prismicT.RichTextField;
-    /**
-     * partnersHeadline field in *Footer*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.partnersHeadline
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    partnersHeadline: prismicT.RichTextField;
+    partnersheadline: prismicT.KeyTextField;
     /**
      * partners field in *Footer*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Group
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.partners
+     * - **API ID Path**: footer.partners[]
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
      *
      */
-    partners: prismicT.RichTextField;
+    partners: prismicT.GroupField<Simplify<FooterDocumentDataPartnersItem>>;
     /**
-     * supportLink field in *Footer*
+     * internalLinks field in *Footer*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.internallinks[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    internallinks: prismicT.GroupField<Simplify<FooterDocumentDataInternallinksItem>>;
+}
+/**
+ * Item in Footer → externalLinks
+ *
+ */
+export interface FooterDocumentDataExternallinksItem {
+    /**
+     * link field in *Footer → externalLinks*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.supportLink
-     * - **Tab**: Main
+     * - **API ID Path**: footer.externallinks[].link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    supportLink: prismicT.LinkField;
+    link: prismicT.LinkField;
+    /**
+     * linkLabel field in *Footer → externalLinks*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.externallinks[].linklabel
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    linklabel: prismicT.KeyTextField;
+}
+/**
+ * Item in Footer → partners
+ *
+ */
+export interface FooterDocumentDataPartnersItem {
+    /**
+     * partnerLogo field in *Footer → partners*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.partners[].partnerlogo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    partnerlogo: prismicT.ImageField<never>;
+}
+/**
+ * Item in Footer → internalLinks
+ *
+ */
+export interface FooterDocumentDataInternallinksItem {
+    /**
+     * link field in *Footer → internalLinks*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.internallinks[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * linkLabel field in *Footer → internalLinks*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.internallinks[].linklabel
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    linklabel: prismicT.KeyTextField;
 }
 /**
  * Footer document from Prismic
@@ -1965,6 +2000,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AboutUsSubpageDocumentData, AboutUsSubpageDocumentDataSlicesSlice, AboutUsSubpageDocument, AboutUsDocumentData, AboutUsDocumentDataSlicesSlice, AboutUsDocument, BurgerMenuDocumentData, BurgerMenuDocumentDataSlicesSlice, BurgerMenuDocument, ContentPageDocumentData, ContentPageDocumentDataSlicesSlice, ContentPageDocument, FactsSubpageDocumentData, FactsSubpageDocumentDataSlicesSlice, FactsSubpageDocument, FactsDocumentData, FactsDocumentDataSlicesSlice, FactsDocument, FooterDocumentData, FooterDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, ManifestoDocumentData, ManifestoDocumentDataSlicesSlice, ManifestoDocument, SubmitIdeasDocumentData, SubmitIdeasDocumentDataSlicesSlice, SubmitIdeasDocument, WhatYouCanDoSubpageDocumentData, WhatYouCanDoSubpageDocumentDataSlicesSlice, WhatYouCanDoSubpageDocument, WhatYouCanDoDocumentData, WhatYouCanDoDocumentDataSubpagesItem, WhatYouCanDoDocumentDataSlicesSlice, WhatYouCanDoDocument, AllDocumentTypes, CallToActionSliceDefaultSliceItem, CallToActionSliceDefaultSlice, CallToActionSliceVariation, CallToActionSlice, FormSliceDefaultPrimary, FormSliceDefaultItem, FormSliceDefault, FormSliceManifestoSignupForm, FormSliceVariation, FormSlice, FullWidthImageSliceDefaultSlicePrimary, FullWidthImageSliceDefaultSlice, FullWidthImageSliceTwoColumnPrimary, FullWidthImageSliceTwoColumn, FullWidthImageSliceVariation, FullWidthImageSlice, HeaderSliceDefaultSlicePrimary, HeaderSliceDefaultSlice, HeaderSliceTwoColumnPrimary, HeaderSliceTwoColumn, HeaderSliceTwoColumnWithMenuPrimary, HeaderSliceTwoColumnWithMenuItem, HeaderSliceTwoColumnWithMenu, HeaderSliceFullWidthWithMenuPrimary, HeaderSliceFullWidthWithMenuItem, HeaderSliceFullWidthWithMenu, HeaderSliceFullWidthWithBgImagePrimary, HeaderSliceFullWidthWithBgImage, HeaderSliceVariation, HeaderSlice, HerosectionSliceDefaultSlicePrimary, HerosectionSliceDefaultSlice, HerosectionSliceTwoColumnHeroPrimary, HerosectionSliceTwoColumnHero, HerosectionSliceVariation, HerosectionSlice, ImageGallerySliceDefaultSliceItem, ImageGallerySliceDefaultSlice, ImageGallerySliceVariation, ImageGallerySlice, LinkImageGallerySliceDefaultSliceItem, LinkImageGallerySliceDefaultSlice, LinkImageGallerySliceVariation, LinkImageGallerySlice, MenuSliceDefaultSlicePrimary, MenuSliceDefaultSliceItem, MenuSliceDefaultSlice, MenuSliceVariation, MenuSlice, QuoteSliceDefaultSliceItem, QuoteSliceDefaultSlice, QuoteSliceVariation, QuoteSlice, ReferencesSliceDefaultPrimary, ReferencesSliceDefault, ReferencesSliceVariation, ReferencesSlice, TextContentSliceDefaultSlicePrimary, TextContentSliceDefaultSliceItem, TextContentSliceDefaultSlice, TextContentSliceVariation, TextContentSlice };
+        export type { AboutUsSubpageDocumentData, AboutUsSubpageDocumentDataSlicesSlice, AboutUsSubpageDocument, AboutUsDocumentData, AboutUsDocumentDataSlicesSlice, AboutUsDocument, BurgerMenuDocumentData, BurgerMenuDocumentDataSlicesSlice, BurgerMenuDocument, ContentPageDocumentData, ContentPageDocumentDataSlicesSlice, ContentPageDocument, FactsSubpageDocumentData, FactsSubpageDocumentDataSlicesSlice, FactsSubpageDocument, FactsDocumentData, FactsDocumentDataSlicesSlice, FactsDocument, FooterDocumentData, FooterDocumentDataExternallinksItem, FooterDocumentDataPartnersItem, FooterDocumentDataInternallinksItem, FooterDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, ManifestoDocumentData, ManifestoDocumentDataSlicesSlice, ManifestoDocument, SubmitIdeasDocumentData, SubmitIdeasDocumentDataSlicesSlice, SubmitIdeasDocument, WhatYouCanDoSubpageDocumentData, WhatYouCanDoSubpageDocumentDataSlicesSlice, WhatYouCanDoSubpageDocument, WhatYouCanDoDocumentData, WhatYouCanDoDocumentDataSubpagesItem, WhatYouCanDoDocumentDataSlicesSlice, WhatYouCanDoDocument, AllDocumentTypes, CallToActionSliceDefaultSliceItem, CallToActionSliceDefaultSlice, CallToActionSliceVariation, CallToActionSlice, FormSliceDefaultPrimary, FormSliceDefaultItem, FormSliceDefault, FormSliceManifestoSignupForm, FormSliceVariation, FormSlice, FullWidthImageSliceDefaultSlicePrimary, FullWidthImageSliceDefaultSlice, FullWidthImageSliceTwoColumnPrimary, FullWidthImageSliceTwoColumn, FullWidthImageSliceVariation, FullWidthImageSlice, HeaderSliceDefaultSlicePrimary, HeaderSliceDefaultSlice, HeaderSliceTwoColumnPrimary, HeaderSliceTwoColumn, HeaderSliceTwoColumnWithMenuPrimary, HeaderSliceTwoColumnWithMenuItem, HeaderSliceTwoColumnWithMenu, HeaderSliceFullWidthWithMenuPrimary, HeaderSliceFullWidthWithMenuItem, HeaderSliceFullWidthWithMenu, HeaderSliceFullWidthWithBgImagePrimary, HeaderSliceFullWidthWithBgImage, HeaderSliceVariation, HeaderSlice, HerosectionSliceDefaultSlicePrimary, HerosectionSliceDefaultSlice, HerosectionSliceTwoColumnHeroPrimary, HerosectionSliceTwoColumnHero, HerosectionSliceVariation, HerosectionSlice, ImageGallerySliceDefaultSliceItem, ImageGallerySliceDefaultSlice, ImageGallerySliceVariation, ImageGallerySlice, LinkImageGallerySliceDefaultSliceItem, LinkImageGallerySliceDefaultSlice, LinkImageGallerySliceVariation, LinkImageGallerySlice, MenuSliceDefaultSlicePrimary, MenuSliceDefaultSliceItem, MenuSliceDefaultSlice, MenuSliceVariation, MenuSlice, QuoteSliceDefaultSliceItem, QuoteSliceDefaultSlice, QuoteSliceVariation, QuoteSlice, ReferencesSliceDefaultPrimary, ReferencesSliceDefault, ReferencesSliceVariation, ReferencesSlice, TextContentSliceDefaultSlicePrimary, TextContentSliceDefaultSliceItem, TextContentSliceDefaultSlice, TextContentSliceVariation, TextContentSlice };
     }
 }

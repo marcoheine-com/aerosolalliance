@@ -1,66 +1,57 @@
 {
-  "id": "d921135f-32f6-44cd-8971-6a3981f685f7",
-  "uid": "error-iure-et",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "footer",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
   "data": {
     "logo": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": "Placeholder image",
+      "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
     },
-    "instagramlink": {
-      "link_type": "Web",
-      "url": "http://twitter.com"
-    },
-    "instagramlinklabel": [
+    "externallinksheadline": "noise",
+    "externallinks": [
       {
-        "type": "paragraph",
-        "text": "Laborum consequat dolor eiusmod ut ad occaecat dolor cupidatat nisi commodo exercitation est amet. Aliqua do et incididunt id cupidatat officia tempor amet pariatur exercitation.",
-        "spans": []
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linklabel": "till"
       }
     ],
-    "adressHeadline": [
-      {
-        "type": "paragraph",
-        "text": "Et eiusmod officia excepteur non ipsum non laboris esse id adipisicing. Enim qui et consequat enim incididunt aute adipisicing laboris voluptate tempor aliqua reprehenderit dolor duis dolore. Enim pariatur cupidatat pariatur eiusmod voluptate dolore incididunt ipsum.",
-        "spans": []
-      }
-    ],
-    "adress": [
-      {
-        "type": "paragraph",
-        "text": "Ullamco incididunt ipsum sit incididunt consequat cupidatat labore esse magna.",
-        "spans": []
-      }
-    ],
-    "links": [
-      {
-        "type": "paragraph",
-        "text": "In irure nostrud deserunt eu ea duis. Cillum magna nostrud id duis anim aliquip nisi magna aliquip irure aute.",
-        "spans": []
-      }
-    ],
-    "partnersHeadline": [
-      {
-        "type": "paragraph",
-        "text": "Adipisicing reprehenderit laboris deserunt mollit qui quis. Minim nisi dolor in elit qui proident consequat enim. Reprehenderit qui irure nisi voluptate deserunt consectetur.",
-        "spans": []
-      }
-    ],
+    "partnersheadline": "date",
     "partners": [
       {
-        "type": "paragraph",
-        "text": "Amet velit sit ullamco elit aliqua cillum quis commodo ut id proident aliqua exercitation laboris. Do veniam ad dolore dolore nostrud tempor eu nostrud ipsum anim est velit laboris. Irure velit ad non pariatur Lorem dolor eiusmod pariatur.",
-        "spans": []
+        "partnerlogo": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
+        }
       }
     ],
-    "supportLink": {
-      "link_type": "Web",
-      "url": "https://slicemachine.dev"
-    }
+    "internallinks": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linklabel": "shut"
+      }
+    ]
   }
 }

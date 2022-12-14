@@ -905,32 +905,7 @@
   "_cts": {
     "home": {},
     "burgerMenu": {},
-    "footer": {
-      "instagramlinklabel": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      },
-      "partners": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      },
-      "adress": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      },
-      "links": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      }
-    },
+    "footer": {},
     "manifesto": {},
     "what-you-can-do": {
       "subpages": {}

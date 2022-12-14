@@ -14,6 +14,8 @@ export const getBackgroundcolorClass = (color: Color): string => {
       return 'bg-darkblue'
     case 'green':
       return 'bg-green'
+    case 'lightgrey':
+      return 'bg-lightgrey'
     default:
       return 'bg-white'
   }

@@ -144,7 +144,7 @@
   }
 
   .imageWrapper h2 {
-    @apply uppercase text-2xl mt-4 mb-2 font-suisseIntlRegular;
+    @apply uppercase text-2xl pb-1 font-suisseIntlRegular;
   }
 
   .imageWrapper p {

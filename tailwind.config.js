@@ -21,6 +21,7 @@ module.exports = {
         grey: '#EFEFEF',
         green: '#00948B',
         darkGrey: 'rgb(39, 47, 102, 0.3)',
+        lightgrey: 'rgb(239, 239, 239, 0.5)',
         header: '#efefef',
       },
       fontSize: {

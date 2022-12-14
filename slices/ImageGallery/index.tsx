@@ -21,7 +21,7 @@ const ImageGallery: FunctionComponent<Props> = ({ slice }) => {
       {slice?.items?.map((item, i) => (
         <div
           key={item.image.alt || i}
-          className="text-center imageWrapper"
+          className="imageWrapper relative text-center"
         >
           {item.image.url && (
             <Image
@@ -31,7 +31,9 @@ const ImageGallery: FunctionComponent<Props> = ({ slice }) => {
               height={item.image.dimensions.height}
             />
           )}
-          <PrismicRichText field={item.subtext} />
+          <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center bg-darkblue/50 text-white opacity-0 transition-opacity hover:opacity-100">
+            <PrismicRichText field={item.subtext} />
+          </div>
         </div>
       ))}
     </section>

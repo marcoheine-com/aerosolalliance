@@ -6,3 +6,4 @@ export type Color =
   | 'darkblue'
   | 'white'
   | 'green'
+  | 'lightgrey'

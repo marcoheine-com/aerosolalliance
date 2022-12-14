@@ -1700,6 +1700,16 @@ export interface LinkImageGallerySliceDefaultSliceItem {
      *
      */
     linkLabel: prismicT.RichTextField;
+    /**
+     * SVGCaption field in *LinkImageGallery → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: link_image_gallery.items[].svgcaption
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    svgcaption: prismicT.ImageField<never>;
 }
 /**
  * Default slice variation for LinkImageGallery Slice

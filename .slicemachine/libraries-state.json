@@ -1711,7 +1711,8 @@
                       "purple",
                       "lightblue",
                       "darkblue",
-                      "green"
+                      "green",
+                      "lightgrey"
                     ]
                   }
                 },
@@ -1758,11 +1759,11 @@
                 "Content": [
                   {
                     "type": "paragraph",
-                    "text": "Voluptate nulla incididunt et dolore ad aliqua ipsum nisi cupidatat aliqua voluptate excepteur. Laboris est Lorem duis reprehenderit irure. Irure velit cupidatat occaecat cillum occaecat proident anim laborum consequat amet amet.",
+                    "text": "Minim excepteur eiusmod pariatur voluptate esse duis.",
                     "spans": []
                   }
                 ],
-                "subline": false
+                "subline": true
               }
             ],
             "primary": {
@@ -1770,8 +1771,8 @@
               "line": true,
               "distanceToTop": "medium",
               "intro": true,
-              "backgroundColor": "yellow",
-              "fullViewportHeight": false
+              "backgroundColor": "lightblue",
+              "fullViewportHeight": true
             },
             "slice_type": "text_content"
           }

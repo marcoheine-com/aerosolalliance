@@ -1963,7 +1963,7 @@ interface TextContentSliceDefaultSlicePrimary {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    backgroundColor: prismicT.SelectField<"yellow" | "red" | "purple" | "lightblue" | "darkblue" | "green">;
+    backgroundColor: prismicT.SelectField<"yellow" | "red" | "purple" | "lightblue" | "darkblue" | "green" | "lightgrey">;
     /**
      * Full Viewport Height field in *TextContent → Primary*
      *

@@ -26,7 +26,7 @@ export const Header: React.FC<Props> = ({ slices }): JSX.Element => {
   }, [prevScrollPos, visible])
   return (
     <header
-      className={`top-0 sticky z-[3] w-full max-w-[1920px] bg-header transition-all ${
+      className={`sticky top-0 z-[3] w-full max-w-[1920px] bg-header transition-all ${
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >

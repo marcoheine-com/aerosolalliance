@@ -56,23 +56,23 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
     >
       <button
         onClick={toggleMenu}
-        className="p-6 backdrop-blur-xl"
+        className="p-6 pr-10 backdrop-blur-xl"
         aria-label="Open menu"
       >
         <BurgerIcon />
       </button>
       <ul
         className={`absolute top-0 right-0
-        z-[1] h-screen overflow-x-scroll uppercase bg-grey transition-all translate-x-[300px] ${
+        z-[1] h-screen translate-x-[300px] overflow-x-scroll bg-grey uppercase transition-all ${
           isOpen
-            ? 'translate-x-0 w-full md:w-[50vw] p-8 md:p-20 pt-32'
-            : 'opacity-0 pointer-events-none w-0 p-0'
+            ? 'w-full translate-x-0 p-8 pt-12 md:w-[50vw] md:p-20'
+            : 'pointer-events-none w-0 p-0 opacity-0'
         }    md:max-w-xl`}
         ref={ref}
       >
         <button
           onClick={toggleMenu}
-          className="absolute top-4 right-4 p-6"
+          className="absolute top-4 right-4 p-6 pr-10"
           aria-label="Close menu"
         >
           <CrossIcon />
@@ -80,10 +80,10 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
         {menuItems?.map((item: Item) => (
           <li
             key={item.primary.link.uid}
-            className="py-4 font-semibold border-b-2 last:border-b-0 border-b-darkblue desktop:py-8"
+            className="border-b-2 border-b-darkblue py-4 font-semibold last:border-b-0 desktop:py-8"
           >
             <Link href={linkResolver(item.primary.link)}>
-              <a className="flex gap-4 items-center submenuItem-trigger">
+              <a className="submenuItem-trigger flex items-center gap-4">
                 <Arrow className="submenuItem-arrow" />
                 <PrismicRichText
                   field={item.primary.linkLabel}

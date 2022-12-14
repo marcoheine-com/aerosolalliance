@@ -2,9 +2,11 @@ import type { GetStaticProps, NextPage } from 'next'
 import { ToastContainer } from 'react-toastify'
 import { Footer } from '../components/footer'
 import { createClient } from '../prismicio'
-import { Slicemachine } from '../components/slicemachine'
 import { Header } from '../components/header'
 import { HeadComponent } from '../components/head-component'
+import { FooterDocument } from '../types.generated'
+import { SliceZone } from '@prismicio/react'
+import { components } from '../slices'
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient(previewData)
@@ -35,11 +37,12 @@ interface Props {
       slices: any
     }
   }
-  footer: any
+  footer: FooterDocument
   menu: any
 }
 
 const Home: NextPage<Props> = (props) => {
+  const { footer } = props
   return (
     <>
       <ToastContainer />
@@ -50,11 +53,14 @@ const Home: NextPage<Props> = (props) => {
         image={props.home?.data?.image}
         imageAlt={props.home?.data?.imageAlt}
       />
-      <main className="flex relative flex-col mx-auto max-w-[1920px]">
+      <main className="relative mx-auto flex max-w-[1920px] flex-col">
         <Header slices={props.menu?.data?.slices} />
-        <Slicemachine slices={props.home?.data?.slices} />
+        <SliceZone
+          slices={props.home?.data?.slices}
+          components={components}
+        />
       </main>
-      <Footer data={props.footer.data} />
+      <Footer {...footer} />
     </>
   )
 }

@@ -1,10 +1,12 @@
 import React, { FunctionComponent } from 'react'
 import { RichTextField } from '@prismicio/types'
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import { DistanceToBottom } from '../../entities'
 import { getDistance } from '../../utils/getDistance'
 import Link from 'next/link'
 import { linkResolver } from '../../prismicio'
+import { TextContentSlice } from '../../types.generated'
+import { getBackgroundcolorClass } from '../../utils'
 
 interface Item {
   Content: RichTextField
@@ -23,9 +25,22 @@ interface Props {
   }
 }
 
-const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
+const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
+  slice,
+}): JSX.Element => {
   return (
-    <>
+    <section
+      className={`${
+        slice.primary.backgroundColor
+          ? `${getBackgroundcolorClass(slice.primary.backgroundColor)}`
+          : ''
+      } ${
+        slice.primary.fullViewportHeight
+          ? 'flex min-h-screen flex-col justify-center'
+          : ''
+      }
+      `}
+    >
       {slice?.items?.map((item: Item, i: number) => {
         // TODO: add check for tableOContents === true
         const tableOfContents = item.Content.filter(
@@ -35,16 +50,15 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
         return (
           <section
             key={i}
-            className={`px-6 mx-auto ${
-              slice.primary.intro ? 'mb-10' : ''
-            } max-w-4xl sm:px-16 ${getDistance(
+            className={`mx-auto max-w-4xl px-6 sm:px-16 ${getDistance(
               slice.primary.distanceToBottom,
               true
-            )} ${getDistance(slice.primary.distanceToTop, false)}`}
+            )} ${getDistance(slice.primary.distanceToTop, false)}
+            `}
           >
             {tableOfContents.length >= 2 ? (
               <>
-                <ol className="flex flex-col gap-4 pl-0 ml-0 font-suisseIntlMono list-none">
+                <ol className="ml-0 flex list-none flex-col gap-4 pl-0 font-suisseIntlMono">
                   {tableOfContents?.map((node: any, i: number) => (
                     <li key={i}>
                       <Link
@@ -55,7 +69,7 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
                     </li>
                   ))}
                 </ol>
-                <hr className="mb-8 h-[1px] border-t-0 border-b-[1px] border-darkblue border-solid opacity-50" />
+                <hr className="mb-8 h-[1px] border-t-0 border-b-[1px] border-solid border-darkblue opacity-50" />
               </>
             ) : null}
 
@@ -86,11 +100,11 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
                   <ol className="pl-4">{props.children}</ol>
                 ),
                 list: (props: any) => (
-                  <ul className="pl-4 mb-8 ml-6 list-disc">{props.children}</ul>
+                  <ul className="mb-8 ml-2 list-disc pl-4">{props.children}</ul>
                 ),
                 hyperlink: (props: any) => (
                   <Link href={linkResolver(props.node.data)}>
-                    <a className="border-b-[1px] hover:border-b-2 border-b-darkblue">
+                    <a className="border-b-[1px] border-b-darkblue hover:border-b-2">
                       {props.children}
                     </a>
                   </Link>
@@ -98,12 +112,12 @@ const TextContent: FunctionComponent<Props> = ({ slice }): JSX.Element => {
               }}
             />
             {slice.primary.line ? (
-              <hr className="border-t-0 border-b-[1px] border-darkblue border-solid" />
+              <hr className="border-t-0 border-b-[1px] border-solid border-darkblue" />
             ) : null}
           </section>
         )
       })}
-    </>
+    </section>
   )
 }
 

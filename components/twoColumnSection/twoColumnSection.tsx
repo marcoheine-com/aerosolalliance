@@ -23,7 +23,7 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
   const BACKGROUND_COLOR = getBackgroundcolorClass(backgroundcolor)
   return (
     <section
-      className={`${className} grid grid-rows-2 overflow-hidden lg:grid-rows-1 lg:grid-cols-2`}
+      className={`${className} grid grid-rows-2 overflow-hidden lg:grid-cols-2 lg:grid-rows-1`}
     >
       <section
         className={`${BACKGROUND_COLOR} flex flex-col justify-center py-36 px-6 md:px-20 xl:p-32`}
@@ -48,12 +48,12 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
           />
         )}
         {headline ? (
-          <span className="absolute top-2/4 left-2/4 font-UvasBlack-Black text-white -translate-x-1/2">
+          <span className="absolute top-2/4 left-2/4 -translate-x-1/2 font-UvasBlack-Black text-white">
             <PrismicRichText
               field={headline}
               components={{
                 heading1: ({ children }) => (
-                  <h1 className="absolute top-2/4 left-2/4 font-UvasBlack-Black text-5xl text-center text-white -translate-x-1/2 -translate-y-1/2 lg:text-[80px]">
+                  <h1 className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center font-UvasBlack-Black text-5xl text-white lg:text-[80px]">
                     {children}
                   </h1>
                 ),

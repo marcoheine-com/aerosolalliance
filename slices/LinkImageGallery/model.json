@@ -24,7 +24,8 @@
           "config": {
             "label": "link",
             "placeholder": "",
-            "allowTargetBlank": false
+            "allowTargetBlank": false,
+            "select": null
           },
           "type": "Link"
         },
@@ -36,8 +37,17 @@
             "single": "paragraph"
           },
           "type": "StructuredText"
+        },
+        "svgcaption": {
+          "type": "Image",
+          "config": {
+            "label": "SVGCaption",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
-      }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

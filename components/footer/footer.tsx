@@ -14,7 +14,6 @@ import { filledLinkTypeGuard } from '../../utils/isFilledLink'
 const CURRENT_YEAR = new Date().getFullYear()
 
 export const Footer: FunctionComponent<FooterDocument> = ({ data }) => {
-  console.log(data)
   const filledLogo =
     data.logo && filledLinkTypeGuard(data.logo) ? data.logo : null
   return (

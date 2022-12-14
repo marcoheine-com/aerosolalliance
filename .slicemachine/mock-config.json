@@ -296,7 +296,14 @@
         "primary": {}
       },
       "default-slice": {
-        "items": {},
+        "items": {
+          "Content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "primary": {}
       }
     },

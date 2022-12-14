@@ -52,6 +52,30 @@
             "placeholder_true": "true",
             "placeholder_false": "false"
           }
+        },
+        "backgroundColor": {
+          "type": "Select",
+          "config": {
+            "label": "Background-Color",
+            "placeholder": "Background-Color",
+            "options": [
+              "yellow",
+              "red",
+              "purple",
+              "lightblue",
+              "darkblue",
+              "green"
+            ]
+          }
+        },
+        "fullViewportHeight": {
+          "type": "Boolean",
+          "config": {
+            "label": "Full Viewport Height",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
         }
       },
       "items": {
@@ -60,7 +84,7 @@
             "label": "Content",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,preformatted,heading2,heading4,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           },
           "type": "StructuredText"
         },

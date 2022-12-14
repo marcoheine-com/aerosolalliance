@@ -1700,6 +1700,16 @@ export interface LinkImageGallerySliceDefaultSliceItem {
      *
      */
     linkLabel: prismicT.RichTextField;
+    /**
+     * SVGCaption field in *LinkImageGallery → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: link_image_gallery.items[].svgcaption
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    svgcaption: prismicT.ImageField<never>;
 }
 /**
  * Default slice variation for LinkImageGallery Slice
@@ -1944,6 +1954,27 @@ interface TextContentSliceDefaultSlicePrimary {
      *
      */
     intro: prismicT.BooleanField;
+    /**
+     * Background-Color field in *TextContent → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: Background-Color
+     * - **API ID Path**: text_content.primary.backgroundColor
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    backgroundColor: prismicT.SelectField<"yellow" | "red" | "purple" | "lightblue" | "darkblue" | "green">;
+    /**
+     * Full Viewport Height field in *TextContent → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: text_content.primary.fullViewportHeight
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    fullViewportHeight: prismicT.BooleanField;
 }
 /**
  * Item in TextContent → Items

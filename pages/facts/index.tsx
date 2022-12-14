@@ -1,9 +1,10 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { Footer } from '../../components/footer'
 import { createClient } from '../../prismicio'
-import { Slicemachine } from '../../components/slicemachine'
 import { Header } from '../../components/header'
 import { HeadComponent } from '../../components/head-component'
+import { SliceZone } from '@prismicio/react'
+import { components } from '../../slices'
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient(previewData)
@@ -39,6 +40,7 @@ interface Props {
 }
 
 const WhatYouCanDo: NextPage<Props> = (props) => {
+  const { footer } = props
   return (
     <>
       <HeadComponent
@@ -48,11 +50,14 @@ const WhatYouCanDo: NextPage<Props> = (props) => {
         imageAlt={props.facts?.data?.imageAlt}
       />
 
-      <main className="flex relative flex-col mx-auto max-w-[1920px]">
+      <main className="relative mx-auto flex max-w-[1920px] flex-col">
         <Header slices={props.menu?.data?.slices} />
-        <Slicemachine slices={props.facts?.data?.slices} />
+        <SliceZone
+          slices={props.facts?.data?.slices}
+          components={components}
+        />
       </main>
-      <Footer data={props.footer.data} />
+      <Footer {...footer} />
     </>
   )
 }

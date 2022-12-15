@@ -19,7 +19,7 @@ const Quote: FunctionComponent<SliceComponentProps<QuoteSlice>> = ({
             key={item.image.alt || index}
           >
             {filledImage && (
-              <div className="relative">
+              <div className="relative text-[0]">
                 <Image
                   src={filledImage.url}
                   alt={filledImage.alt || ''}

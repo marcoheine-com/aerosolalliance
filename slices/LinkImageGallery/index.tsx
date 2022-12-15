@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
+import { SliceComponentProps } from '@prismicio/react'
 import {
   LinkImageGallerySlice,
   LinkImageGallerySliceDefaultSliceItem,
@@ -17,34 +17,35 @@ const LinkImageGallery: FunctionComponent<
       {slice?.items?.map((item: LinkImageGallerySliceDefaultSliceItem) => {
         const filledLink =
           item.link && filledLinkTypeGuard(item.link) ? item.link : null
+
         return filledLink ? (
-          <div
-            key={item.image.alt}
-            className="relative"
+          <Link
+            href={linkResolver(filledLink)}
+            key={filledLink.url}
           >
-            <Link href={linkResolver(filledLink)}>
-              <a>
-                {item.image.url && (
+            <a>
+              {item.image.url && (
+                <div className="text-[0]">
                   <Image
                     src={item.image.url}
                     alt={item.image.alt || ''}
                     width={item.image.dimensions.width}
                     height={item.image.dimensions.height}
                   />
-                )}
-                {item.svgcaption?.url && (
-                  <div className="absolute top-2/4 left-2/4 w-full -translate-x-1/2 -translate-y-1/2 text-center font-UvasBlack-Black text-white">
-                    <Image
-                      src={item.svgcaption.url}
-                      alt={item.svgcaption.alt || ''}
-                      width={item.svgcaption.dimensions.width}
-                      height={item.svgcaption.dimensions.height}
-                    />
-                  </div>
-                )}
-              </a>
-            </Link>
-          </div>
+                </div>
+              )}
+              {item.svgcaption?.url && (
+                <div className="absolute top-2/4 left-2/4 w-full -translate-x-1/2 -translate-y-1/2">
+                  <Image
+                    src={item.svgcaption.url}
+                    alt={item.svgcaption.alt || ''}
+                    width={item.svgcaption.dimensions.width}
+                    height={item.svgcaption.dimensions.height}
+                  />
+                </div>
+              )}
+            </a>
+          </Link>
         ) : null
       })}
     </section>

@@ -1,10 +1,13 @@
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
 
-export const Logo: FunctionComponent = () => {
+interface Props {
+  width?: string
+}
+export const Logo: FunctionComponent<Props> = ({ width = 'w-full' }) => {
   return (
     <Link href="/">
-      <a className="w-full max-w-xs p-6">
+      <a className={`${width} block max-w-xs p-6`}>
         <svg
           version="1.1"
           id="Ebene_1"

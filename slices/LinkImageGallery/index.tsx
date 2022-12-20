@@ -14,40 +14,42 @@ const LinkImageGallery: FunctionComponent<
 > = ({ slice }) => {
   return (
     <section className="grid gap-5 p-5 md:grid-cols-2 md:p-16 xl:gap-16 xl:p-24 2xl:gap-20">
-      {slice?.items?.map((item: LinkImageGallerySliceDefaultSliceItem) => {
-        const filledLink =
-          item.link && filledLinkTypeGuard(item.link) ? item.link : null
+      {slice?.items?.map(
+        (item: LinkImageGallerySliceDefaultSliceItem, index: number) => {
+          const filledLink =
+            item.link && filledLinkTypeGuard(item.link) ? item.link : null
 
-        return filledLink ? (
-          <Link
-            href={linkResolver(filledLink)}
-            key={filledLink.url}
-          >
-            <a>
-              {item.image.url && (
-                <div className="text-[0]">
-                  <Image
-                    src={item.image.url}
-                    alt={item.image.alt || ''}
-                    width={item.image.dimensions.width}
-                    height={item.image.dimensions.height}
-                  />
-                </div>
-              )}
-              {item.svgcaption?.url && (
-                <div className="absolute top-2/4 left-2/4 w-full -translate-x-1/2 -translate-y-1/2">
-                  <Image
-                    src={item.svgcaption.url}
-                    alt={item.svgcaption.alt || ''}
-                    width={item.svgcaption.dimensions.width}
-                    height={item.svgcaption.dimensions.height}
-                  />
-                </div>
-              )}
-            </a>
-          </Link>
-        ) : null
-      })}
+          return filledLink ? (
+            <Link
+              href={linkResolver(filledLink)}
+              key={`${filledLink.url}-${index}`}
+            >
+              <a className="relative">
+                {item.image.url && (
+                  <div className="text-[0]">
+                    <Image
+                      src={item.image.url}
+                      alt={item.image.alt || ''}
+                      width={item.image.dimensions.width}
+                      height={item.image.dimensions.height}
+                    />
+                  </div>
+                )}
+                {item.svgcaption?.url && (
+                  <div className="absolute top-2/4 left-2/4 w-full -translate-x-1/2 -translate-y-1/2">
+                    <Image
+                      src={item.svgcaption.url}
+                      alt={item.svgcaption.alt || ''}
+                      width={item.svgcaption.dimensions.width}
+                      height={item.svgcaption.dimensions.height}
+                    />
+                  </div>
+                )}
+              </a>
+            </Link>
+          ) : null
+        }
+      )}
     </section>
   )
 }

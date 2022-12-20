@@ -532,6 +532,26 @@ export interface FooterDocumentDataPartnersItem {
      *
      */
     partnerlogo: prismicT.ImageField<never>;
+    /**
+     * link field in *Footer → partners*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.partners[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * linklabel field in *Footer → partners*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.partners[].linklabel
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    linklabel: prismicT.KeyTextField;
 }
 /**
  * Item in Footer → internalLinks

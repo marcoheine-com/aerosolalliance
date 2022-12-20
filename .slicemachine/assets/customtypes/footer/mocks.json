@@ -18,19 +18,19 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
     },
-    "externallinksheadline": "noise",
+    "externallinksheadline": "memory",
     "externallinks": [
       {
         "link": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://slicemachine.dev"
         },
-        "linklabel": "till"
+        "linklabel": "wave"
       }
     ],
-    "partnersheadline": "date",
+    "partnersheadline": "case",
     "partners": [
       {
         "partnerlogo": {
@@ -40,17 +40,22 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
-        }
+          "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+        },
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "linklabel": "butter"
       }
     ],
     "internallinks": [
       {
         "link": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://slicemachine.dev"
         },
-        "linklabel": "shut"
+        "linklabel": "fox"
       }
     ]
   }

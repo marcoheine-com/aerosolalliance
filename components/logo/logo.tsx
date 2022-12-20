@@ -3,11 +3,15 @@ import { FunctionComponent } from 'react'
 
 interface Props {
   width?: string
+  className?: string
 }
-export const Logo: FunctionComponent<Props> = ({ width = 'w-full' }) => {
+export const Logo: FunctionComponent<Props> = ({
+  width = 'w-full',
+  className,
+}) => {
   return (
     <Link href="/">
-      <a className={`${width} block max-w-xs p-6`}>
+      <a className={`${width} block max-w-xs p-6 ${className}`}>
         <svg
           version="1.1"
           id="Ebene_1"

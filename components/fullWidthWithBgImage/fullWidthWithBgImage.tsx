@@ -18,18 +18,17 @@ export const FullWidthWithBgImage: FunctionComponent<Props> = ({
       {bgImage?.url && (
         <Image
           src={bgImage.url}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           alt={bgImage.alt}
         />
       )}
       {svg?.url && (
-        <div className="absolute top-1/3 left-0 p-7 w-full">
+        <div className="absolute top-1/3 left-0 w-full p-7">
           <Image
             src={svg.url}
             width={svg.width}
             height={svg.height}
-            layout="responsive"
             alt={svg.name}
           />
         </div>

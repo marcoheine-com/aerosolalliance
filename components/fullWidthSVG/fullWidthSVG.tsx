@@ -30,7 +30,6 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
             src={svgMobile.url}
             width={svgMobile.width}
             height={svgMobile.height}
-            layout="responsive"
             alt={svg.name}
           />
         </div>
@@ -38,15 +37,12 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
 
       {svg?.url && (
         <div
-          className={`${
-            svgMobile?.url ? 'hidden' : ''
-          } mx-auto mb-12 w-full lg:block`}
+          className={`${svgMobile?.url ? 'hidden' : ''} mx-auto mb-12 lg:block`}
         >
           <Image
             src={svg.url}
             width={svg.width}
             height={svg.height}
-            layout="responsive"
             alt={svg.name}
           />
         </div>

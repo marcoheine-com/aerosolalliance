@@ -33,7 +33,6 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
             src={svg.url}
             width={svg.width}
             height={svg.height}
-            layout="responsive"
             alt={svg.name}
           />
         )}
@@ -42,8 +41,8 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
         {image.url && (
           <Image
             src={image?.url}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             alt={image?.alt}
           />
         )}

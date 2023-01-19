@@ -54,7 +54,6 @@ const FullWidthImage: FunctionComponent<Props> = ({ slice }) => {
           alt={primary.image?.alt}
           width={primary.image?.dimensions.width}
           height={primary.image?.dimensions.height}
-          layout="responsive"
         />
       ) : null
     default:

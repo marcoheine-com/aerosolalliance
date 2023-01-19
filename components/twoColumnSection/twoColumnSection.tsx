@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { Color, ImageProps, SVG } from '../../entities'
 import { getBackgroundcolorClass } from '../../utils'
 import { RichTextField } from '@prismicio/types'
@@ -33,6 +33,7 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
             src={svg.url}
             width={svg.width}
             height={svg.height}
+            layout="responsive"
             alt={svg.name}
           />
         )}
@@ -41,8 +42,8 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
         {image.url && (
           <Image
             src={image?.url}
-            fill
-            style={{ objectFit: 'cover' }}
+            layout="fill"
+            objectFit="cover"
             alt={image?.alt}
           />
         )}
@@ -52,7 +53,7 @@ export const TwoColumnSection: FunctionComponent<Props> = ({
               field={headline}
               components={{
                 heading1: ({ children }) => (
-                  <h1 className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center font-UvasBlack-Black text-5xl text-white lg:text-[80px]">
+                  <h1 className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center font-UvasBlack-Black text-5xl text-white xl:text-[80px]">
                     {children}
                   </h1>
                 ),

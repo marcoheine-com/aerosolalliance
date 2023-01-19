@@ -1,0 +1,57 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default-slice",
+    "primary": {
+      "link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      "linkLabel": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Cillum esse ad do culpa cillum. Fugiat sint ea laboris dolore commodo reprehenderit ipsum et amet eu tempor tempor laborum. Do ad enim velit voluptate fugiat excepteur elit magna deserunt minim."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "subLink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ],
+          [
+            "subLinkLabel",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Minim Lorem magna enim magna sit mollit sit consequat aute nisi voluptate excepteur nostrud ipsum magna. Enim consectetur occaecat voluptate esse laboris proident do eiusmod elit et excepteur mollit. Aliquip anim sit exercitation quis aliqua quis laborum adipisicing adipisicing consectetur ullamco qui in laboris cillum."
+                  }
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,26 +1,532 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "home",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "title": "born",
-    "description": "dress",
-    "image": {
-      "link_type": "Media",
-      "name": "mock",
-      "kind": "image",
-      "url": "https://source.unsplash.com/random",
-      "size": "10kB"
-    },
-    "imageAlt": "pressure",
-    "slices": []
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "entirely"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "section",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "excitement",
+    "type": "Text"
+  },
+  "image": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "id": "mock_Media_link",
+      "kind": "image/jpeg",
+      "name": "mock_name",
+      "url": "https://source.unsplash.com/daily",
+      "size": "0",
+      "__TYPE__": "FileLink"
+    }
+  },
+  "imageAlt": {
+    "__TYPE__": "FieldContent",
+    "value": "connected",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "herosection$5d2cc296-eaab-4cde-bc53-d825396b9c6d",
+        "name": "herosection",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default-slice",
+          "primary": {
+            "backgroundcolor": {
+              "__TYPE__": "FieldContent",
+              "value": "white",
+              "type": "Select"
+            },
+            "herosvgMobile": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "id": "mock_Media_link",
+                "kind": "image/jpeg",
+                "name": "mock_name",
+                "url": "https://source.unsplash.com/daily",
+                "size": "0",
+                "__TYPE__": "FileLink"
+              }
+            },
+            "herosvg": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "id": "mock_Media_link",
+                "kind": "image/jpeg",
+                "name": "mock_name",
+                "url": "https://source.unsplash.com/daily",
+                "size": "0",
+                "__TYPE__": "FileLink"
+              }
+            },
+            "caption": {
+              "__TYPE__": "FieldContent",
+              "value": "orange",
+              "type": "Text"
+            },
+            "distanceToBottom": {
+              "__TYPE__": "FieldContent",
+              "value": "none",
+              "type": "Select"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "text_content$a4062102-01b7-44c7-9883-8b3f8dbd3c83",
+        "name": "text_content",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default-slice",
+          "primary": {
+            "distanceToBottom": {
+              "__TYPE__": "FieldContent",
+              "value": "large",
+              "type": "Select"
+            },
+            "line": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "distanceToTop": {
+              "__TYPE__": "FieldContent",
+              "value": "medium",
+              "type": "Select"
+            },
+            "intro": {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            },
+            "backgroundColor": {
+              "__TYPE__": "FieldContent",
+              "value": "green",
+              "type": "Select"
+            },
+            "fullViewportHeight": {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "Content",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Mollit duis amet veniam velit voluptate nulla proident non do velit."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "subline",
+                  {
+                    "__TYPE__": "BooleanContent",
+                    "value": true
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "call_to_action$6487eba7-b632-4311-a545-2002951588b7",
+        "name": "call_to_action",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default-slice",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://twitter.com"
+                    }
+                  }
+                ],
+                [
+                  "linkLabel",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "broken",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "linkColor",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "purple",
+                    "type": "Select"
+                  }
+                ],
+                [
+                  "invertedColor",
+                  {
+                    "__TYPE__": "BooleanContent",
+                    "value": false
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "quote$a236047d-6aac-4a6f-a6c9-96777d6c95d7",
+        "name": "quote",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default-slice",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "image",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+                      "width": 6000,
+                      "height": 4000
+                    },
+                    "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+                    "width": 6000,
+                    "height": 4000,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "quote",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Consequat laboris ad consequat. Mollit consectetur ipsum ex amet tempor cupidatat sit nulla reprehenderit in id voluptate tempor velit eiusmod. Eu id et fugiat amet."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "caption",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "successful",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "link_image_gallery$f57a1290-eb79-454d-b61c-ed53756f5a9d",
+        "name": "link_image_gallery",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default-slice",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "image",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+                      "width": 3424,
+                      "height": 3424
+                    },
+                    "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+                    "width": 3424,
+                    "height": 3424,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://prismic.io"
+                    }
+                  }
+                ],
+                [
+                  "linkLabel",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Veniam minim qui Lorem."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "svgcaption",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+                      "width": 3344,
+                      "height": 2509
+                    },
+                    "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+                    "width": 3344,
+                    "height": 2509,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "image_gallery$f33e00a1-20a5-42ca-820a-265644b596a2",
+        "name": "image_gallery",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default-slice",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "image",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+                      "width": 4010,
+                      "height": 4010
+                    },
+                    "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+                    "width": 4010,
+                    "height": 4010,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "subtext",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Exercitation ut voluptate exercitation elit elit elit magna cupidatat. Aliqua ut excepteur labore."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "header$662abbb0-b026-466b-9073-497eea4cb3e1",
+        "name": "header",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default-slice",
+          "primary": {
+            "backgroundcolor": {
+              "__TYPE__": "FieldContent",
+              "value": "white",
+              "type": "Select"
+            },
+            "headersvg": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "id": "mock_Media_link",
+                "kind": "image/jpeg",
+                "name": "mock_name",
+                "url": "https://source.unsplash.com/daily",
+                "size": "0",
+                "__TYPE__": "FileLink"
+              }
+            },
+            "distanceToBottom": {
+              "__TYPE__": "FieldContent",
+              "value": "none",
+              "type": "Select"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "form$7bb79a86-3d97-42c0-9f8d-f07286c8e91f",
+        "name": "form",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "submitButtonText": {
+              "__TYPE__": "FieldContent",
+              "value": "rod",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "text",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Quis et minim ea veniam proident aliquip aliquip consequat do esse. Anim et eiusmod consequat cupidatat dolore fugiat deserunt minim eiusmod non pariatur sint non pariatur aliquip. Duis culpa veniam id eu culpa aliquip occaecat."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "label",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "whistle",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "inputType",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "Textarea",
+                    "type": "Select"
+                  }
+                ],
+                [
+                  "placeholder",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "teeth",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "references$604819e6-7756-4612-9ff0-0309de9dd815",
+        "name": "references",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "content": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Cupidatat non aute aliquip eiusmod aliquip irure magna. Exercitation non magna cupidatat occaecat cillum."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
   }
 }

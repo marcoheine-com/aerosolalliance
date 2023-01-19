@@ -1,0 +1,69 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "submitButtonText": {
+        "__TYPE__": "FieldContent",
+        "value": "particularly",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "text",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Commodo ex tempor fugiat minim cillum esse sint. Et aliqua velit ad commodo dolore proident excepteur quis anim id enim laboris nulla."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "label",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "rate",
+              "type": "Text"
+            }
+          ],
+          [
+            "inputType",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "Textarea",
+              "type": "Select"
+            }
+          ],
+          [
+            "placeholder",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "itself",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "manifestoSignupForm",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

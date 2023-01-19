@@ -1,0 +1,60 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default-slice",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+                "width": 3344,
+                "height": 2509
+              },
+              "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+              "width": 3344,
+              "height": 2509,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ],
+          [
+            "quote",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Officia elit do culpa velit ut quis cupidatat officia veniam adipisicing. Ut fugiat adipisicing sit culpa id tempor anim nostrud sint et elit voluptate cillum minim cillum."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "caption",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "try",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,61 +1,140 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "footer",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "logo": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+      "width": 3648,
+      "height": 4560
     },
-    "externallinksheadline": "memory",
-    "externallinks": [
+    "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+    "width": 3648,
+    "height": 4560,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "externallinksheadline": {
+    "__TYPE__": "FieldContent",
+    "value": "operation",
+    "type": "Text"
+  },
+  "externallinks": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "linklabel": "wave"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ],
+          [
+            "linklabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "rich",
+              "type": "Text"
+            }
+          ]
+        ]
       }
-    ],
-    "partnersheadline": "case",
-    "partners": [
+    ]
+  },
+  "partnersheadline": {
+    "__TYPE__": "FieldContent",
+    "value": "labor",
+    "type": "Text"
+  },
+  "partners": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "partnerlogo": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": null,
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
-        },
-        "link": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "linklabel": "butter"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "partnerlogo",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+                "width": 6000,
+                "height": 4000
+              },
+              "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+              "width": 6000,
+              "height": 4000,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "linklabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "strong",
+              "type": "Text"
+            }
+          ]
+        ]
       }
-    ],
-    "internallinks": [
+    ]
+  },
+  "internallinks": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "linklabel": "fox"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "linklabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "definition",
+              "type": "Text"
+            }
+          ]
+        ]
       }
     ]
   }

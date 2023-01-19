@@ -19,6 +19,7 @@ export const FullWidthWithBgImage: FunctionComponent<Props> = ({
         <Image
           src={bgImage.url}
           fill
+          sizes="(max-width: 1024px) 100vw, 1024px"
           style={{ objectFit: 'cover' }}
           alt={bgImage.alt}
         />

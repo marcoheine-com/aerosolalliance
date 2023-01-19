@@ -1,0 +1,63 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default-slice",
+    "primary": {
+      "distanceToBottom": {
+        "__TYPE__": "FieldContent",
+        "value": "large",
+        "type": "Select"
+      },
+      "line": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "distanceToTop": {
+        "__TYPE__": "FieldContent",
+        "value": "small",
+        "type": "Select"
+      },
+      "intro": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "backgroundColor": {
+        "__TYPE__": "FieldContent",
+        "value": "purple",
+        "type": "Select"
+      },
+      "fullViewportHeight": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "Content",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Sunt adipisicing officia dolor labore ad non nostrud deserunt aliqua ex et non anim duis."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "subline",
+            {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

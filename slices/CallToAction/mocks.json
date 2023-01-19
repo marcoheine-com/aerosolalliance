@@ -1,0 +1,47 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default-slice",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ],
+          [
+            "linkLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "themselves",
+              "type": "Text"
+            }
+          ],
+          [
+            "linkColor",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "purple",
+              "type": "Select"
+            }
+          ],
+          [
+            "invertedColor",
+            {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

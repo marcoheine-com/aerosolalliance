@@ -4,10 +4,22 @@ const nextConfig = {
   transpilePackages: ['friendly-challenge'],
   images: {
     remotePatterns: [
-      'https://images.prismic.io/aerosolalliance/*',
-      'https://source.unsplash.com/*',
-      'https://images.unsplash.com/*',
-      'https://aerosolalliance.cdn.prismic.io/*',
+      {
+        protocol: 'https',
+        hostname: 'images.prismic.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'aerosolalliance.cdn.prismic.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
   i18n: {

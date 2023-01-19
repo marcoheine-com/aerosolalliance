@@ -1,5 +1,3 @@
-import { PrismicRichText } from '@prismicio/react'
-import { RichTextField } from '@prismicio/types'
 import Link from 'next/link'
 import React from 'react'
 import { Color } from '../../entities'
@@ -47,26 +45,26 @@ const getBeforeStyling = (item: Item): string => {
 
 const CallToAction: React.FC<Props> = ({ slice }) => {
   return (
-    <section className="flex gap-8 px-6 mx-auto mt-10 mb-20">
+    <section className="mx-auto mt-10 mb-20 flex gap-8 px-6">
       {slice?.items?.map((item: Item, index: number) => (
         <React.Fragment key={`${item.link?.uid}_${index}`}>
-          <Link href={linkResolver(item.link)}>
-            <a
-              className={`${getBeforeStyling(
+          <Link
+            href={linkResolver(item.link)}
+            passHref
+            className={`${getBeforeStyling(
+              item
+            )} hover-trigger relative block overflow-hidden rounded-full py-4 px-20 font-suisseIntlMono text-2xl uppercase md:py-6 md:px-24`}
+          >
+            {' '}
+            {item.linkLabel}
+            <span
+              className={` ${getLinkStyling(
                 item
-              )} font-suisseIntlMono uppercase rounded-full py-4 px-20 md:py-6 md:px-24 block hover-trigger relative overflow-hidden text-2xl`}
+              )} hover-target absolute inset-x-0 top-0 flex h-full items-center justify-center rounded-full bg-white py-4 transition-all md:py-6`}
+              aria-hidden="true"
             >
-              {' '}
               {item.linkLabel}
-              <span
-                className={` ${getLinkStyling(
-                  item
-                )} rounded-full py-4 md:py-6 flex justify-center items-center absolute top-0 h-full bg-white left-0 right-0 transition-all hover-target`}
-                aria-hidden="true"
-              >
-                {item.linkLabel}
-              </span>
-            </a>
+            </span>
           </Link>
         </React.Fragment>
       ))}

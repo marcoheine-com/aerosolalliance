@@ -64,7 +64,7 @@ const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
                       <Link
                         href={`#${node.text.replace(/\W+/g, '').toLowerCase()}`}
                       >
-                        <a>{`${node.text}`}</a>
+                        {`${node.text}`}
                       </Link>
                     </li>
                   ))}
@@ -103,11 +103,13 @@ const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
                   <ul className="mb-8 ml-2 list-disc pl-4">{props.children}</ul>
                 ),
                 hyperlink: (props: any) => (
-                  <Link href={linkResolver(props.node.data)}>
-                    <a className="border-b-[1px] border-b-darkblue hover:border-b-2">
-                      {props.children}
-                    </a>
-                  </Link>
+                  (<Link
+                    href={linkResolver(props.node.data)}
+                    className="border-b-[1px] border-b-darkblue hover:border-b-2">
+
+                    {props.children}
+
+                  </Link>)
                 ),
               }}
             />
@@ -115,10 +117,10 @@ const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
               <hr className="border-t-0 border-b-[1px] border-solid border-darkblue" />
             ) : null}
           </section>
-        )
+        );
       })}
     </section>
-  )
+  );
 }
 
 export default TextContent

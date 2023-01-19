@@ -3,11 +3,11 @@
 const nextConfig = {
   transpilePackages: ['friendly-challenge'],
   images: {
-    domains: [
-      'images.prismic.io',
-      'source.unsplash.com',
-      'images.unsplash.com',
-      'aerosolalliance.cdn.prismic.io',
+    remotePatterns: [
+      'https://images.prismic.io/aerosolalliance/*',
+      'https://source.unsplash.com/*',
+      'https://images.unsplash.com/*',
+      'https://aerosolalliance.cdn.prismic.io/*',
     ],
   },
   i18n: {

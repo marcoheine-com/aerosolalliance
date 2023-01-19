@@ -103,7 +103,7 @@ const SignupForm = () => {
 
   return (
     <>
-      <div className="px-6 mx-auto mb-32 w-full max-w-4xl sm:px-16">
+      <div className="mx-auto mb-32 w-full max-w-4xl px-6 sm:px-16">
         <form
           action=""
           onSubmit={(e) => handleSignupFormSubmit(e, reset)}
@@ -111,7 +111,7 @@ const SignupForm = () => {
         >
           <fieldset className="mb-4 w-full">
             <label
-              className="flex flex-col gap-2 justify-start mb-4 uppercase"
+              className="mb-4 flex flex-col justify-start gap-2 uppercase"
               htmlFor="username"
             >
               Name you go by*
@@ -125,7 +125,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex flex-col gap-2 justify-start mb-4 uppercase"
+              className="mb-4 flex flex-col justify-start gap-2 uppercase"
               htmlFor="email"
             >
               E-Mail*
@@ -139,7 +139,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex flex-col gap-2 justify-start mb-4 uppercase"
+              className="mb-4 flex flex-col justify-start gap-2 uppercase"
               htmlFor="location"
             >
               Location*
@@ -153,7 +153,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex flex-col gap-2 justify-start mb-4 uppercase"
+              className="mb-4 flex flex-col justify-start gap-2 uppercase"
               htmlFor="social"
             >
               Website or Instagram
@@ -166,7 +166,7 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex flex-col gap-2 justify-start mb-4 uppercase"
+              className="mb-4 flex flex-col justify-start gap-2 uppercase"
               htmlFor="position"
             >
               What are you?*
@@ -184,11 +184,11 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex gap-2 mb-4 uppercase hover:cursor-pointer"
+              className="mb-4 flex gap-2 uppercase hover:cursor-pointer"
               htmlFor="shouldDisplayName"
             >
               <input
-                className={`${styles.input} w-auto mb-0 `}
+                className={`${styles.input} mb-0 w-auto `}
                 type="checkbox"
                 name="shouldDisplayName"
                 id="shouldDisplayName"
@@ -197,11 +197,11 @@ const SignupForm = () => {
             </label>
 
             <label
-              className="flex gap-2 mb-4 uppercase hover:cursor-pointer"
+              className="mb-4 flex gap-2 uppercase hover:cursor-pointer"
               htmlFor="signUpForNewsletter"
             >
               <input
-                className={`${styles.input} w-auto mb-0`}
+                className={`${styles.input} mb-0 w-auto`}
                 type="checkbox"
                 name="signUpForNewsletter"
                 id="signUpForNewsletter"
@@ -214,7 +214,7 @@ const SignupForm = () => {
               htmlFor="readTerms"
             >
               <input
-                className={`${styles.input} w-auto mb-0 `}
+                className={`${styles.input} mb-0 w-auto `}
                 type="checkbox"
                 name="readTerms"
                 id="readTerms"
@@ -224,8 +224,11 @@ const SignupForm = () => {
                 I acknowledge that the information I provide will be processed
                 in accordance with our{' '}
               </span>
-              <Link href="/privacy-policy">
-                <a className="border-b-2 border-darkblue">privacy policy</a>
+              <Link
+                href="/privacy-policy"
+                className="border-b-2 border-darkblue"
+              >
+                privacy policy
               </Link>{' '}
               .*
             </label>
@@ -242,8 +245,8 @@ const SignupForm = () => {
           />
 
           <button
-            className={`justify-self-start mt-10 py-4 px-10 font-suisseIntlMono text-2xl text-white uppercase bg-darkblue rounded-full col-start-1  ${
-              submitButtonEnabled ? '' : 'opacity-30 cursor-not-allowed'
+            className={`col-start-1 mt-10 justify-self-start rounded-full bg-darkblue py-4 px-10 font-suisseIntlMono text-2xl uppercase text-white  ${
+              submitButtonEnabled ? '' : 'cursor-not-allowed opacity-30'
             }`}
             type="submit"
             disabled={!submitButtonEnabled}

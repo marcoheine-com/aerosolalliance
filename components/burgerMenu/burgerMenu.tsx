@@ -109,7 +109,7 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
                             href={linkResolver(item.subLink)}
                             key={item.subLink.uid || index}
                           >
-                            <a className="flex gap-4 items-center font-suisseIntlRegular font-normal submenuItem-trigger">
+                            <a className="submenuItem-trigger flex items-center gap-4 font-suisseIntlRegular font-normal">
                               <Arrow className="submenuItem-arrow" />
                               <PrismicRichText
                                 field={item.subLinkLabel}

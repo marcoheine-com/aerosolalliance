@@ -1,5 +1,4 @@
 import type { GetStaticProps, NextPage } from 'next'
-import Head from 'next/head'
 import * as prismic from '@prismicio/client'
 import { Footer } from '../../components/footer'
 import { createClient } from '../../prismicio'
@@ -7,6 +6,11 @@ import { Header } from '../../components/header'
 import { SliceZone } from '@prismicio/react'
 import { components } from '../../slices'
 import { HeadComponent } from '../../components/head-component'
+import {
+  BurgerMenuDocument,
+  FooterDocument,
+  WhatYouCanDoSubpageDocument,
+} from '../../types.generated'
 
 export const getStaticProps: GetStaticProps = async ({
   params,
@@ -48,9 +52,9 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  document: any
-  footer: any
-  menu: any
+  document: WhatYouCanDoSubpageDocument
+  footer: FooterDocument
+  menu: BurgerMenuDocument
 }
 
 const WhatYouCanDo: NextPage<Props> = (props) => {
@@ -60,7 +64,7 @@ const WhatYouCanDo: NextPage<Props> = (props) => {
       <HeadComponent
         title={props.document?.data?.title}
         description={props.document?.data?.description}
-        image={props.document?.data?.image?.url}
+        image={props.document?.data?.image}
         imageAlt={props.document?.data?.imageAlt}
       />
       <main className="relative mx-auto flex max-w-[1920px] flex-col">

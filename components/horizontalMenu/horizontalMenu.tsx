@@ -23,7 +23,7 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
 
   return (
     <section
-      className={`flex flex-col sm:grid sm:grid-cols-2 sm:auto-rows-[1fr] xl:flex xl:flex-row justify-around items-center bg-grey ${className}`}
+      className={`flex flex-col items-center justify-around bg-grey sm:grid sm:auto-rows-[1fr] sm:grid-cols-2 xl:flex xl:flex-row ${className}`}
     >
       {items?.map((item) =>
         item.link?.url ? (
@@ -34,9 +34,9 @@ export const HorizontalMenu: FunctionComponent<Props> = ({
             <a
               className={`${
                 isActiveLink(item?.link?.url)
-                  ? 'bg-darkblue text-white font-bold'
+                  ? 'bg-darkblue font-bold text-white'
                   : 'font-normal'
-              } w-full h-full flex gap-4 items-center justify-center uppercase font-suisseIntlMono py-4 xl:py-0 submenuItem-trigger border-[1px] border-separate border-white`}
+              } submenuItem-trigger flex h-full w-full border-separate items-center justify-center gap-4 border-[1px] border-white py-4 font-suisseIntlMono uppercase xl:py-0`}
             >
               <Arrow
                 className="horizontalmenuItem-arrow"

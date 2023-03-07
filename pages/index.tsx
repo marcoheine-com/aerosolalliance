@@ -4,7 +4,11 @@ import { Footer } from '../components/footer'
 import { createClient } from '../prismicio'
 import { Header } from '../components/header'
 import { HeadComponent } from '../components/head-component'
-import { FooterDocument } from '../types.generated'
+import {
+  BurgerMenuDocument,
+  FooterDocument,
+  HomeDocument,
+} from '../types.generated'
 import { SliceZone } from '@prismicio/react'
 import { components } from '../slices'
 
@@ -25,20 +29,9 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 }
 
 interface Props {
-  home: {
-    data: {
-      title: string
-      description: string
-      image: {
-        url: string
-        alt: string
-      }
-      imageAlt: string
-      slices: any
-    }
-  }
+  home: HomeDocument
   footer: FooterDocument
-  menu: any
+  menu: BurgerMenuDocument
 }
 
 const Home: NextPage<Props> = (props) => {

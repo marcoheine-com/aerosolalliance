@@ -24,7 +24,7 @@ export const FullWidthWithBgImage: FunctionComponent<Props> = ({
         />
       )}
       {svg?.url && (
-        <div className="absolute top-1/3 left-0 p-7 w-full">
+        <div className="absolute top-1/3 left-0 w-full p-7">
           <Image
             src={svg.url}
             width={svg.width}

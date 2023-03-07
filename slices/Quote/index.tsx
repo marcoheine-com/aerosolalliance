@@ -26,11 +26,15 @@ const Quote: FunctionComponent<SliceComponentProps<QuoteSlice>> = ({
                   width={filledImage.dimensions.width}
                   height={filledImage.dimensions.height}
                 />
-                <figcaption className="absolute bottom-0 left-0 w-full p-4 text-white">
-                  {item.caption}
-                </figcaption>
               </div>
             )}
+            <figcaption
+              className={`absolute bottom-0 left-0 flex w-full p-4 text-white ${
+                index % 2 ? 'justify-end' : 'justify-start'
+              }`}
+            >
+              <span>{item.caption}</span>
+            </figcaption>
             <section className="relative px-8 pt-8 pb-20 lg:px-20 xl:px-32 xl:pt-28">
               <div className="relative z-[2]">
                 <PrismicRichText

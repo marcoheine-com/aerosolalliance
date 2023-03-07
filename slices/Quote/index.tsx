@@ -29,8 +29,8 @@ const Quote: FunctionComponent<SliceComponentProps<QuoteSlice>> = ({
               </div>
             )}
             <figcaption
-              className={`absolute bottom-0 left-0 flex w-full p-4 text-white ${
-                index % 2 ? 'justify-end' : 'justify-start'
+              className={`bottom-0 left-0 flex w-full translate-y-[-50px] p-4 text-white md:absolute md:translate-y-0 ${
+                index % 2 ? 'md:justify-end' : 'md:justify-start'
               }`}
             >
               <span>{item.caption}</span>

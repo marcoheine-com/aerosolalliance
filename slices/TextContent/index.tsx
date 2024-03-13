@@ -25,7 +25,7 @@ interface Props {
   }
 }
 
-const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
+const TextContent: FunctionComponent<SliceComponentProps<any>> = ({
   slice,
 }): JSX.Element => {
   return (
@@ -69,7 +69,7 @@ const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
                     </li>
                   ))}
                 </ol>
-                <hr className="mb-8 h-[1px] border-t-0 border-b-[1px] border-solid border-darkblue opacity-50" />
+                <hr className="mb-8 h-px border-b-DEFAULT border-t-0 border-solid border-darkblue opacity-50" />
               </>
             ) : null}
 
@@ -104,7 +104,7 @@ const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
                 ),
                 hyperlink: (props: any) => (
                   <Link href={linkResolver(props.node.data)}>
-                    <a className="border-b-[1px] border-b-darkblue hover:border-b-2">
+                    <a className="border-b-DEFAULT border-b-darkblue hover:border-b-2">
                       {props.children}
                     </a>
                   </Link>
@@ -112,7 +112,7 @@ const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
               }}
             />
             {slice.primary.line ? (
-              <hr className="border-t-0 border-b-[1px] border-solid border-darkblue" />
+              <hr className="border-b-DEFAULT border-t-0 border-solid border-darkblue" />
             ) : null}
           </section>
         )

@@ -10,7 +10,7 @@ import { filledLinkTypeGuard } from '../../utils/isFilledLink'
 import { linkResolver } from '../../prismicio'
 
 const LinkImageGallery: FunctionComponent<
-  SliceComponentProps<LinkImageGallerySlice>
+  SliceComponentProps<any>
 > = ({ slice }) => {
   return (
     <section className="grid gap-5 p-5 md:grid-cols-2 md:p-16 xl:gap-16 xl:p-24 2xl:gap-20">
@@ -36,7 +36,7 @@ const LinkImageGallery: FunctionComponent<
                   </div>
                 )}
                 {item.svgcaption?.url && (
-                  <div className="absolute top-2/4 left-2/4 w-full -translate-x-1/2 -translate-y-1/2">
+                  <div className="absolute left-2/4 top-2/4 w-full -translate-x-1/2 -translate-y-1/2">
                     <Image
                       src={item.svgcaption.url}
                       alt={item.svgcaption.alt || ''}

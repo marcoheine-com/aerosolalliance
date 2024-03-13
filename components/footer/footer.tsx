@@ -107,14 +107,16 @@ export const Footer: FunctionComponent<FooterDocument> = ({ data }) => {
                   : null
                 return (
                   <span key={`${filledLink?.url}-${index}`}>
-                    <Link href={linkResolver(filledLink)}>
-                      <a className="border-b-[1px] border-b-darkblue hover:border-b-2">
-                        {internalLink.linklabel || filledLink?.url}{' '}
-                      </a>
+                    <Link
+                      href={linkResolver(filledLink)}
+                      className="border-b-[1px] border-b-darkblue hover:border-b-2">
+
+                      {internalLink.linklabel || filledLink?.url}{' '}
+
                     </Link>
                     <span>{index === 0 && '&'}</span>
                   </span>
-                )
+                );
               }
             )}
           </p>
@@ -124,5 +126,5 @@ export const Footer: FunctionComponent<FooterDocument> = ({ data }) => {
         </section>
       </section>
     </footer>
-  )
+  );
 }

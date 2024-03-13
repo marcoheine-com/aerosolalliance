@@ -50,28 +50,28 @@ const CallToAction: React.FC<Props> = ({ slice }) => {
     <section className="flex gap-8 px-6 mx-auto mt-10 mb-20">
       {slice?.items?.map((item: Item, index: number) => (
         <React.Fragment key={`${item.link?.uid}_${index}`}>
-          <Link href={linkResolver(item.link)}>
-            <a
-              className={`${getBeforeStyling(
+          <Link
+            href={linkResolver(item.link)}
+            className={`${getBeforeStyling(
+              item
+            )} font-suisseIntlMono uppercase rounded-full py-4 px-20 md:py-6 md:px-24 block hover-trigger relative overflow-hidden text-2xl`}>
+
+            {' '}
+            {item.linkLabel}
+            <span
+              className={` ${getLinkStyling(
                 item
-              )} font-suisseIntlMono uppercase rounded-full py-4 px-20 md:py-6 md:px-24 block hover-trigger relative overflow-hidden text-2xl`}
+              )} rounded-full py-4 md:py-6 flex justify-center items-center absolute top-0 h-full bg-white left-0 right-0 transition-all hover-target`}
+              aria-hidden="true"
             >
-              {' '}
               {item.linkLabel}
-              <span
-                className={` ${getLinkStyling(
-                  item
-                )} rounded-full py-4 md:py-6 flex justify-center items-center absolute top-0 h-full bg-white left-0 right-0 transition-all hover-target`}
-                aria-hidden="true"
-              >
-                {item.linkLabel}
-              </span>
-            </a>
+            </span>
+
           </Link>
         </React.Fragment>
       ))}
     </section>
-  )
+  );
 }
 
 export default CallToAction

@@ -11,8 +11,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <PrismicProvider
       linkResolver={linkResolver}
       internalLinkComponent={({ href, children, ...props }) => (
-        <Link href={href}>
-          <a {...props}>{children}</a>
+        <Link href={href} {...props}>
+          {children}
         </Link>
       )}
     >
@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </PlausibleProvider>
       {/* </PrismicPreview> */}
     </PrismicProvider>
-  )
+  );
 }
 
 export default MyApp

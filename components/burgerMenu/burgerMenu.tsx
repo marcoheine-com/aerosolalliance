@@ -62,17 +62,17 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
         <BurgerIcon />
       </button>
       <ul
-        className={`absolute top-0 right-0
-        z-[1] h-screen translate-x-[300px] overflow-x-scroll bg-grey uppercase transition-all ${
+        className={`absolute right-0 top-0
+        z-[1] h-screen overflow-x-scroll bg-grey uppercase transition-all ${
           isOpen
             ? 'w-full translate-x-0 p-8 pt-12 md:w-[50vw] md:p-20'
-            : 'pointer-events-none w-0 p-0 opacity-0'
+            : 'pointer-events-none w-0 translate-x-[300px] p-0 opacity-0'
         }    md:max-w-xl`}
         ref={ref}
       >
         <button
           onClick={toggleMenu}
-          className="absolute top-4 right-4 p-6 pr-10"
+          className="absolute right-4 top-4 p-6 pr-10"
           aria-label="Close menu"
         >
           <CrossIcon />

@@ -8,6 +8,7 @@ module.exports = {
       'images.unsplash.com',
       'aerosolalliance.cdn.prismic.io',
     ],
+    dangerouslyAllowSVG: true,
   },
   i18n: {
     locales: ['en'],

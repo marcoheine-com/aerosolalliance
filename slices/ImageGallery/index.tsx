@@ -1,6 +1,6 @@
 import { PrismicRichText } from '@prismicio/react'
 import { RichTextField } from '@prismicio/types'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import React, { FunctionComponent } from 'react'
 import { ImageProps } from '../../entities'
 

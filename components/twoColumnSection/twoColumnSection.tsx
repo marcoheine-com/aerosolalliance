@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { Color, ImageProps, SVG } from '../../entities'
 import { getBackgroundcolorClass } from '../../utils'
 import { RichTextField } from '@prismicio/types'

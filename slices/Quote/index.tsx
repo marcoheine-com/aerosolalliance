@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import { QuoteSlice, QuoteSliceDefaultSliceItem } from '../../types.generated'
 import { filledImageTypeGuard } from '../../utils/filledImageTypeGuard'

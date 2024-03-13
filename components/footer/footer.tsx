@@ -9,7 +9,7 @@ import {
 } from '../../types.generated'
 import { linkResolver } from '../../prismicio'
 import { filledLinkTypeGuard } from '../../utils/isFilledLink'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { filledImageTypeGuard } from '../../utils/filledImageTypeGuard'
 
 const CURRENT_YEAR = new Date().getFullYear()

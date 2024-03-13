@@ -115,10 +115,10 @@ const TextContent: FunctionComponent<SliceComponentProps<any>> = ({
               <hr className="border-b-DEFAULT border-t-0 border-solid border-darkblue" />
             ) : null}
           </section>
-        )
+        );
       })}
     </section>
-  )
+  );
 }
 
 export default TextContent

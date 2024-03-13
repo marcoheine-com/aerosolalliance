@@ -54,12 +54,12 @@ export const routeResolver = {
       path: '/:uid',
     },
     {
-      type: 'facts-subpage',
-      path: '/facts/:uid',
-    },
-    {
       type: 'about-us-subpage',
       path: '/about-us/:uid',
+    },
+    {
+      type: 'facts-subpage',
+      path: '/facts/:uid',
     },
     {
       type: 'content-page',

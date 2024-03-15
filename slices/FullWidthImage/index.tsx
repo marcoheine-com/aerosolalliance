@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { ImageProps } from '../../entities'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 type Variation = 'default-slice' | 'twoColumn'
 

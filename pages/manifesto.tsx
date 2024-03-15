@@ -42,6 +42,7 @@ const Manifesto: NextPage<Props> = (props) => {
       <main className="relative mx-auto flex max-w-[1920px] flex-col">
         <Header slices={props.menu?.data?.slices} />
         <SliceZone
+          // @ts-ignore
           slices={props.manifesto?.data?.slices}
           components={components}
         />

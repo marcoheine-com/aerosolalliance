@@ -1,7 +1,8 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { FunctionComponent } from 'react'
 import { Color, SVG } from '../../entities'
 import { getBackgroundcolorClass } from '../../utils'
+import { modifyImageUrl } from "../../utils/modifyImageUrl"
 
 interface Props {
   backgroundcolor: Color
@@ -20,6 +21,9 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
 }): JSX.Element => {
   const BACKGROUND_COLOR = getBackgroundcolorClass(backgroundcolor)
 
+  const svgMobileURL = modifyImageUrl(svgMobile?.url)
+  const svgURL = modifyImageUrl(svg.url)
+
   return (
     <section
       className={`${BACKGROUND_COLOR} relative flex flex-col justify-center p-12 ${className}`}
@@ -27,7 +31,7 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
       {svgMobile?.url && (
         <div className="mb-12 lg:hidden">
           <Image
-            src={svgMobile.url}
+            src={svgMobileURL}
             width={svgMobile.width}
             height={svgMobile.height}
             layout="responsive"
@@ -43,7 +47,7 @@ export const FullWidthSVG: FunctionComponent<Props> = ({
           } mx-auto mb-12 w-full lg:block`}
         >
           <Image
-            src={svg.url}
+            src={svgURL}
             width={svg.width}
             height={svg.height}
             layout="responsive"

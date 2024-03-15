@@ -25,7 +25,7 @@ interface Props {
   }
 }
 
-const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
+const TextContent: FunctionComponent<SliceComponentProps<any>> = ({
   slice,
 }): JSX.Element => {
   return (
@@ -64,12 +64,12 @@ const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
                       <Link
                         href={`#${node.text.replace(/\W+/g, '').toLowerCase()}`}
                       >
-                        <a>{`${node.text}`}</a>
+                        {`${node.text}`}
                       </Link>
                     </li>
                   ))}
                 </ol>
-                <hr className="mb-8 h-[1px] border-t-0 border-b-[1px] border-solid border-darkblue opacity-50" />
+                <hr className="mb-8 h-px border-b-DEFAULT border-t-0 border-solid border-darkblue opacity-50" />
               </>
             ) : null}
 
@@ -103,22 +103,24 @@ const TextContent: FunctionComponent<SliceComponentProps<TextContentSlice>> = ({
                   <ul className="mb-8 ml-2 list-disc pl-4">{props.children}</ul>
                 ),
                 hyperlink: (props: any) => (
-                  <Link href={linkResolver(props.node.data)}>
-                    <a className="border-b-[1px] border-b-darkblue hover:border-b-2">
-                      {props.children}
-                    </a>
-                  </Link>
+                  (<Link
+                    href={linkResolver(props.node.data)}
+                    className="border-b-DEFAULT border-b-darkblue hover:border-b-2">
+
+                    {props.children}
+
+                  </Link>)
                 ),
               }}
             />
             {slice.primary.line ? (
-              <hr className="border-t-0 border-b-[1px] border-solid border-darkblue" />
+              <hr className="border-b-DEFAULT border-t-0 border-solid border-darkblue" />
             ) : null}
           </section>
-        )
+        );
       })}
     </section>
-  )
+  );
 }
 
 export default TextContent

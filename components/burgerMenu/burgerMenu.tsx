@@ -62,17 +62,17 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
         <BurgerIcon />
       </button>
       <ul
-        className={`absolute top-0 right-0
-        z-[1] h-screen translate-x-[300px] overflow-x-scroll bg-grey uppercase transition-all ${
+        className={`absolute right-0 top-0
+        z-[1] h-screen overflow-x-scroll bg-grey uppercase transition-all ${
           isOpen
             ? 'w-full translate-x-0 p-8 pt-12 md:w-[50vw] md:p-20'
-            : 'pointer-events-none w-0 p-0 opacity-0'
+            : 'pointer-events-none w-0 translate-x-[300px] p-0 opacity-0'
         }    md:max-w-xl`}
         ref={ref}
       >
         <button
           onClick={toggleMenu}
-          className="absolute top-4 right-4 p-6 pr-10"
+          className="absolute right-4 top-4 p-6 pr-10"
           aria-label="Close menu"
         >
           <CrossIcon />
@@ -82,18 +82,20 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
             key={item.primary.link.uid}
             className="border-b-2 border-b-darkblue py-4 font-semibold last:border-b-0 desktop:py-8"
           >
-            <Link href={linkResolver(item.primary.link)}>
-              <a className="submenuItem-trigger flex items-center gap-4">
-                <Arrow className="submenuItem-arrow" />
-                <PrismicRichText
-                  field={item.primary.linkLabel}
-                  components={{
-                    paragraph: ({ children }) => (
-                      <p className="pb-0">{children}</p>
-                    ),
-                  }}
-                />
-              </a>
+            <Link
+              href={linkResolver(item.primary.link)}
+              className="submenuItem-trigger flex items-center gap-4">
+
+              <Arrow className="submenuItem-arrow" />
+              <PrismicRichText
+                field={item.primary.linkLabel}
+                components={{
+                  paragraph: ({ children }) => (
+                    <p className="pb-0">{children}</p>
+                  ),
+                }}
+              />
+
             </Link>
             {item.items?.length > 0 &&
               (item.items[0].subLink.uid || item.items[0].subLink.url) && (
@@ -108,18 +110,18 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
                           <Link
                             href={linkResolver(item.subLink)}
                             key={item.subLink.uid || index}
-                          >
-                            <a className="submenuItem-trigger flex items-center gap-4 font-suisseIntlRegular font-normal">
-                              <Arrow className="submenuItem-arrow" />
-                              <PrismicRichText
-                                field={item.subLinkLabel}
-                                components={{
-                                  paragraph: ({ children }) => (
-                                    <p className="pb-0">{children}</p>
-                                  ),
-                                }}
-                              />
-                            </a>
+                            className="submenuItem-trigger flex items-center gap-4 font-suisseIntlRegular font-normal">
+
+                            <Arrow className="submenuItem-arrow" />
+                            <PrismicRichText
+                              field={item.subLinkLabel}
+                              components={{
+                                paragraph: ({ children }) => (
+                                  <p className="pb-0">{children}</p>
+                                ),
+                              }}
+                            />
+
                           </Link>
                         </li>
                       )
@@ -130,5 +132,5 @@ export const BurgerMenu: React.FC<Props> = ({ menuItems }): JSX.Element => {
         ))}
       </ul>
     </nav>
-  )
+  );
 }

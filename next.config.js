@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-// Package docs at https://github.com/martpie/next-transpile-modules
-const withTM = require('next-transpile-modules')(['friendly-challenge'])
-
-module.exports = withTM({
+module.exports = {
   images: {
     domains: [
       'images.prismic.io',
@@ -11,10 +8,12 @@ module.exports = withTM({
       'images.unsplash.com',
       'aerosolalliance.cdn.prismic.io',
     ],
+    dangerouslyAllowSVG: true,
   },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
   },
   reactStrictMode: true,
-})
+  transpilePackages: ['friendly-challenge'],
+}

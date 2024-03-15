@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import { QuoteSlice, QuoteSliceDefaultSliceItem } from '../../types.generated'
 import { filledImageTypeGuard } from '../../utils/filledImageTypeGuard'
 
-const Quote: FunctionComponent<SliceComponentProps<QuoteSlice>> = ({
+const Quote: FunctionComponent<SliceComponentProps<any>> = ({
   slice,
 }): JSX.Element => {
   return (
@@ -35,7 +35,7 @@ const Quote: FunctionComponent<SliceComponentProps<QuoteSlice>> = ({
             >
               <span>{item.caption}</span>
             </figcaption>
-            <section className="relative px-8 pt-8 pb-20 lg:px-20 xl:px-32 xl:pt-28">
+            <section className="relative px-8 pb-20 pt-8 lg:px-20 xl:px-32 xl:pt-28">
               <div className="relative z-[2]">
                 <PrismicRichText
                   field={item.quote}

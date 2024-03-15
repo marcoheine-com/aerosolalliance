@@ -22,6 +22,7 @@ interface UserInfo {
 const styles = {
   input:
     'placeholder:text-slate-400 p-3 w-full rounded-xl border-[1px] border-darkblue mb-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm',
+  checkbox: 'className={`mb-0 w-auto rounded-xl border-DEFAULT border-darkblue p-3 shadow-sm placeholder:text-slate-400 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm`'
 }
 
 const SignupForm = () => {
@@ -101,173 +102,171 @@ const SignupForm = () => {
     }
   }
 
-  return (
-    <>
-      <div className="mx-auto mb-32 w-full max-w-4xl px-6 sm:px-16">
-        <form
-          action=""
-          onSubmit={(e) => handleSignupFormSubmit(e, reset)}
-          id="signup-form"
-        >
-          <fieldset className="mb-4 w-full">
-            <label
-              className="mb-4 flex flex-col justify-start gap-2 uppercase"
-              htmlFor="username"
-            >
-              Name you go by*
-              <input
-                className={styles.input}
-                placeholder="Name you go by"
-                type="text"
-                name="username"
-                required
-              />
-            </label>
-
-            <label
-              className="mb-4 flex flex-col justify-start gap-2 uppercase"
-              htmlFor="email"
-            >
-              E-Mail*
-              <input
-                className={styles.input}
-                placeholder="Your email adress"
-                type="email"
-                name="email"
-                required
-              />
-            </label>
-
-            <label
-              className="mb-4 flex flex-col justify-start gap-2 uppercase"
-              htmlFor="location"
-            >
-              Location*
-              <input
-                className={styles.input}
-                placeholder="Berlin"
-                type="text"
-                name="location"
-                required
-              />
-            </label>
-
-            <label
-              className="mb-4 flex flex-col justify-start gap-2 uppercase"
-              htmlFor="social"
-            >
-              Website or Instagram
-              <input
-                className={styles.input}
-                placeholder="website or instagram"
-                type="text"
-                name="social"
-              />
-            </label>
-
-            <label
-              className="mb-4 flex flex-col justify-start gap-2 uppercase"
-              htmlFor="position"
-            >
-              What are you?*
-              <select
-                className={`${styles.input} bg-none`}
-                name="position"
-                required
-              >
-                <option value="artist">Artist</option>
-                <option value="curator">Curator</option>
-                <option value="manufacturer">Manufacturer</option>
-                <option value="recycler">Recycler</option>
-                <option value="human being">Human being</option>
-              </select>
-            </label>
-
-            <label
-              className="mb-4 flex gap-2 uppercase hover:cursor-pointer"
-              htmlFor="shouldDisplayName"
-            >
-              <input
-                className={`${styles.input} mb-0 w-auto `}
-                type="checkbox"
-                name="shouldDisplayName"
-                id="shouldDisplayName"
-              />
-              Do not display my name
-            </label>
-
-            <label
-              className="mb-4 flex gap-2 uppercase hover:cursor-pointer"
-              htmlFor="signUpForNewsletter"
-            >
-              <input
-                className={`${styles.input} mb-0 w-auto`}
-                type="checkbox"
-                name="signUpForNewsletter"
-                id="signUpForNewsletter"
-              />
-              Sign up for newsletter / keep me updated
-            </label>
-
-            <label
-              className="col-span-2 col-start-1 mb-8 uppercase hover:cursor-pointer"
-              htmlFor="readTerms"
-            >
-              <input
-                className={`${styles.input} mb-0 w-auto `}
-                type="checkbox"
-                name="readTerms"
-                id="readTerms"
-                required
-              />
-              <span className="ml-2">
-                I acknowledge that the information I provide will be processed
-                in accordance with our{' '}
-              </span>
-              <Link href="/privacy-policy">
-                <a className="border-b-2 border-darkblue">privacy policy</a>
-              </Link>{' '}
-              .*
-            </label>
-          </fieldset>
-
-          <FriendlyCaptcha
-            ref={widgetRef}
-            // @ts-ignore
-            sitekey={process.env.NEXT_PUBLIC_FRIENDLY_CAPTCHA_SITEKEY}
-            doneCallback={() => setSubmitButtonEnabled(true)}
-            errorCallback={() => {
-              setSubmitButtonEnabled(true)
-            }}
-          />
-
-          <button
-            className={`col-start-1 mt-10 justify-self-start rounded-full bg-darkblue py-4 px-10 font-suisseIntlMono text-2xl uppercase text-white  ${
-              submitButtonEnabled ? '' : 'cursor-not-allowed opacity-30'
-            }`}
-            type="submit"
-            disabled={!submitButtonEnabled}
+  return <>
+    <div className="mx-auto mb-32 w-full max-w-4xl px-6 sm:px-16">
+      <form
+        action=""
+        onSubmit={(e) => handleSignupFormSubmit(e, reset)}
+        id="signup-form"
+      >
+        <fieldset className="mb-4 w-full">
+          <label
+            className="mb-4 flex flex-col justify-start gap-2 uppercase"
+            htmlFor="username"
           >
-            {isLoading ? 'Submitting...' : 'Sign the manifesto'}
-          </button>
+            Name you go by*
+            <input
+              className={styles.input}
+              placeholder="Name you go by"
+              type="text"
+              name="username"
+              required
+            />
+          </label>
 
-          <ReactCanvasConfetti
-            style={{
-              position: 'fixed',
-              width: '100%',
-              height: '100%',
-              top: 0,
-              left: 0,
-              zIndex: -1,
-            }}
-            fire={renderConfetti}
-          />
+          <label
+            className="mb-4 flex flex-col justify-start gap-2 uppercase"
+            htmlFor="email"
+          >
+            E-Mail*
+            <input
+              className={styles.input}
+              placeholder="Your email adress"
+              type="email"
+              name="email"
+              required
+            />
+          </label>
 
-          <ToastContainer />
-        </form>
-      </div>
-    </>
-  )
+          <label
+            className="mb-4 flex flex-col justify-start gap-2 uppercase"
+            htmlFor="location"
+          >
+            Location*
+            <input
+              className={styles.input}
+              placeholder="Berlin"
+              type="text"
+              name="location"
+              required
+            />
+          </label>
+
+          <label
+            className="mb-4 flex flex-col justify-start gap-2 uppercase"
+            htmlFor="social"
+          >
+            Website or Instagram
+            <input
+              className={styles.input}
+              placeholder="website or instagram"
+              type="text"
+              name="social"
+            />
+          </label>
+
+          <label
+            className="mb-4 flex flex-col justify-start gap-2 uppercase"
+            htmlFor="position"
+          >
+            What are you?*
+            <select
+              className={`${styles.input} bg-none`}
+              name="position"
+              required
+            >
+              <option value="artist">Artist</option>
+              <option value="curator">Curator</option>
+              <option value="manufacturer">Manufacturer</option>
+              <option value="recycler">Recycler</option>
+              <option value="human being">Human being</option>
+            </select>
+          </label>
+
+          <label
+            className="mb-4 flex gap-2 uppercase hover:cursor-pointer"
+            htmlFor="shouldDisplayName"
+          >
+            <input
+              className={`${styles.checkbox}`}
+              type="checkbox"
+              name="shouldDisplayName"
+              id="shouldDisplayName"
+            />
+            Do not display my name
+          </label>
+
+          <label
+            className="mb-4 flex gap-2 uppercase hover:cursor-pointer"
+            htmlFor="signUpForNewsletter"
+          >
+            <input
+              className={`${styles.checkbox}`}
+              type="checkbox"
+              name="signUpForNewsletter"
+              id="signUpForNewsletter"
+            />
+            Sign up for newsletter / keep me updated
+          </label>
+
+          <label
+            className="col-span-2 col-start-1 mb-8 uppercase hover:cursor-pointer"
+            htmlFor="readTerms"
+          >
+            <input
+              className={`${styles.checkbox}`}
+              type="checkbox"
+              name="readTerms"
+              id="readTerms"
+              required
+            />
+            <span className="ml-2">
+              I acknowledge that the information I provide will be processed
+              in accordance with our{' '}
+            </span>
+            <Link href="/privacy-policy" className="border-b-2 border-darkblue">
+              privacy policy
+            </Link>{' '}
+            .*
+          </label>
+        </fieldset>
+
+        <FriendlyCaptcha
+          ref={widgetRef}
+          // @ts-ignore
+          sitekey={process.env.NEXT_PUBLIC_FRIENDLY_CAPTCHA_SITEKEY}
+          doneCallback={() => setSubmitButtonEnabled(true)}
+          errorCallback={() => {
+            setSubmitButtonEnabled(true)
+          }}
+        />
+
+        <button
+          className={`col-start-1 mt-10 justify-self-start rounded-full bg-darkblue px-10 py-4 font-suisseIntlMono text-2xl uppercase text-white  ${
+            submitButtonEnabled ? '' : 'cursor-not-allowed opacity-30'
+          }`}
+          type="submit"
+          disabled={!submitButtonEnabled}
+        >
+          {isLoading ? 'Submitting...' : 'Sign the manifesto'}
+        </button>
+
+        <ReactCanvasConfetti
+          style={{
+            position: 'fixed',
+            width: '100%',
+            height: '100%',
+            top: 0,
+            left: 0,
+            zIndex: -1,
+          }}
+          fire={renderConfetti}
+        />
+
+        <ToastContainer />
+      </form>
+    </div>
+  </>;
 }
 
 export default SignupForm

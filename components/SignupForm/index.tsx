@@ -22,6 +22,7 @@ interface UserInfo {
 const styles = {
   input:
     'placeholder:text-slate-400 p-3 w-full rounded-xl border-[1px] border-darkblue mb-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm',
+  checkbox: 'className={`mb-0 w-auto rounded-xl border-DEFAULT border-darkblue p-3 shadow-sm placeholder:text-slate-400 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm`'
 }
 
 const SignupForm = () => {
@@ -187,7 +188,7 @@ const SignupForm = () => {
             htmlFor="shouldDisplayName"
           >
             <input
-              className={`${styles.input} mb-0 w-auto `}
+              className={`${styles.checkbox}`}
               type="checkbox"
               name="shouldDisplayName"
               id="shouldDisplayName"
@@ -200,7 +201,7 @@ const SignupForm = () => {
             htmlFor="signUpForNewsletter"
           >
             <input
-              className={`${styles.input} mb-0 w-auto`}
+              className={`${styles.checkbox}`}
               type="checkbox"
               name="signUpForNewsletter"
               id="signUpForNewsletter"
@@ -213,7 +214,7 @@ const SignupForm = () => {
             htmlFor="readTerms"
           >
             <input
-              className={`${styles.input} mb-0 w-auto `}
+              className={`${styles.checkbox}`}
               type="checkbox"
               name="readTerms"
               id="readTerms"
@@ -241,7 +242,7 @@ const SignupForm = () => {
         />
 
         <button
-          className={`col-start-1 mt-10 justify-self-start rounded-full bg-darkblue py-4 px-10 font-suisseIntlMono text-2xl uppercase text-white  ${
+          className={`col-start-1 mt-10 justify-self-start rounded-full bg-darkblue px-10 py-4 font-suisseIntlMono text-2xl uppercase text-white  ${
             submitButtonEnabled ? '' : 'cursor-not-allowed opacity-30'
           }`}
           type="submit"
